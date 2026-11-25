@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "avian": "/path/to/avian-research-workspace",
+    "mammals": "/path/to/mammalian-research-workspace",
+    "resources": "/path/to/shared-reference-storage",
+    "tools_home": "/path/to/tool-installations",
+    "workstation": "/path/to/original-figure-workspace"
+  },
+  "runs": {},
+  "rscript": "Rscript"
+}

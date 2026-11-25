@@ -1,0 +1,602 @@
+{
+  "baseline_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+  "source_map": [
+    {
+      "original_path": "analyses/avian/scripts/40_ruslan_style_scatters.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "0d2a10035c83e67561e58d10ed9d2991b04eb055ae505999e5e4824998855670",
+      "module": "bodymass/groups.py",
+      "function": "_ruslan_style_scatters",
+      "kind": "library",
+      "configuration_changes": [
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/53_three_checks.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "19870385e87474455dcd476722047c2a339d11c0a499f642df7826caaf7577b0",
+      "module": "bodymass/avian.py",
+      "function": "_three_checks",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/57_working_sets_round2.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "a5ee91f42ce63f7c45d1ab24044bc619d4427dea545d92588de74251536dad58",
+      "module": "bodymass/avian.py",
+      "function": "_working_sets_round2",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/62_build_library_matrices.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "4649f3ae59a69083b5e815133f882164da78be0d66144b63bcf4f6d32e43af7e",
+      "module": "bodymass/avian.py",
+      "function": "_build_library_matrices",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/68_rebuild_matrices_asymmetric.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "a6c50c939ed17337be56f125c652253ebb8396f7bf45a8b18fbacc0cb2510633",
+      "module": "bodymass/avian.py",
+      "function": "_rebuild_matrices_asymmetric",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/72_modules_v2.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "0e019f9d0e7adbecbec12e81fdd4d4ccee14174c9bc57fe28bad003394e64478",
+      "module": "bodymass/avian.py",
+      "function": "_modules_v2",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/74_nineteen_via_cage.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "1cf766f604d5f804abb838b0e0769cab5888c9b1ffcd3c3379417edd32f87e40",
+      "module": "bodymass/avian.py",
+      "function": "_nineteen_via_cage",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/75_honest_gene_mass_scan.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "a3a3e08d22b706ee6508ac79f41d70664acf4e63cabeca4aef208c0377ec96d9",
+      "module": "bodymass/avian.py",
+      "function": "_honest_gene_mass_scan",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/78_holding_cores.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "870d80f95f64627c2ff0aa43bad7a96e516afaa604a3d489803133802cd9b5c0",
+      "module": "bodymass/groups.py",
+      "function": "_holding_cores",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/80_story_epi_and_traits.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "ee34fc66c3f9b0d1f3246ff4d1f7e42f1ad60e4c0020e438d94a985be71a35f3",
+      "module": "bodymass/groups.py",
+      "function": "_story_epi_and_traits",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Replace file-loader execution with an in-package dependency"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/81_story_cre_motifs.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "80cace721d4bc32c6761685333fa39fcabdf9acd8c5a2956e787b3dec8dc47ef",
+      "module": "bodymass/groups.py",
+      "function": "_story_cre_motifs",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Replace generic numbered-file loader with an in-package dependency"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/82_motif_method_compare.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "51b9fb46641450a33c717a75f96ee1232593e3feb767b0ab9941b25d8c204e64",
+      "module": "bodymass/groups.py",
+      "function": "_motif_method_compare",
+      "kind": "library",
+      "configuration_changes": [
+        "Remove legacy script-directory sys.path mutation",
+        "Replace file-loader execution with an in-package dependency",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/94_nine_set_motifs.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "f92756c19732cd37dd9895207a123841bd7c8b8e3cd5ef90001b5ea95ff8b724",
+      "module": "bodymass/groups.py",
+      "function": "_nine_set_motifs",
+      "kind": "library",
+      "configuration_changes": [
+        "Replace file-loader execution with an in-package dependency",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/95_nine_set_slopes.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "ccb73da3c503dfc42c92ea06f304d70602fa068d5702e0405a8810e3e3e6df3a",
+      "module": "bodymass/groups.py",
+      "function": "_nine_set_slopes",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Replace file-loader execution with an in-package dependency",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/98_epi_own_promoters.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "a45f4e7c5cd4f862bebdc9848c405f04cb96c10a97aa65666f9334f4c40d01c5",
+      "module": "bodymass/avian.py",
+      "function": "_epi_own_promoters",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/oxphos_thread_lib.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "964f938f697391ed4c0ec4e2aea5b2fdb3460279f7c93cba8701d86704336f87",
+      "module": "bodymass/avian.py",
+      "function": "_oxphos_thread_lib",
+      "kind": "library",
+      "configuration_changes": [
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/00_gene_sets.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "fddcb14aa30944e878b2e1e83746637b2d90b99bd0e44067d02aa9b1ac7021d8",
+      "module": "bodymass/groups.py",
+      "function": "_gene_sets",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/01_sets_mass.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "35778c43fc730331a9ae1e82e37dbd0c7571b7fe56eda2391e5ae8a3273363d4",
+      "module": "bodymass/groups.py",
+      "function": "_sets_mass",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/03_promoters_fimo.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "f82ad1ff61ca8e2cfbad19865edac70d437ba6443302465ecf7e603064f806b3",
+      "module": "bodymass/groups.py",
+      "function": "_promoters_fimo",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/04_enrichment_mass.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "f4e7934d3dcb165f75d9aa44e5cfcf5ad449faf1d476970b507baf09c44253ab",
+      "module": "bodymass/groups.py",
+      "function": "_enrichment_mass",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Remove legacy script-directory sys.path mutation"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/05_gsea_phylo.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "46745b08baafcbd67cabc1aa7501d8c0c8e980abf848f712aa000b765ce51460",
+      "module": "bodymass/groups.py",
+      "function": "_gsea_phylo",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Remove legacy script-directory sys.path mutation",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/common_rm.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "2edcc00bffc0214ff416449a1734d0b4e3bab5f632fbb815bb88d7b67fa05da6",
+      "module": "bodymass/groups.py",
+      "function": "_common_rm",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/describe_correlations.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "88979a66792589de9db1c60c7908122c75b35d234217a69fa4e5b6f4fbbbc134",
+      "module": "bodymass/groups.py",
+      "function": "_describe_correlations",
+      "kind": "operation",
+      "configuration_changes": [],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_maps/code/run_all_maps.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "b4cdc6b00746beec0b66b4bcf6fbcd55dd1f663f5189ae43b4fe7633496b5c72",
+      "module": "bodymass/groups.py",
+      "function": "_run_all_maps",
+      "kind": "operation",
+      "configuration_changes": [],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/01_prepare.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "9b4cd8473af4e67f8617cd90b9d72e813783f0c678166ec43c830ae3faf17a55",
+      "module": "bodymass/scenic.py",
+      "function": "_prepare",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/02_grn.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "9745a0e91933122a87e08619d5586e77114614b895ee2b81b7bdb102ebec87c1",
+      "module": "bodymass/scenic.py",
+      "function": "_grn",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Preserve the fork-shared GRN worker at module scope; pass its original bindings explicitly"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/03_build_db.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "4454dde3781785099a79f5e325e1d4bba711bceaaf48cc4a7101d32650ad7790",
+      "module": "bodymass/scenic.py",
+      "function": "_build_db",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/04_prune.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "83526f40640b9eb50ba08120d4123572dfe064372fbcce39d88f3e0ab8d908f9",
+      "module": "bodymass/scenic.py",
+      "function": "_prune",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/04_prune_existing.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "466519ff4c598b7138e0f3911dbab70724d24c15a3f59ab9b8e66aba8dff2699",
+      "module": "bodymass/scenic.py",
+      "function": "_prune_existing",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/05_analyze.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "85d174fcfc208292f2f7266b18ad3d60184d498c537c0564e33e0a36fa19f229",
+      "module": "bodymass/scenic.py",
+      "function": "_analyze",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/08_stability.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "1735c5a630510494ba7645e284b09810fd784859dd879d6819802f41f7cd164c",
+      "module": "bodymass/scenic.py",
+      "function": "_stability",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/10_prepare_full.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "9cdbdbf9c69e0408ea4ede8b36ad595e8bb74e66849feeb12e0fcdeed565f788",
+      "module": "bodymass/networks.py",
+      "function": "_prepare_full",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/12_statistics_full.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "5bd73784be3590a3d15a1d683494fa797c5e8d833208f7bd162124c41a7ed8ff",
+      "module": "bodymass/networks.py",
+      "function": "_statistics_full",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/16_tree_sensitivity.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "f58dd987e5bf4a921b89bff018ab7d46ca93e622017a0dee7789319f28a5e5ad",
+      "module": "bodymass/networks.py",
+      "function": "_tree_sensitivity",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/19_Hallmark_and_gene_jackknife.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "203b818dda9a98d3d53446a5ed30efa7e1e7c7a31c111add1b5b3a9215e721f3",
+      "module": "bodymass/networks.py",
+      "function": "_Hallmark_and_gene_jackknife",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind existing shared imports to the consolidated namespace"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/common.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "dca963f90c8855f1b5981f181c7985337f75e1823de4271420f5d70ee7f95af8",
+      "module": "bodymass/networks.py",
+      "function": "_common",
+      "kind": "library",
+      "configuration_changes": [
+        "Bind run root from configuration",
+        "Resolve machine-specific paths through configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "figures/figure_bank/code/draw_scientific_panels.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "7db11627a6656f24518ca49db9c568a37348a2a63eec2df9b95d6b82d408ac49",
+      "module": "bodymass/figures.py",
+      "function": "_draw_scientific_panels",
+      "kind": "operation",
+      "configuration_changes": [],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "figures/figure_bank/code/refine_motif_panels.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "46293047b920411d186d4f54d84f5a9ccaa7f5120485f5af0abd24d58b6d04e9",
+      "module": "bodymass/figures.py",
+      "function": "_refine_motif_panels",
+      "kind": "operation",
+      "configuration_changes": [],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "figures/target_heatmap/code/prepare_heatmap.py",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "34072e4e68672146c5f811bcc1d2e09523bd93bcd05d130853fe973e8e37d52a",
+      "module": "bodymass/figures.py",
+      "function": "_prepare_heatmap",
+      "kind": "operation",
+      "configuration_changes": [
+        "Bind run root from configuration"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/11_wgcna_full.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "e09692148474dd782ded7c766115118dd95e0b8306f49fb7177a13520e1b4542",
+      "module": "R/networks.R",
+      "function": "fit",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/15_wgcna_full_LOO.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "31e39a1d0d93530f41cd26accf62d99e70c68ccd5dd5557da487617c99e7862f",
+      "module": "R/networks.R",
+      "function": "loo",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/71_wgcna_v2.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "0898880466b5b6d4118e151149a5369248b250a8cd54bfad5d300332693097a7",
+      "module": "R/networks.R",
+      "function": "avian",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_wgcna/code/module_scores.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "6cc704ba95ebb2a27a4f7623d2e54761a8e16ed31d6d1706db1fb718d7576130",
+      "module": "R/networks.R",
+      "function": "summary",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/94_monalisa_nine.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "ae497bf0f31711f66c087065e8a8f0ba157788609cb41900a436c88e720a0e3c",
+      "module": "R/regulation.R",
+      "function": "nine_sets",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/avian/scripts/82_monalisa_binned.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "1df9218d83ff7978a5b2a1c4e6574b35f3a5dcab862ff442ee6b8d104974498c",
+      "module": "R/regulation.R",
+      "function": "binned",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "analyses/mammal_scenic/code/06_verify.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "ab3a5b81eb1a6eae58f98109ab0b9a35df0b3d2427e1f67a32293cc2ded804c2",
+      "module": "R/regulation.R",
+      "function": "verify",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "figures/regulon_scatter/code/draw_regulons.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "a11245aec645faedc7593df99fd530bf3afadf4a6d5d23e54bf3ba08b0fbb94d",
+      "module": "R/figures.R",
+      "function": "regulons",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    },
+    {
+      "original_path": "figures/target_heatmap/code/draw_heatmap.R",
+      "original_commit": "d230e56ab942305ec88fbfc04cc1ec8a7a6d67e2",
+      "source_sha256": "13eb16a444108393f305515a4f5df313ce12fd9c16d02b67ddf9d690a1c5d71d",
+      "module": "R/figures.R",
+      "function": "targets",
+      "configuration_changes": [
+        "Function scope; run-directory/argument binding only"
+      ],
+      "analysis_main_deferred": true
+    }
+  ],
+  "note": "Original computations preserved; runtime binding, paths, imports and CLI scope refactored. No legacy source-file execution."
+}
