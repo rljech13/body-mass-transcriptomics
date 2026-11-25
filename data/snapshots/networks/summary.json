@@ -1,0 +1,102 @@
+{
+  "studies": {
+    "gse105160_full": {
+      "modules": 28,
+      "BH05": 1,
+      "BH_all3_05": 1,
+      "min_q": 0.01074888546506
+    },
+    "ma2016_full": {
+      "modules": 41,
+      "BH05": 4,
+      "BH_all3_05": 1,
+      "min_q": 0.001833551147696
+    },
+    "wagner_full": {
+      "modules": 54,
+      "BH05": 0,
+      "BH_all3_05": 1,
+      "min_q": 0.06224979175686
+    }
+  },
+  "selected_modules": [
+    {
+      "panel": "ma2016_full",
+      "module": "orange",
+      "n_species": 15,
+      "n_genes": 77,
+      "variance_PC1": 0.4978370860522,
+      "r": -0.8570067321852,
+      "p": 4.472075969989e-05,
+      "historical_OLS_p": 4.47207596999e-05,
+      "historical_PGLS_p": 0.004437223899452,
+      "historical_PGLS_q": 0.2747381131077,
+      "top_Hallmark": "",
+      "top_Hallmark_q": 1,
+      "loo_sign_fraction": 1,
+      "loo_min_abs_r": 0.8204260321123,
+      "q_within_study": 0.001833551147696,
+      "q_all3": 0.005500653443087
+    },
+    {
+      "panel": "ma2016_full",
+      "module": "violet",
+      "n_species": 15,
+      "n_genes": 56,
+      "variance_PC1": 0.4835112813782,
+      "r": -0.706146470285,
+      "p": 0.003258063812965,
+      "historical_OLS_p": 0.003258063812965,
+      "historical_PGLS_p": 0.04774667582788,
+      "historical_PGLS_q": 0.6822265411561,
+      "top_Hallmark": "",
+      "top_Hallmark_q": 1,
+      "loo_sign_fraction": 1,
+      "loo_min_abs_r": 0.5915647906889,
+      "q_within_study": 0.04783512245434,
+      "q_all3": 0.08400408199908
+    },
+    {
+      "panel": "ma2016_full",
+      "module": "cyan",
+      "n_species": 15,
+      "n_genes": 116,
+      "variance_PC1": 0.494262464998,
+      "r": -0.6869545862589,
+      "p": 0.004666841215058,
+      "historical_OLS_p": 0.004666841215058,
+      "historical_PGLS_p": 0.04391350813023,
+      "historical_PGLS_q": 0.6797445112658,
+      "top_Hallmark": "",
+      "top_Hallmark_q": 0.6327856251762,
+      "loo_sign_fraction": 1,
+      "loo_min_abs_r": 0.6307366380026,
+      "q_within_study": 0.04783512245434,
+      "q_all3": 0.08400408199908
+    },
+    {
+      "panel": "ma2016_full",
+      "module": "skyblue3",
+      "n_species": 15,
+      "n_genes": 44,
+      "variance_PC1": 0.4979468347415,
+      "r": 0.7018367140796,
+      "p": 0.003540110828479,
+      "historical_OLS_p": 0.003540110828479,
+      "historical_PGLS_p": 0.1335888606728,
+      "historical_PGLS_q": 0.794052187839,
+      "top_Hallmark": "",
+      "top_Hallmark_q": 1,
+      "loo_sign_fraction": 1,
+      "loo_min_abs_r": 0.6451576333807,
+      "q_within_study": 0.04783512245434,
+      "q_all3": 0.08400408199908
+    }
+  ],
+  "all_historical_OLS_p_reproduced": true,
+  "network_rebuilt": false,
+  "previous_historical_PGLS_mammal_tests_BH05": 0,
+  "interpretation": "New descriptive Pearson/BH presentation of the previously frozen modules; no new module discovery. Relative module expression, not absolute activation or flux.",
+  "human_review": "not_completed",
+  "training_enabled": false
+}

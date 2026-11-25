@@ -1,0 +1,19 @@
+{
+  "frozen_before_run": true,
+  "question": "Ruslan's approach (gene set -> mass -> promoter motifs per species -> regulators) repeated in mammalian fibroblasts",
+  "panels": ["ma2016", "gse105160", "wagner"],
+  "masses": "nonbird_common_state_2026-10-21_v1/config/species_trait_admission.corrected.tsv, status admitted (Microtus 49 g; orangutan and dog excluded)",
+  "matrices": "growth_regulators_2026-10-21_v1/inputs/<panel>_full.* (before gene filtering), per-species mean of samples",
+  "composition": "single-symbol genes with positive expression in every admitted species of the panel; set score uses only these",
+  "primary_score": "mean across set genes of per-gene z-score across species (log scale)",
+  "ruslan_style_score": "log10 of summed linear expression over the same fixed genes",
+  "test": "PGLS of score on log10 adult mass with the panel covariance; Pearson r reported as in Ruslan's figures",
+  "null": "expression-matched random gene sets of the same size (deciles of mean log expression), two-sided |t|",
+  "n_null": 10000,
+  "null_expression_bins": 10,
+  "min_genes": 10,
+  "seed": 20261022,
+  "multiple_testing": "BH over all panel x set empirical p",
+  "replication_rule": "same sign and empirical p < 0.05 in at least two panels",
+  "step2_regulators": "per-species promoter motif enrichment for genes of replicated sets (native genomes), log odds ratio vs expression-matched background, PGLS on mass, BH over all motifs, replication across panels; frozen separately before step 2"
+}

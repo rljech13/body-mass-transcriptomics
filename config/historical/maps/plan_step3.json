@@ -1,0 +1,22 @@
+{
+  "frozen_before_run": true,
+  "question": "Genome-wide GSEA (as Ruslan's clusterProfiler GSEA, but phylogenetic): which pathways shift with adult mass in mammalian fibroblasts, and which shift the same way in all three panels?",
+  "panels": ["ma2016", "gse105160", "wagner"],
+  "gene_universe": "step-1 fixed composition per panel (common_rm.load + background)",
+  "ranking": "per gene PGLS t of z-scored log expression on log10 adult mass with the panel covariance",
+  "catalogs": {
+    "GO_BP": "data/genesets/mammal_catalogs/gobp.tsv (MSigDB 2026.1 C5 GOBP)",
+    "Reactome": "data/genesets/mammal_catalogs/reactome.tsv",
+    "KEGG": "data/genesets/kegg_hsa_all_pathways.tsv",
+    "Hallmark": "data/genesets/mammal_catalogs/hallmark.tsv",
+    "Ruslan": "data/genesets/ruslan_oxphos_133.txt, ruslan_thermo_229.txt, seven_ruslan_sums MT142"
+  },
+  "set_size": "15 to 500 genes present in the panel universe",
+  "ES": "weighted running-sum enrichment score (weight |t|, exponent 1), as GSEA/fgsea",
+  "null": "1000 phylogenetically simulated log10 mass vectors per panel (MVN with panel covariance, rescaled to observed mean and SD); gene t and ES recomputed, so gene-gene correlation is preserved",
+  "NES_p": "NES = ES / mean |null ES| of the same sign; p = share of same-sign null ES at least as extreme (+1 correction); BH within panel over all catalogues",
+  "concordance": "set counted as concordant if NES has the same sign and nominal p < 0.05 in all three panels; also reported for at least two panels",
+  "concordance_null": "the same 1000 simulated draws give a null count of concordant sets (each simulated ES scored against the remaining null draws); empirical p of the observed counts",
+  "combined": "Stouffer of signed z from the three panel p values per set, BH over sets; descriptive companion",
+  "seed": 20261023
+}

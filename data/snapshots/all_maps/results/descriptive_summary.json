@@ -1,0 +1,277 @@
+{
+  "question": "Какие суммы экспрессии полных измеренных частей KEGG/GO/Reactome коррелируют с массой млекопитающих?",
+  "primary_metric": "Descriptive Pearson correlation of log10 linear normalized map sum with log10 body mass. Phylogeny is a separate diagnostic, not a gate.",
+  "panels": [
+    {
+      "mode": "all3_common",
+      "panel": "gse105160",
+      "n_species": 9,
+      "n_maps": 7414,
+      "nominal": 1272,
+      "BH05": 0,
+      "min_q": 0.0927617066232505
+    },
+    {
+      "mode": "all3_common",
+      "panel": "ma2016",
+      "n_species": 15,
+      "n_maps": 7414,
+      "nominal": 1193,
+      "BH05": 3,
+      "min_q": 0.0082370880468051
+    },
+    {
+      "mode": "all3_common",
+      "panel": "wagner",
+      "n_species": 11,
+      "n_maps": 7414,
+      "nominal": 1455,
+      "BH05": 0,
+      "min_q": 0.2002799473544995
+    },
+    {
+      "mode": "panel_available",
+      "panel": "gse105160",
+      "n_species": 9,
+      "n_maps": 10880,
+      "nominal": 1882,
+      "BH05": 18,
+      "min_q": 0.0368951626834521
+    },
+    {
+      "mode": "panel_available",
+      "panel": "ma2016",
+      "n_species": 15,
+      "n_maps": 9488,
+      "nominal": 1645,
+      "BH05": 0,
+      "min_q": 0.089725110835799
+    },
+    {
+      "mode": "panel_available",
+      "panel": "wagner",
+      "n_species": 11,
+      "n_maps": 8245,
+      "nominal": 1442,
+      "BH05": 0,
+      "min_q": 0.2462249856416881
+    }
+  ],
+  "common_composition_hits": [
+    {
+      "panel": "ma2016",
+      "set_id": "GO_BP:GOBP_POSITIVE_REGULATION_OF_RNA_SPLICING",
+      "n_measured": 14,
+      "r_Pearson": -0.9209738872095312,
+      "p_Pearson": 1.111018080227287e-06,
+      "q_Pearson_panel": 0.0082370880468051
+    },
+    {
+      "panel": "ma2016",
+      "set_id": "Reactome:REACTOME_SIGNALING_BY_NTRK3_TRKC",
+      "n_measured": 9,
+      "r_Pearson": -0.8821482952927964,
+      "p_Pearson": 1.3554328993062578e-05,
+      "q_Pearson_panel": 0.0467412852541184
+    },
+    {
+      "panel": "ma2016",
+      "set_id": "GO_MF:GOMF_NEUROTROPHIN_TRK_RECEPTOR_BINDING",
+      "n_measured": 5,
+      "r_Pearson": -0.8756388416655864,
+      "p_Pearson": 1.891338761294245e-05,
+      "q_Pearson_panel": 0.0467412852541184
+    }
+  ],
+  "significant_main_terms": [
+    {
+      "panel": "gse105160",
+      "set_id": "GO_MF:GOMF_HETEROTRIMERIC_G_PROTEIN_BINDING",
+      "n_measured": 5,
+      "n_canonical": 7,
+      "r_Pearson": 0.97404369418641,
+      "beta_OLS": 0.2352810842361458,
+      "p_Pearson": 9.04432782005298e-06,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS",
+      "n_measured": 8,
+      "n_canonical": 13,
+      "r_Pearson": -0.9717729050582534,
+      "beta_OLS": -0.13080281343366,
+      "p_Pearson": 1.2102905940857446e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_REGULATION_OF_GLUTAMATE_RECEPTOR_CLUSTERING",
+      "n_measured": 5,
+      "n_canonical": 7,
+      "r_Pearson": 0.9703201322498648,
+      "beta_OLS": 0.1625766635782755,
+      "p_Pearson": 1.4406385953870789e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_ISOPENTENYL_DIPHOSPHATE_BIOSYNTHETIC_PROCESS_MEVALONATE_PATHWAY",
+      "n_measured": 5,
+      "n_canonical": 5,
+      "r_Pearson": -0.967642447950564,
+      "beta_OLS": -0.1650614385193045,
+      "p_Pearson": 1.9440600798808222e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "Reactome:REACTOME_NFE2L2_REGULATING_ER_STRESS_ASSOCIATED_GENES",
+      "n_measured": 5,
+      "n_canonical": 5,
+      "r_Pearson": -0.9653333152108468,
+      "beta_OLS": -0.0406897425596114,
+      "p_Pearson": 2.4688865736002155e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE",
+      "n_measured": 20,
+      "n_canonical": 22,
+      "r_Pearson": 0.9620855765794246,
+      "beta_OLS": 0.0987364336771901,
+      "p_Pearson": 3.366931590153933e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_ARTICULAR_CARTILAGE_DEVELOPMENT",
+      "n_measured": 5,
+      "n_canonical": 7,
+      "r_Pearson": -0.961826468434646,
+      "beta_OLS": -0.3726850206914979,
+      "p_Pearson": 3.447275335401021e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION",
+      "n_measured": 14,
+      "n_canonical": 15,
+      "r_Pearson": 0.9606132234288814,
+      "beta_OLS": 0.0861688580977574,
+      "p_Pearson": 3.841623839898819e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_REGULATION_OF_SOMATIC_STEM_CELL_POPULATION_MAINTENANCE",
+      "n_measured": 7,
+      "n_canonical": 10,
+      "r_Pearson": -0.9596190079783116,
+      "beta_OLS": -0.2663477783113734,
+      "p_Pearson": 4.187760859040651e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_POSITIVE_REGULATION_OF_INTERLEUKIN_5_PRODUCTION",
+      "n_measured": 9,
+      "n_canonical": 14,
+      "r_Pearson": -0.959505971082946,
+      "beta_OLS": -0.1896640312718773,
+      "p_Pearson": 4.2284622860403686e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "Reactome:REACTOME_RRNA_MODIFICATION_IN_THE_MITOCHONDRION",
+      "n_measured": 11,
+      "n_canonical": 15,
+      "r_Pearson": 0.9589192373527136,
+      "beta_OLS": 0.15586648893945,
+      "p_Pearson": 4.444238261489367e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_DEPYRIMIDINATION",
+      "n_measured": 8,
+      "n_canonical": 8,
+      "r_Pearson": 0.9579169254156512,
+      "beta_OLS": 0.176999537429057,
+      "p_Pearson": 4.830689312587285e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CONTRACTION",
+      "n_measured": 21,
+      "n_canonical": 27,
+      "r_Pearson": -0.9578112192805202,
+      "beta_OLS": -0.1623490636857057,
+      "p_Pearson": 4.8727831417123336e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_FIBROBLAST_ACTIVATION",
+      "n_measured": 12,
+      "n_canonical": 17,
+      "r_Pearson": -0.9575778199168996,
+      "beta_OLS": -0.2186901886077707,
+      "p_Pearson": 4.96664422813293e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_POSITIVE_REGULATION_OF_CELL_ACTIVATION",
+      "n_measured": 242,
+      "n_canonical": 395,
+      "r_Pearson": -0.9572839106749887,
+      "beta_OLS": -0.0643945300652066,
+      "p_Pearson": 5.086649267020052e-05,
+      "q_Pearson_panel": 0.0368951626834521
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_BIOSYNTHETIC_PROCESS",
+      "n_measured": 7,
+      "n_canonical": 11,
+      "r_Pearson": -0.9559161132793615,
+      "beta_OLS": -0.1358583815225032,
+      "p_Pearson": 5.672239027024425e-05,
+      "q_Pearson_panel": 0.0370318424438575
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_BP:GOBP_PLASMA_MEMBRANE_PHOSPHOLIPID_SCRAMBLING",
+      "n_measured": 20,
+      "n_canonical": 31,
+      "r_Pearson": -0.9556616139939296,
+      "beta_OLS": -0.0993490141263421,
+      "p_Pearson": 5.786225381852738e-05,
+      "q_Pearson_panel": 0.0370318424438575
+    },
+    {
+      "panel": "gse105160",
+      "set_id": "GO_CC:GOCC_MKS_COMPLEX",
+      "n_measured": 14,
+      "n_canonical": 15,
+      "r_Pearson": 0.9538271645194136,
+      "beta_OLS": 0.0992501204645903,
+      "p_Pearson": 6.656276582791857e-05,
+      "q_Pearson_panel": 0.0402334940115418
+    }
+  ],
+  "independent_checks": {
+    "Pearson_fits": 276,
+    "max_r_error": 2.554623179662485e-13,
+    "max_p_error": 3.1541436129600697e-13,
+    "BH_every_row_verified": true
+  },
+  "interpretation": "18 whole measured-map associations in GSE105160; contextual differences across panels are visible and not used to dismiss those descriptive associations. Three additional Ma2016 associations refer to the smaller common composition, not the same complete sums.",
+  "human_review": "not_completed",
+  "training_enabled": false
+}

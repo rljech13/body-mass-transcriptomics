@@ -1,0 +1,265 @@
+{
+  "status": "passed",
+  "date": "2026-11-25",
+  "source_code_revision": "0.3.0 candidate; exact final commit contains this report",
+  "baseline_commit": "0b9ff465d3870620f1b615ba6d87af82b455db33",
+  "isolation": {
+    "checkout": "fresh temporary clone of publication repository plus candidate patch",
+    "python_environment": "new venv, no system-site-packages; replay dependencies installed from the pinned requirements",
+    "R_environment": "existing R installation with separately recorded package versions; base SVG fallback when svglite is absent; no fresh R environment claim",
+    "private_research_roots_configured": false
+  },
+  "environment": {
+    "python": "3.11.11",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "1.5.3",
+      "scipy": "1.16.0",
+      "matplotlib": "3.6.3",
+      "Pillow": "9.2.0"
+    },
+    "R": {
+      "R": "R version 4.3.1 (2023-06-16)",
+      "packages": {
+        "jsonlite": "2.0.0",
+        "ggplot2": "3.4.4",
+        "ggrepel": "0.9.6",
+        "svglite": null,
+        "patchwork": "1.3.0"
+      }
+    }
+  },
+  "runs": [
+    {
+      "name": "integrity",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "--verify-data"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    },
+    {
+      "name": "regressions",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stderr_tail": "test_bundled_input_integrity (test_refactor.RefactorTests.test_bundled_input_integrity) ... ok\ntest_existing_bird_fit_functions_preserve_all_eighteen_frozen_results (test_refactor.RefactorTests.test_existing_bird_fit_functions_preserve_all_eighteen_frozen_results) ... ok\ntest_grn_worker_preserves_original_arguments (test_refactor.RefactorTests.test_grn_worker_preserves_original_arguments) ... ok\ntest_help_and_plan_do_not_read_scientific_inputs (test_refactor.RefactorTests.test_help_and_plan_do_not_read_scientific_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.653s\n\nOK\n"
+    },
+    {
+      "name": "whole_maps",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "figures",
+        "all-maps",
+        "--out",
+        "<output>/all_maps"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    },
+    {
+      "name": "motifs",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "figures",
+        "refine-motifs",
+        "--out",
+        "<output>/motifs"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    },
+    {
+      "name": "network_summary",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "networks",
+        "summary",
+        "--config",
+        "<output>/r_config.json",
+        "--out",
+        "<output>/networks"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    },
+    {
+      "name": "regulons",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "figures",
+        "regulons",
+        "--config",
+        "<output>/r_config.json",
+        "--out",
+        "<output>/regulons"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    },
+    {
+      "name": "targets",
+      "command": [
+        "<venv-bin>/python",
+        "-m",
+        "bodymass",
+        "figures",
+        "targets",
+        "--config",
+        "<output>/r_config.json",
+        "--out",
+        "<output>/targets"
+      ],
+      "exit_code": 0,
+      "stderr_tail": ""
+    }
+  ],
+  "numerical_verification": {
+    "modules": {
+      "rows": 123,
+      "max_absolute_errors": {
+        "r": 9.992007221626409e-16,
+        "p": 9.992007221626409e-16,
+        "q_within_study": 1.1102230246251565e-15,
+        "q_all3": 9.992007221626409e-16,
+        "historical_PGLS_p": 0.0,
+        "historical_PGLS_q": 9.992007221626409e-16,
+        "loo_sign_fraction": 0.0,
+        "loo_min_abs_r": 9.992007221626409e-16
+      },
+      "network_discovery_rerun": false
+    },
+    "targets": {
+      "implementation": "Checked-in 520 sample values and frozen full primary target-edge table; species means, sample-SD row z and top-ten ranking verified",
+      "verification_scope": "compact-snapshot",
+      "mean_max_abs_error": 0,
+      "z_max_abs_error": 8.881784197001252e-16,
+      "verified_cells": 300,
+      "all_selected_weights_and_ranks_match": true
+    }
+  },
+  "packaged_data_files": 48,
+  "input_files_unchanged": true,
+  "failures": [],
+  "code_sha256": {
+    "R/figures.R": "3e668b38d0df01f0ec9b936b2171fc6c03c217e8a25a97f4520bba7f00f33d5f",
+    "R/networks.R": "a65989da2e1452b4886954425daca7ed36c53252e7789da0fbc35d17f10a956d",
+    "R/regulation.R": "2a71f398b871b61b402d4858efa5fa0d12c78ea2f15379d5d1ff3be3d4c521b4",
+    "bodymass/__init__.py": "6b517eeadd2e43cb141a51e3dd5a940b0d86562b469d01c84344af467efe8441",
+    "bodymass/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "bodymass/avian.py": "fed77b278676d08fca5935251f58791102bb63e63f6aef663aa773685b4847a5",
+    "bodymass/cli.py": "8359c6d0e585c88a130b294cd43813d7a6fbfaac197d80bf9687ebbe694ebedc",
+    "bodymass/figures.py": "6f92bdc48428508c608a4dd2e586e9d56e95f7afa2b0b579aa097d3f3f4838c0",
+    "bodymass/groups.py": "ded2cbba18157265fc29a233156fd4470ae54a682095031f5e29d1d076f49601",
+    "bodymass/networks.py": "48f286a6800db7db5988d3bfdb93a3411048a2df9aafc9f12af9962e1d6378cd",
+    "bodymass/registry.py": "b2afb80c2c0462c1d84ca14ef6cdfccd9d347e08a74483081b66958a681dd398",
+    "bodymass/runtime.py": "5c0c07f96350fc18301c488dc84e6c38e97be3bbefe15d047002c6b517764d25",
+    "bodymass/scenic.py": "fff1e21ae818a66367d38e4ab4f1fa1914b2b4f7c8bc73e4b7d5176f633fcb38"
+  },
+  "rendered_artifacts": [
+    {
+      "name": "all_maps/01_whole_maps_three_programmes.png",
+      "sha256": "d88becca2b0f0b4381025d3fee575b5c8f43a5937e562b91865bd6a13deda8d5",
+      "bytes": 369849
+    },
+    {
+      "name": "all_maps/01_whole_maps_three_programmes.svg",
+      "sha256": "dab525ec20cd9b7f4b11cfdbe3c5b028e916ed527b5a1ee26c3811b7b68f848d",
+      "bytes": 46296
+    },
+    {
+      "name": "all_maps/02_all_18_maps_context.png",
+      "sha256": "1d68a73d1ac3e56507fbe5a3097aaeb9765585422b1f11c7ceda521d8ab8bd3e",
+      "bytes": 439347
+    },
+    {
+      "name": "all_maps/02_all_18_maps_context.svg",
+      "sha256": "64fda9abc229a9c96917372d14b52524f7cf2fee6384b21b96ff8ebb07801fe6",
+      "bytes": 41040
+    },
+    {
+      "name": "all_maps/03_catalogue_and_composition.png",
+      "sha256": "c41b1479a72cef9faadec1b50364fe5e1bc2677879d3fc80e9e9bfc4d986babc",
+      "bytes": 334642
+    },
+    {
+      "name": "all_maps/03_catalogue_and_composition.svg",
+      "sha256": "16cb0a0c4fbef61aacd23b38d1fd6bbcb0fd1ae8b15f1d248c4fa1d001da0f0c",
+      "bytes": 32308
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_broad816.pdf",
+      "sha256": "e4b2492c2107dc54621f10c8150f539b066a176a38798b67fed073234b490307",
+      "bytes": 18663
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_broad816.png",
+      "sha256": "e7300f35486a01d4034a9b8e04de9b5b0e3518eecf8114ddc24fb72770ada90e",
+      "bytes": 187674
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_broad816.svg",
+      "sha256": "c724626ece0389aa79051a44e7fba3a7c62652485195868f001ec00be1f7702d",
+      "bytes": 28138
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_matched21.pdf",
+      "sha256": "cf81ed49741ad7d657dcd25ca28d77cc1b90c9f0e9ec335442bfb4e9be25be6c",
+      "bytes": 17912
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_matched21.png",
+      "sha256": "88cb13d14c5bc97b61b681736cf9dfa7142f2d865f747f449958dc7c1b255d9c",
+      "bytes": 162681
+    },
+    {
+      "name": "motifs/panels/F4A_motif_evidence_matched21.svg",
+      "sha256": "8cdb66d1143a528be3b97b47a394337270fe772408ead40faea1a1fdfa6d75b8",
+      "bytes": 21534
+    },
+    {
+      "name": "regulons/Panel_E_ERG_FOXP4.svg",
+      "sha256": "a821d15d6eaab6f513aefe5710b84bf001a5313d4f5b6949a63a60d17b326ad2",
+      "bytes": 216211
+    },
+    {
+      "name": "regulons/audit/preview.png",
+      "sha256": "c5773f670408372b8802d37114af84e9afdc159afe41d4600eca8f38e0c2ded5",
+      "bytes": 143470
+    },
+    {
+      "name": "targets/Panel_F_regulon_targets.svg",
+      "sha256": "f50af249daf84253084d3e7797c3cdd419251800de7e2da389d8ae693edb8aba",
+      "bytes": 292642
+    },
+    {
+      "name": "targets/audit/preview.png",
+      "sha256": "562f46a640aaa6e371187038ea81fb3292c120783a219226ff6f7af708b070e5",
+      "bytes": 117148
+    }
+  ],
+  "boundaries": [
+    "No raw-read quantification, CAGE reassignment, WGCNA discovery, GRNBoost2 training or catalogue-wide discovery rerun.",
+    "Historical raw-input and exact-environment gaps remain; this verifies only the specified bundled-data replay.",
+    "Visual file equality is not required across graphics environments; numerical values are checked separately."
+  ],
+  "github_actions_execution": "Not configured: the current GitHub OAuth token cannot create workflows. The documented local replay commands were executed successfully."
+}

@@ -1,0 +1,18 @@
+{
+  "frozen_before_run": true,
+  "frozen_after": "step 1 results (01_sets_mass.tsv) were seen; no motif result has been computed",
+  "question": "Ruslan's regulator step in mammals: does promoter motif enrichment in his gene sets, measured in each species' own genome, change with adult mass, and does it replicate across panels?",
+  "genomes": "NCBI RefSeq/annotated assemblies per species (config/genomes.tsv); species without an annotated genome are excluded; Saimiri sciureus uses Saimiri boliviensis and is flagged as congener",
+  "genes": "per panel, the fixed-composition background of step 1, restricted to symbols that occur exactly once as a protein-coding gene name in that species' annotation",
+  "promoter": "-1000/+200 nt around the TSS of the longest annotated mRNA of the gene, strand-aware (minus-strand windows reverse-complemented), soft-masked bases kept",
+  "motifs": "size_program_regulons_2026-10-21_v1/reference/JASPAR2024_one_per_symbol.meme; FIMO p <= 1e-4 both strands; gene positive if at least one site",
+  "foreground": ["Ruslan_MT142", "OXPHOS_hsa00190", "Thermogenesis_hsa04714", "CellCycle_hsa04110_control", "Ribosome_hsa03010"],
+  "background": "all other genes of the panel background in that species (complements computed on the same gene identifiers, fixing the Fisher-complement defect of the bird code)",
+  "enrichment": "per species x set x motif: log odds ratio (Haldane +0.5) of motif-positive genes, foreground vs background, Mantel-Haenszel across GC-content quintiles of the promoter windows",
+  "mass_test": "per panel x set x motif: PGLS of log OR on log10 adult mass with the step-1 covariance restricted to species with genomes; Pearson r reported",
+  "multiple_testing": "BH over all panel x set x motif tests",
+  "replication": "same sign and PGLS p < 0.05 in at least two panels; a candidate regulator also requires its own RNA detected in the fibroblast panels",
+  "replication_null": "1000 draws of phylogenetically simulated log mass per panel (multivariate normal with the panel covariance, scaled to the observed variance), recomputing the number of replicated set x motif pairs; empirical p of the observed count",
+  "prespecified_from_ruslan": ["SNAI3", "PHOX2B", "ZEB1", "SOX14", "MEF2B", "HEY2", "MEF2A", "MEF2D", "SNAI1", "SNAI2", "ESRRA", "NRF1", "GABPA", "PPARGC1A"],
+  "not_done": "Ruslan's enhancer windows (no mammalian fibroblast enhancer maps for these species) and CellOracle virtual knockouts"
+}

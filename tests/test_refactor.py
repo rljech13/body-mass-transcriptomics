@@ -10,6 +10,11 @@ from bodymass.runtime import Context, PACKAGE_ROOT
 
 
 class RefactorTests(unittest.TestCase):
+    def test_bundled_input_integrity(self):
+        from bodymass.runtime import verify_data
+
+        self.assertEqual(verify_data()["status"], "passed")
+
     def context(self):
         return Context(
             {

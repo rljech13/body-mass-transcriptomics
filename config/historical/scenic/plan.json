@@ -1,0 +1,49 @@
+{
+  "run": "ma2016_pyscenic_2026-10-23_v1",
+  "authorization": "User: Ну так в чем проблема это сделать?",
+  "experiment": "Ma2016 primary mammalian fibroblasts, same source as frozen WGCNA",
+  "technical_pairs": [
+    [
+      "RedSquirrel.1A",
+      "RedSquirrel.1B"
+    ],
+    [
+      "DeerMouse.2A",
+      "DeerMouse.2B"
+    ]
+  ],
+  "normalization": "sum raw counts within explicit technical pairs; CPM from all source gene counts; log2(CPM+1)",
+  "filter": "CPM >=1 in >=20% of26 collapsed sample-label groups, nonconstant; no body mass or WGCNA selection",
+  "orthology": "unique one-to-one mouse-to-human mappings, unique human symbols",
+  "seeds": [
+    20261023,
+    20261024,
+    20261025
+  ],
+  "primary_seed": 20261023,
+  "workers": 24,
+  "regressor": "Official arboreto GRNBoost2 defaults",
+  "cisTarget": "Official custom database builder, cluster-buster, JASPAR2024 one-per-symbol816 motifs; standard downloads and official mirror refused connection",
+  "reference_windows": {
+    "500up100down": [
+      -500,
+      100
+    ],
+    "10kb_each_side": [
+      -10000,
+      10000
+    ]
+  },
+  "reference": "Human GRCh38.99 longest exonic transcript on primary chromosomes; protein-coding genes plus expression-input symbols; unique gene symbols",
+  "pruning": {
+    "rank_threshold": 1500,
+    "auc_threshold": 0.05,
+    "nes_threshold": 3.0,
+    "annotation": "direct JASPAR TF label, heterodimer components expanded, HGNC unambiguous aliases normalized"
+  },
+  "overlap": "all inferred primary regulons x4 fixed WGCNA modules; measured/ranked WGCNA-network gene background; one-sided hypergeometric, BH across all tested module-regulon pairs",
+  "activity": "AUCell continuous per donor-labelled group; species means for mass correlation; BH across primary regulons; exploratory same-study analysis",
+  "stability": "two additional predeclared full GRN/prune runs, target Jaccard and TF recovery; not independent data",
+  "wgcna_rebuilt": false,
+  "slides_edited": false
+}

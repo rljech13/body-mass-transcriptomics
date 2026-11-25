@@ -668,8 +668,12 @@ def _refine_motif_panels(context):
 
         p = argparse.ArgumentParser()
         p.add_argument("--out", type=Path, required=True)
+        p.add_argument("--input", type=Path, default=context.run_dir("figure_bank"))
         a = p.parse_args(context.argv)
         O = a.out
+        I = a.input
+        for folder in ["panels", "audit"]:
+            (O / folder).mkdir(parents=True, exist_ok=True)
         plt.rcParams.update(
             {"font.family": "DejaVu Sans", "svg.fonttype": "none", "pdf.fonttype": 42}
         )
@@ -689,7 +693,7 @@ def _refine_motif_panels(context):
                 "816-model screen; BH across 11,424 tests",
             ),
         ]:
-            d = pd.read_csv(O / "data" / f"motif_{name}.tsv", sep="\t")
+            d = pd.read_csv(I / "data" / f"motif_{name}.tsv", sep="\t")
             fig, ax = plt.subplots(figsize=(13.8, 3.5))
             fig.subplots_adjust(left=0.12, right=0.91, bottom=0.22, top=0.86)
             for i, sp in enumerate(SP):
@@ -771,7 +775,7 @@ def _prepare_heatmap(context):
         import csv, gzip, json, hashlib, statistics, math
 
         w = context.run_dir("target_heatmap")
-        root = w.parents[1]
+        root = context.root("workstation")
         source = root / "outputs/mammal_SCENIC_2026-10-23/selected"
         targets = root / "outputs/mammal_SCENIC_regulon_screen_2026-10-23/data"
         inputs = []
@@ -904,5 +908,406 @@ def _prepare_heatmap(context):
         )
         (w / "audit/preparation.json").write_text(json.dumps(plan, indent=2) + "\n")
         print(json.dumps(plan, indent=2))
+
+    return SimpleNamespace(**locals())
+
+
+def _whole_map_panels(context):
+    """Existing whole-map figure procedure; only argument defaults and execution scope changed."""
+
+    def main():
+        """Scientific figures: descriptive full-map sums and body mass."""
+        from pathlib import Path
+        import argparse, json, sys
+        import numpy as np, pandas as pd
+        import matplotlib
+
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        from matplotlib.colors import TwoSlopeNorm
+        from PIL import Image
+
+        ap = argparse.ArgumentParser()
+        ap.add_argument(
+            "--selected", type=Path, default=context.root("repository") / "data/snapshots/all_maps"
+        )
+        ap.add_argument("--out", type=Path, required=True)
+        a = ap.parse_args(context.argv)
+        D = a.selected
+        O = a.out
+        O.mkdir(parents=True, exist_ok=True)
+        T = pd.read_csv(D / "results/map_tests.tsv.gz", sep="\t")
+        H = pd.read_csv(D / "results/Pearson_BH_hits.tsv", sep="\t")
+        S = pd.read_csv(D / "results/Pearson_hit_species_scores.tsv", sep="\t")
+        DI = pd.read_csv(D / "results/Pearson_hit_diagnostics.tsv", sep="\t")
+        SU = json.loads((D / "results/descriptive_summary.json").read_text())
+        BLUE = "#3467DB"
+        RED = "#C35646"
+        INK = "#172238"
+        GRAY = "#65738A"
+        LIGHT = "#E8ECF3"
+        plt.rcParams.update(
+            {
+                "font.family": "DejaVu Sans",
+                "font.size": 11,
+                "text.color": INK,
+                "axes.labelcolor": INK,
+                "axes.spines.top": False,
+                "axes.spines.right": False,
+                "axes.edgecolor": "#BAC3D2",
+                "axes.axisbelow": True,
+                "axes.grid": True,
+                "grid.color": LIGHT,
+                "grid.linewidth": 0.65,
+                "svg.fonttype": "none",
+                "figure.facecolor": "white",
+                "savefig.facecolor": "white",
+            }
+        )
+
+        def fig(title, sub, foot):
+            f = plt.figure(figsize=(16, 9), dpi=200)
+            f.text(0.04, 0.95, title, fontweight="bold", fontsize=22)
+            f.text(0.04, 0.901, sub, fontsize=11.2, color=GRAY)
+            f.add_artist(
+                plt.Line2D([0.04, 0.965], [0.105, 0.105], transform=f.transFigure, color=LIGHT)
+            )
+            f.text(0.04, 0.06, foot, fontsize=11, fontweight="bold")
+            f.text(
+                0.04,
+                0.021,
+                "Млекопитающие · суммы нормированной RNA · описательный поиск · 23 октября 2026",
+                fontsize=9,
+                color=GRAY,
+            )
+            return f
+
+        def save(f, stem):
+            f.canvas.draw()
+            for text in f.texts:
+                while (
+                    text.get_window_extent(f.canvas.get_renderer()).x1 > f.bbox.x1 * 0.98
+                    and text.get_fontsize() > 9
+                ):
+                    text.set_fontsize(text.get_fontsize() - 0.5)
+                    f.canvas.draw()
+            f.savefig(O / (stem + ".png"), dpi=200)
+            f.savefig(O / (stem + ".svg"))
+            plt.close(f)
+
+        programmes = [
+            (
+                "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE",
+                "Ресничная переходная зона",
+                BLUE,
+            ),
+            (
+                "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION",
+                "Регуляция окисления жирных кислот (+)",
+                BLUE,
+            ),
+            (
+                "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS",
+                "Регуляция метаболизма гликогена (−)",
+                RED,
+            ),
+        ]
+        shortspecies = [
+            "Мышь",
+            "Саймири",
+            "Макак лапундер",
+            "Макак резус",
+            "Павиан анубис",
+            "Бонобо",
+            "Шимпанзе",
+            "Человек",
+            "Горилла",
+        ]
+        gsp = np.load(D / "results/gse105160_design.npz")["species"].tolist()
+        f = fig(
+            "Целые измеренные карты уже дают сильные размерные связи",
+            "GSE105160 · 9 видов · сначала сумма линейной RNA всех измеренных генов карты, затем log₁₀ · обычная корреляция Пирсона",
+            "Три знакомые темы сохраняются при суммировании всех измеренных компонентов карт; все три проходят FDR по 10 880 картам.",
+        )
+        gs = f.add_gridspec(1, 3, left=0.07, right=0.96, bottom=0.32, top=0.76, wspace=0.27)
+        for j, (sid, title, color) in enumerate(programmes):
+            z = (
+                S[(S["mode"] == "panel_available") & S.panel.eq("gse105160") & S.set_id.eq(sid)]
+                .set_index("species")
+                .loc[gsp]
+            )
+            row = T[
+                (T["mode"] == "panel_available") & T.panel.eq("gse105160") & T.set_id.eq(sid)
+            ].iloc[0]
+            diag = DI[
+                (DI["mode"] == "panel_available") & DI.panel.eq("gse105160") & DI.set_id.eq(sid)
+            ].iloc[0]
+            x = z.log10_mass.to_numpy()
+            y = z.log10_sum.to_numpy()
+            ax = f.add_subplot(gs[0, j])
+            ax.scatter(x, y, s=34, color=color, zorder=4, edgecolor="white", linewidth=0.7)
+            xx = np.linspace(x.min(), x.max(), 100)
+            b = np.polyfit(x, y, 1)
+            ax.plot(xx, np.polyval(b, xx), color=color, lw=2, alpha=0.8)
+            ax.margins(x=0.12, y=0.17)
+            for i, (px, py) in enumerate(zip(x, y)):
+                ax.annotate(
+                    str(i + 1),
+                    (px, py),
+                    xytext=(4, 6 if i not in [3, 6] else -13),
+                    textcoords="offset points",
+                    fontsize=9,
+                    color=INK,
+                    fontweight="bold",
+                )
+            ax.set_title(title, fontsize=12.1, fontweight="bold", loc="left", pad=48)
+            ax.text(
+                0,
+                1.08,
+                f"r = {row.r_Pearson:+.3f}    BH q = {row.q_Pearson_panel:.3f}",
+                transform=ax.transAxes,
+                fontsize=12,
+                color=color,
+                fontweight="bold",
+            )
+            ax.text(
+                0,
+                1.015,
+                f"{row.n_measured}/{row.n_canonical} генов карты · β = {row.beta_OLS:+.3f}",
+                transform=ax.transAxes,
+                fontsize=10,
+                color=GRAY,
+            )
+            ax.set_xlabel("log₁₀ массы тела, г")
+            ax.set_ylabel("log₁₀ суммы нормированной RNA")
+            ax.text(
+                0,
+                -0.22,
+                f"Удаление одного вида: min |r| = {diag.loo_min_abs_r:.3f}",
+                transform=ax.transAxes,
+                fontsize=10,
+                color=GRAY,
+            )
+        for j in range(3):
+            f.text(
+                0.07 + j * 0.307,
+                0.183,
+                " · ".join((f"{i + 1} {shortspecies[i]}" for i in range(j * 3, j * 3 + 3))),
+                fontsize=10.3,
+                color=GRAY,
+            )
+        f.text(
+            0.07,
+            0.131,
+            "Знаки (+)/(−) входят в аннотацию GO. По сумме RNA мы измеряем ассоциацию набора генов, без измерения потока реакции.",
+            fontsize=9.5,
+            color=GRAY,
+        )
+        save(f, "01_whole_maps_three_programmes")
+        names = {
+            "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE": "Белки ресничной переходной зоны",
+            "GO_CC:GOCC_MKS_COMPLEX": "Комплекс MKS",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION": "Окисление жирных кислот: регуляция (+)",
+            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS": "Метаболизм гликогена: регуляция (−)",
+            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_BIOSYNTHETIC_PROCESS": "Синтез гликогена: регуляция (−)",
+            "Reactome:REACTOME_RRNA_MODIFICATION_IN_THE_MITOCHONDRION": "Модификация митохондриальной рРНК",
+            "Reactome:REACTOME_NFE2L2_REGULATING_ER_STRESS_ASSOCIATED_GENES": "Гены ER-стресса под регуляцией NFE2L2",
+            "GO_BP:GOBP_ISOPENTENYL_DIPHOSPHATE_BIOSYNTHETIC_PROCESS_MEVALONATE_PATHWAY": "Мевалонатный путь: синтез изопентенил-PP",
+            "GO_MF:GOMF_HETEROTRIMERIC_G_PROTEIN_BINDING": "Связывание гетеротримерного G-белка",
+            "GO_BP:GOBP_REGULATION_OF_GLUTAMATE_RECEPTOR_CLUSTERING": "Кластеризация глутаматных рецепторов",
+            "GO_BP:GOBP_FIBROBLAST_ACTIVATION": "Активация фибробластов",
+            "GO_BP:GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CONTRACTION": "Сокращение сосудистых гладких мышц",
+            "GO_BP:GOBP_ARTICULAR_CARTILAGE_DEVELOPMENT": "Развитие суставного хряща",
+            "GO_BP:GOBP_REGULATION_OF_SOMATIC_STEM_CELL_POPULATION_MAINTENANCE": "Поддержание соматических стволовых клеток",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_INTERLEUKIN_5_PRODUCTION": "Продукция интерлейкина-5: регуляция (+)",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_CELL_ACTIVATION": "Активация клеток: регуляция (+)",
+            "GO_BP:GOBP_DEPYRIMIDINATION": "Депиримидинизация ДНК",
+            "GO_BP:GOBP_PLASMA_MEMBRANE_PHOSPHOLIPID_SCRAMBLING": "Перераспределение фосфолипидов мембраны",
+        }
+        ids = list(names)
+        assert set(ids) == set(H[H["mode"].eq("panel_available")].set_id)
+        f = fig(
+            "18 ассоциаций GSE105160: что видно в остальных панелях",
+            "Все 18 проходят BH q<0,05 в GSE105160 · цвет и число — Pearson r · каждая панель использует свою фиксированную измеренную часть карты",
+            "Это 18 связанных с размером карт в GSE105160. Остальные панели показывают, где наблюдается сходная или другая картина.",
+        )
+        ax = f.add_axes([0.345, 0.178, 0.32, 0.637])
+        pa = ["ma2016", "gse105160", "wagner"]
+        mat = np.full((len(ids), 3), np.nan)
+        for i, sid in enumerate(ids):
+            for j, p in enumerate(pa):
+                z = T[T["mode"].eq("panel_available") & T.panel.eq(p) & T.set_id.eq(sid)]
+                if len(z):
+                    mat[i, j] = z.r_Pearson.iloc[0]
+        cmap = plt.get_cmap("RdBu").copy()
+        cmap.set_bad("#E9EDF2")
+        ax.imshow(mat, cmap=cmap, norm=TwoSlopeNorm(vmin=-1, vcenter=0, vmax=1), aspect="auto")
+        ax.grid(False)
+        ax.set_xticks(
+            range(3), ["Ma2016\n15 видов", "GSE105160\n9 видов", "Wagner\n11 видов"], fontsize=11
+        )
+        ax.xaxis.tick_top()
+        ax.set_yticks(range(len(ids)), [names[s] for s in ids], fontsize=9.7)
+        ax.tick_params(axis="y", length=0, pad=10)
+        ax.tick_params(axis="x", length=0, pad=12)
+        for i in range(len(ids)):
+            for j in range(3):
+                ax.text(
+                    j,
+                    i,
+                    "—" if np.isnan(mat[i, j]) else f"{mat[i, j]:+.2f}",
+                    ha="center",
+                    va="center",
+                    fontsize=10,
+                    color="white" if np.isfinite(mat[i, j]) and abs(mat[i, j]) > 0.65 else INK,
+                )
+        ax2 = f.add_axes([0.755, 0.178, 0.2, 0.637])
+        ax2.axvline(0, color="#A9B3C2", lw=0.8)
+        for i, sid in enumerate(ids):
+            row = DI[
+                DI["mode"].eq("panel_available") & DI.panel.eq("gse105160") & DI.set_id.eq(sid)
+            ].iloc[0]
+            r = mat[i, 1]
+            col = BLUE if r > 0 else RED
+            ax2.plot(
+                [row.loo_min_r, row.loo_max_r], [i, i], color=col, lw=3, solid_capstyle="round"
+            )
+            ax2.plot(r, i, "o", color=col, ms=4)
+        ax2.set_ylim(len(ids) - 0.5, -0.5)
+        ax2.set_xlim(-1.06, 1.06)
+        ax2.set_xticks([-1, 0, 1])
+        ax2.set_yticks([])
+        ax2.set_title(
+            "GSE: удаляем по одному виду\nдиапазон r; точка — все 9 видов", fontsize=10.5, pad=24
+        )
+        ax2.set_xlabel("Pearson r", fontsize=10)
+        f.text(
+            0.04,
+            0.132,
+            "— измерено менее 5 генов карты; составы карт между панелями различаются.",
+            fontsize=9.5,
+            color=GRAY,
+        )
+        save(f, "02_all_18_maps_context")
+        f = fig(
+            "Все карты: охват поиска и зависимость от состава суммы",
+            "12 701 карта: KEGG 372 · GO BP 7 538 · GO MF 1 872 · GO CC 1 080 · Reactome 1 839 · минимум 5 измеренных генов",
+            "Основной результат — 18 карт GSE105160. На меньшем общем составе есть ещё три ассоциации Ma2016; состав суммы имеет значение.",
+        )
+        gs = f.add_gridspec(
+            1,
+            3,
+            left=0.07,
+            right=0.96,
+            bottom=0.26,
+            top=0.77,
+            width_ratios=[1, 1.1, 1.4],
+            wspace=0.35,
+        )
+        ax = f.add_subplot(gs[0, 0])
+        zs = [
+            next((z for z in SU["panels"] if z["mode"] == "panel_available" and z["panel"] == p))
+            for p in pa
+        ]
+        ax.barh(range(3), [z["n_maps"] for z in zs], color=[GRAY, BLUE, GRAY])
+        ax.set_yticks(range(3), ["Ma2016", "GSE105160", "Wagner"])
+        ax.invert_yaxis()
+        ax.set_xlim(0, 13300)
+        ax.set_xlabel("Карт с измеренным составом ≥5 генов")
+        ax.set_title(
+            "A  Реально проверенные карты", loc="left", fontsize=12, fontweight="bold", pad=17
+        )
+        for i, z in enumerate(zs):
+            ax.text(
+                z["n_maps"] + 180, i, f"{z['n_maps']:,}".replace(",", " "), va="center", fontsize=11
+            )
+        ax = f.add_subplot(gs[0, 1])
+        xx = np.arange(3)
+        main = [z["BH05"] for z in zs]
+        common = [
+            next(
+                (z["BH05"] for z in SU["panels"] if z["mode"] == "all3_common" and z["panel"] == p)
+            )
+            for p in pa
+        ]
+        ax.bar(xx - 0.18, main, 0.35, color=BLUE, label="Все измеренные гены карты")
+        ax.bar(xx + 0.18, common, 0.35, color="#94A8CE", label="Гены, общие трём панелям")
+        ax.set_xticks(xx, ["Ma2016", "GSE105160", "Wagner"])
+        ax.set_ylim(0, 23)
+        ax.set_ylabel("Карт с BH q<0,05 · Pearson")
+        ax.set_title("B  Ассоциации после FDR", loc="left", fontsize=12, fontweight="bold", pad=17)
+        ax.legend(loc="upper right", fontsize=8.5, frameon=False)
+        for i, (v, w) in enumerate(zip(main, common)):
+            ax.text(i - 0.18, v + 0.3, str(v), ha="center", fontsize=12, fontweight="bold")
+            ax.text(i + 0.18, w + 0.3, str(w), ha="center", fontsize=12, color=GRAY)
+        ax = f.add_subplot(gs[0, 2])
+        sid = "GO_BP:GOBP_POSITIVE_REGULATION_OF_RNA_SPLICING"
+        z = S[S["mode"].eq("all3_common") & S.panel.eq("ma2016") & S.set_id.eq(sid)].sort_values(
+            "log10_mass"
+        )
+        row = T[T["mode"].eq("all3_common") & T.panel.eq("ma2016") & T.set_id.eq(sid)].iloc[0]
+        x = z.log10_mass.to_numpy()
+        y = z.log10_sum.to_numpy()
+        ax.scatter(x, y, color=RED, s=28)
+        ax.plot(x, np.polyval(np.polyfit(x, y, 1), x), color=RED, lw=2)
+        ax.set_xlabel("log₁₀ массы тела, г")
+        ax.set_ylabel("log₁₀ суммы 14 общих генов")
+        ax.set_title(
+            "C  Ma2016: регуляция сплайсинга (+)",
+            loc="left",
+            fontsize=12,
+            fontweight="bold",
+            pad=38,
+        )
+        ax.text(
+            0,
+            1.025,
+            f"r={row.r_Pearson:.3f} · BH q={row.q_Pearson_panel:.3f} · 15 видов",
+            transform=ax.transAxes,
+            fontsize=10,
+            color=RED,
+        )
+        f.text(
+            0.07,
+            0.157,
+            "Общий состав: 4 825 генов, 7 414 карт в каждой панели. Это отдельная чувствительность с меньшими фрагментами карт.",
+            fontsize=10,
+            color=GRAY,
+        )
+        save(f, "03_catalogue_and_composition")
+        stems = [
+            "01_whole_maps_three_programmes",
+            "02_all_18_maps_context",
+            "03_catalogue_and_composition",
+        ]
+        sheet = Image.new("RGB", (1600, 2700), "white")
+        for i, stem in enumerate(stems):
+            im = Image.open(O / (stem + ".png"))
+            im.thumbnail((1600, 900))
+            sheet.paste(im, (0, i * 900))
+        sheet.save(O / "preview.jpg", quality=92)
+        (O / "gallery.html").write_text(
+            '<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Суммы карт и размер млекопитающих</title><style>body{margin:0;background:#eef1f6;font:16px system-ui}main{max-width:1600px;margin:auto}img{width:100%;margin:18px 0}a{color:#3467db}</style><main>'
+            + "".join(
+                (
+                    f'<a href="{s}.png"><img src="{s}.png" alt="{s}"></a><a href="{s}.svg">SVG</a>'
+                    for s in stems
+                )
+            )
+            + "</main></html>"
+        )
+        (O / "plot_environment.json").write_text(
+            json.dumps(
+                dict(
+                    python=sys.version,
+                    numpy=np.__version__,
+                    matplotlib=matplotlib.__version__,
+                    png_dimensions=[3200, 1800],
+                    new_inference=False,
+                ),
+                indent=2,
+            )
+        )
+        print(json.dumps(dict(figures=stems)))
 
     return SimpleNamespace(**locals())

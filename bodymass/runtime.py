@@ -34,6 +34,8 @@ class Context:
         explicit = self.settings.get("runs", {}).get(name)
         if explicit:
             return Path(explicit).expanduser().resolve()
+        if name == "network_summary":
+            return PACKAGE_ROOT / "data/snapshots/networks"
         if name in {"figure_bank", "regulon_scatter", "target_heatmap"}:
             return PACKAGE_ROOT / "figures" / name
         names = {
@@ -81,3 +83,22 @@ class Context:
             "runs": self.settings.get("runs", {}),
             "executes_analysis": False,
         }
+
+
+def verify_data():
+    """Verify packaged bytes; this is integrity checking, not biological replication."""
+    import hashlib
+
+    manifest = json.loads((PACKAGE_ROOT / "provenance/data_manifest.json").read_text())
+    failures = []
+    for item in manifest["files"]:
+        path = PACKAGE_ROOT / item["path"]
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            failures.append(item["path"])
+    if failures:
+        raise ValueError("Missing or changed packaged data: " + ", ".join(failures))
+    return {
+        "status": "passed",
+        "checked_files": len(manifest["files"]),
+        "biological_replication": False,
+    }

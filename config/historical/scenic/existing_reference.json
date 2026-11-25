@@ -1,0 +1,19 @@
+{
+  "database": "owner:Dosage_compensation_proj/data/cisTarget/hg38/hg38_500bp_up_100bp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather",
+  "annotation": "owner:Dosage_compensation_proj/data/cisTarget/hg38/v10nr_clust_public/snapshots/motifs-v10-nr.hgnc-m0.00001-o0.0.tbl",
+  "database_sha256": "50bd3a2e0da17bf74ad31b1a2f284ebbacfad700a07a540a7a1d3db5e185eaac",
+  "annotation_sha256": "81eb754118e27e854974301b1400fcf519489f8be5249239671fb288cb501c31",
+  "database_genes": 27015,
+  "motifs": 5876,
+  "matched_motif_annotations": 5876,
+  "expression_covered": 10616,
+  "expression_total": 11332,
+  "module_covered": {
+    "orange": 71,
+    "violet": 54,
+    "cyan": 109,
+    "skyblue3": 42
+  },
+  "amendment": "User pointed to preexisting cisTarget on host1. Existing hg38 v10 database selected before pruning/seeing motif results; custom assembly stopped after short-window database. Original GRN inputs and seeds unchanged.",
+  "provider_checksum_verified": false
+}

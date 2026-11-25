@@ -1,0 +1,160 @@
+{
+  "catalog_counts": {
+    "GO_BP": 7538,
+    "GO_MF": 1872,
+    "Reactome": 1839,
+    "GO_CC": 1080,
+    "KEGG": 372
+  },
+  "catalog_total": 12701,
+  "common_genes": 4825,
+  "panels": [
+    {
+      "mode": "all3_common",
+      "panel": "gse105160",
+      "n_tests": 7414,
+      "nominal": 59,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.9954325674670569,
+      "Pearson_BH": 0,
+      "coverage_median": 0.35714285714285715,
+      "maps_ge50pct": 1315
+    },
+    {
+      "mode": "all3_common",
+      "panel": "ma2016",
+      "n_tests": 7414,
+      "nominal": 394,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.3558123580896537,
+      "Pearson_BH": 3,
+      "coverage_median": 0.35714285714285715,
+      "maps_ge50pct": 1315
+    },
+    {
+      "mode": "all3_common",
+      "panel": "wagner",
+      "n_tests": 7414,
+      "nominal": 793,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.43021562501663996,
+      "Pearson_BH": 0,
+      "coverage_median": 0.35714285714285715,
+      "maps_ge50pct": 1315
+    },
+    {
+      "mode": "panel_available",
+      "panel": "gse105160",
+      "n_tests": 10880,
+      "nominal": 150,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.9988353675232408,
+      "Pearson_BH": 18,
+      "coverage_median": 0.7647058823529411,
+      "maps_ge50pct": 9947
+    },
+    {
+      "mode": "panel_available",
+      "panel": "ma2016",
+      "n_tests": 9488,
+      "nominal": 397,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.7243989573411079,
+      "Pearson_BH": 0,
+      "coverage_median": 0.6,
+      "maps_ge50pct": 6514
+    },
+    {
+      "mode": "panel_available",
+      "panel": "wagner",
+      "n_tests": 8245,
+      "nominal": 733,
+      "BH_panel": 0,
+      "BH_all_tests": 0,
+      "q_min": 0.5049597076880145,
+      "Pearson_BH": 0,
+      "coverage_median": 0.4222222222222222,
+      "maps_ge50pct": 2500
+    }
+  ],
+  "replication": [
+    {
+      "mode": "all3_common",
+      "panels": "gse105160+wagner",
+      "n_terms": 7414,
+      "nominal": 2,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "all3_common",
+      "panels": "ma2016+gse105160",
+      "n_terms": 7414,
+      "nominal": 0,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "all3_common",
+      "panels": "ma2016+gse105160+wagner",
+      "n_terms": 7414,
+      "nominal": 0,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "all3_common",
+      "panels": "ma2016+wagner",
+      "n_terms": 7414,
+      "nominal": 12,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "panel_available",
+      "panels": "gse105160+wagner",
+      "n_terms": 8237,
+      "nominal": 5,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "panel_available",
+      "panels": "ma2016+gse105160",
+      "n_terms": 9480,
+      "nominal": 0,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "panel_available",
+      "panels": "ma2016+gse105160+wagner",
+      "n_terms": 8030,
+      "nominal": 0,
+      "BH": 0,
+      "q_min": 1.0
+    },
+    {
+      "mode": "panel_available",
+      "panels": "ma2016+wagner",
+      "n_terms": 8030,
+      "nominal": 6,
+      "BH": 0,
+      "q_min": 1.0
+    }
+  ],
+  "limits": [
+    "Relative normalized RNA sums, not absolute RNA per cell or flux.",
+    "Human-reference catalog symbols use inherited mapping; not a new native orthology audit.",
+    "Partial measured map composition differs between panels in panel_available; all3_common fixes composition.",
+    "Small species counts, different source contexts and pathway overlap remain.",
+    "Post hoc whole-catalog screen, not independent validation of previously selected own5."
+  ],
+  "human_review": "not_completed",
+  "training_enabled": false
+}

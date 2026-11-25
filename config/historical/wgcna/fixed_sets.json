@@ -1,0 +1,300 @@
+{
+  "bird": {
+    "amino_5": [
+      "ASNS",
+      "PGK1",
+      "PHGDH",
+      "PYCR1",
+      "TALDO1"
+    ],
+    "carbon_7": [
+      "AMT",
+      "FH",
+      "GPI",
+      "PGD",
+      "PGK1",
+      "PHGDH",
+      "TALDO1"
+    ],
+    "epi_lipid_3": [
+      "ATF4",
+      "TNFRSF1A",
+      "XBP1"
+    ],
+    "folate_12": [
+      "AHCY",
+      "ALDH7A1",
+      "AMT",
+      "ATIC",
+      "CTH",
+      "DHFR",
+      "GCSH",
+      "MAT2B",
+      "MTHFD1",
+      "MTHFD1L",
+      "MTHFD2",
+      "TYMS"
+    ],
+    "green_51_rest": [
+      "ACBD5",
+      "AGK",
+      "ASNS",
+      "BBS5",
+      "BRCA1",
+      "C5H11ORF58",
+      "CDCA2",
+      "CEP112",
+      "CIZ1",
+      "EIF2B4",
+      "EIF3D",
+      "FEM1B",
+      "FH",
+      "GPI",
+      "IFITM3",
+      "KIF20A",
+      "MARCKSL1",
+      "MCMBP",
+      "MKRN2",
+      "NUDCD2",
+      "NUP160",
+      "ORC4",
+      "PALB2",
+      "PGD",
+      "PGK1",
+      "PSMD6",
+      "PSMF1",
+      "PTRH2",
+      "RCHY1",
+      "RNF214",
+      "RTN4IP1",
+      "SF3A1",
+      "SKA3",
+      "SPC25",
+      "SRSF6",
+      "TALDO1",
+      "TBC1D31",
+      "THOC3",
+      "YTHDF1",
+      "ZNHIT6",
+      "ZW10"
+    ],
+    "green_hubs_7": [
+      "CCNDBP1",
+      "FLVCR1",
+      "MRPL28",
+      "NDUFA13",
+      "POLR2C",
+      "RRP1B",
+      "SNRPA1"
+    ],
+    "mitochondrial_14": [
+      "ATP5F1E",
+      "COX6A1",
+      "COX6C",
+      "NDUFA5",
+      "NDUFA7",
+      "NDUFAB1",
+      "NDUFB2",
+      "NDUFB5",
+      "NDUFB6",
+      "NDUFB8",
+      "NDUFC2",
+      "SDHD",
+      "UQCR10",
+      "UQCRC1"
+    ],
+    "nafld_4": [
+      "ADIPOR1",
+      "NDUFA10",
+      "NDUFA5",
+      "NDUFB2"
+    ],
+    "oxphos_16": [
+      "ATP5F1E",
+      "ATP6V0E1",
+      "ATP6V0E2",
+      "COX6A1",
+      "COX6C",
+      "NDUFA5",
+      "NDUFA7",
+      "NDUFAB1",
+      "NDUFB2",
+      "NDUFB5",
+      "NDUFB6",
+      "NDUFB8",
+      "NDUFC2",
+      "SDHD",
+      "UQCR10",
+      "UQCRC1"
+    ],
+    "ribo_5": [
+      "DKC1",
+      "GNL2",
+      "MDN1",
+      "RAN",
+      "RIOK2"
+    ],
+    "v_atpase_2": [
+      "ATP6V0E1",
+      "ATP6V0E2"
+    ],
+    "anabolic_amino_acids": [
+      "ALDH18A1",
+      "ASNS",
+      "CBS",
+      "CTH",
+      "GLUL",
+      "GOT1",
+      "GOT2",
+      "GPT",
+      "GPT2",
+      "PHGDH",
+      "PSAT1",
+      "PSPH",
+      "PYCR1",
+      "PYCR2",
+      "PYCR3",
+      "SHMT1",
+      "SHMT2"
+    ],
+    "cytosolic_folate_nucleotide": [
+      "ADSL",
+      "ADSS1",
+      "ADSS2",
+      "ALDH1L1",
+      "ATIC",
+      "CAD",
+      "DHFR",
+      "DHODH",
+      "GART",
+      "GMPS",
+      "IMPDH1",
+      "IMPDH2",
+      "MTHFD1",
+      "PAICS",
+      "PFAS",
+      "PPAT",
+      "SHMT1",
+      "TYMS",
+      "UMPS"
+    ],
+    "methionine_sam": [
+      "AHCY",
+      "MAT1A",
+      "MAT2A",
+      "MAT2B",
+      "MTHFR",
+      "MTR",
+      "MTRR"
+    ],
+    "mitochondrial_1c": [
+      "ALDH1L2",
+      "MTHFD1L",
+      "MTHFD2",
+      "MTHFD2L",
+      "SHMT2"
+    ],
+    "ppp": [
+      "G6PD",
+      "PGD",
+      "PGLS",
+      "RPE",
+      "RPIA",
+      "TALDO1",
+      "TKT"
+    ],
+    "serine_glycine": [
+      "AMT",
+      "DLD",
+      "GCSH",
+      "GLDC",
+      "PHGDH",
+      "PSAT1",
+      "PSPH",
+      "SHMT1",
+      "SHMT2"
+    ],
+    "ATF4__amino_acid_metabolism": [
+      "GOT1",
+      "GPT2",
+      "LARS",
+      "PSAT1",
+      "SLC7A5"
+    ],
+    "ATF4__amino_acid_transport": [
+      "SLC1A4",
+      "SLC7A11",
+      "SLC7A5"
+    ],
+    "ATF4__tRNA_charging": [
+      "AARS",
+      "GARS",
+      "LARS",
+      "NARS",
+      "TARS",
+      "YARS"
+    ],
+    "YY1__RNA_metabolism": [
+      "CPSF2",
+      "CWC27",
+      "DNAJC8",
+      "EXOSC2",
+      "LUC7L3",
+      "URM1",
+      "UTP20"
+    ],
+    "FIXED_MAP|Reactome|R-GGA-350562": [
+      "ODC1",
+      "PSMA7",
+      "PSMB7",
+      "PSMC2",
+      "PSMC5",
+      "PSMD14",
+      "PSMD6",
+      "PSMD7"
+    ],
+    "FIXED_MAP|Reactome|R-GGA-9861718": [
+      "DLAT",
+      "MAEA",
+      "NEK1",
+      "PDHA1",
+      "PDHB",
+      "PDHX",
+      "PDK1",
+      "RPS27A",
+      "WDR26"
+    ]
+  },
+  "mammal": {
+    "mammal:IL receptor SHC": [
+      "PIK3R1",
+      "PIK3R3",
+      "SHC1"
+    ],
+    "mammal:basigin": [
+      "ITGA6",
+      "ITGB1",
+      "SLC16A3",
+      "SLC7A11"
+    ],
+    "mammal:ciliary transition zone": [
+      "B9D1",
+      "NPHP4",
+      "RPGRIP1L",
+      "SPATA7",
+      "TCTN1",
+      "TCTN3",
+      "TMEM237"
+    ],
+    "mammal:fatty acid oxidation": [
+      "IRS2",
+      "PPARA",
+      "TWIST1"
+    ],
+    "mammal:glycogen, down": [
+      "GRB10",
+      "GSK3A",
+      "SELENOS"
+    ]
+  }
+}

@@ -1,11 +1,38 @@
+output_dir <- function(argv, fallback) {
+  i <- match("--out", argv)
+  if (!is.na(i) && (i == length(argv) || startsWith(argv[i+1], "--"))) stop("--out needs a directory")
+  out <- if (is.na(i)) fallback else argv[i+1]
+  dir.create(file.path(out,"audit"), recursive=TRUE, showWarnings=FALSE)
+  dir.create(file.path(out,"data"), recursive=TRUE, showWarnings=FALSE)
+  normalizePath(out)
+}
+
+svg_device <- function(filename, width, height, bg='white') {
+  if(requireNamespace('svglite',quietly=TRUE)) svglite::svglite(filename,width=width,height=height,bg=bg)
+  else grDevices::svg(filename,width=width,height=height,bg=bg)
+}
+
 regulons <- function(run_dir=NULL, argv=character()) {
   suppressPackageStartupMessages({library(ggplot2);library(ggrepel);library(jsonlite)})
-  w<-normalizePath(run_dir);root<-Sys.getenv("BODYMASS_WORKSTATION")
+  w<-normalizePath(run_dir);root<-Sys.getenv("BODYMASS_WORKSTATION");out<-output_dir(argv,file.path('results',basename(w)))
   .libPaths(c(file.path(root,'outputs/mammal_R_SVG_2026-10-23/R_library'),.libPaths()))
+  if("--verify-originals" %in% argv) {
   src<-file.path(root,'outputs/mammal_SCENIC_2026-10-23/selected')
   auc<-read.delim(file.path(src,'results/analysis/AUCell_species.tsv'),check.names=FALSE)
   traits<-read.delim(file.path(src,'inputs/species_traits.tsv'),check.names=FALSE)
   checked<-read.delim(file.path(root,'outputs/mammal_WGCNA_GO_2026-10-23/data/ERG_FOXP4_verified.tsv'),check.names=FALSE)
+  } else {
+    frozen<-read.delim(file.path(w,'data/species_activity.tsv'),check.names=FALSE)
+    fits<-read.delim(file.path(w,'data/display_fits.tsv'),check.names=FALSE)
+    sp<-unique(frozen$species)
+    auc<-data.frame(species=sp,check.names=FALSE)
+    for(tf in c('ERG','FOXP4')) {
+      z<-frozen[frozen$TF==tf,];stopifnot(!anyDuplicated(z$species))
+      auc[[paste0(tf,'(+)')]]<-z$activity[match(sp,z$species)]
+    }
+    traits<-unique(frozen[,c('species','mass_g')]);stopifnot(nrow(traits)==15)
+    checked<-data.frame(seed=20261023,regulon=paste0(fits$TF,'(+)'),mass_r=fits$r,mass_p=fits$p,mass_q=fits$q,targets_nonself=fits$targets_nonself)
+  }
   stats<-checked[checked$seed==20261023,];stopifnot(nrow(stats)==2,nrow(auc)==15,!anyDuplicated(auc$species))
   traits<-traits[match(auc$species,traits$species),];stopifnot(!anyNA(traits$mass_g),all(traits$mass_g>0))
   rows<-list();fits<-list();cols<-c(ERG='#2166AC',FOXP4='#984EA3')
@@ -31,20 +58,21 @@ regulons <- function(run_dir=NULL, argv=character()) {
    labs(title='E',x='Log10 body mass (g)',y='Regulon activity (AUCell)')+
    theme_light(base_size=12,base_family='sans')+
    theme(plot.title=element_text(size=21,face='bold',hjust=0,margin=margin(b=9)),axis.title=element_text(size=12.5),axis.title.x=element_text(margin=margin(t=9)),axis.text=element_text(size=10.5,color='black'),panel.grid.minor=element_blank(),strip.background=element_blank(),strip.text=element_text(size=12,color='black',lineheight=1.25,margin=margin(b=12)),panel.spacing.x=grid::unit(2,'lines'),plot.margin=margin(12,20,10,10))
-  svglite::svglite(file.path(w,'Panel_E_ERG_FOXP4.svg'),width=12,height=6.4,bg='white');print(p);dev.off()
-  ggsave(file.path(w,'audit/preview.png'),p,width=12,height=6.4,dpi=160,bg='white')
-  write.table(d,file.path(w,'data/species_activity.tsv'),sep='\t',quote=TRUE,row.names=FALSE)
-  write.table(fits,file.path(w,'data/display_fits.tsv'),sep='\t',quote=FALSE,row.names=FALSE)
-  write_json(list(R=R.version.string,packages=setNames(lapply(c('ggplot2','ggrepel','svglite','jsonlite'),function(n)as.character(packageVersion(n))),c('ggplot2','ggrepel','svglite','jsonlite')),study='Ma2016',species=15,primary_seed=20261023,facets=c('ERG','FOXP4'),source_values='Previously independently verified primary species-mean AUCell and mass r/p/q; q across all 187 primary regulons.',new_SCENIC=FALSE,new_association_tests=FALSE,display_fits='Ordinary least squares AUCell against log10 mass; lines extend to entire displayed x range.',different_y_scales=TRUE,own_TF_in_signature=list(ERG=TRUE,FOXP4=FALSE),figure_approval='pending',presentation_modified=FALSE),file.path(w,'audit/render.json'),auto_unbox=TRUE,pretty=TRUE,digits=16)
+  svg_device(file.path(out,'Panel_E_ERG_FOXP4.svg'),width=12,height=6.4,bg='white');print(p);dev.off()
+  ggsave(file.path(out,'audit/preview.png'),p,width=12,height=6.4,dpi=160,bg='white')
+  write.table(d,file.path(out,'data/species_activity.tsv'),sep='\t',quote=TRUE,row.names=FALSE)
+  write.table(fits,file.path(out,'data/display_fits.tsv'),sep='\t',quote=FALSE,row.names=FALSE)
+  write_json(list(R=R.version.string,packages=setNames(lapply(c('ggplot2','ggrepel','svglite','jsonlite'),function(n)if(requireNamespace(n,quietly=TRUE))as.character(packageVersion(n))else "not installed; base SVG fallback"),c('ggplot2','ggrepel','svglite','jsonlite')),study='Ma2016',species=15,primary_seed=20261023,facets=c('ERG','FOXP4'),source_values='Previously independently verified primary species-mean AUCell and mass r/p/q; q across all 187 primary regulons.',new_SCENIC=FALSE,new_association_tests=FALSE,display_fits='Ordinary least squares AUCell against log10 mass; lines extend to entire displayed x range.',different_y_scales=TRUE,own_TF_in_signature=list(ERG=TRUE,FOXP4=FALSE),figure_approval='pending',presentation_modified=FALSE),file.path(out,'audit/render.json'),auto_unbox=TRUE,pretty=TRUE,digits=16)
 }
 
 targets <- function(run_dir=NULL, argv=character()) {
   suppressPackageStartupMessages({library(ggplot2);library(patchwork);library(jsonlite)})
-  w<-normalizePath(run_dir);root<-Sys.getenv("BODYMASS_WORKSTATION")
+  w<-normalizePath(run_dir);root<-Sys.getenv("BODYMASS_WORKSTATION");out<-output_dir(argv,file.path('results',basename(w)))
   .libPaths(c(file.path(root,'outputs/mammal_R_SVG_2026-10-23/R_library'),.libPaths()))
   d<-read.delim(file.path(w,'data/species_gene_expression.tsv'),check.names=FALSE)
   sel<-read.delim(file.path(w,'data/selected_targets.tsv'),check.names=FALSE)
   sp<-read.delim(file.path(w,'data/species_order.tsv'),check.names=FALSE)
+  if("--verify-originals" %in% argv) {
   src<-file.path(root,'outputs/mammal_SCENIC_2026-10-23/selected/inputs')
   x<-read.delim(gzfile(file.path(src,'expression.tsv.gz')),row.names=1,check.names=FALSE)
   meta<-read.delim(file.path(src,'samples.tsv'),check.names=FALSE)
@@ -55,13 +83,25 @@ targets <- function(run_dir=NULL, argv=character()) {
    e<-e[order(-e$importance,e$target),];s<-sel[sel$TF==tf,]
    stopifnot(identical(s$gene,e$target[1:10]),max(abs(s$importance-e$importance[1:10]))<1e-12)
   }
+  } else {
+    sample_data<-read.delim(file.path(w,'data/sample_gene_expression.tsv'),check.names=FALSE)
+    meta<-unique(sample_data[,c('sample','species')]);stopifnot(nrow(meta)==26,!anyDuplicated(meta$sample),nrow(sample_data)==520)
+    x<-sapply(sel$gene,function(g){v<-sample_data[sample_data$gene==g,];stopifnot(!anyDuplicated(v$sample));v$log2_CPM_plus1[match(meta$sample,v$sample)]})
+    rownames(x)<-meta$sample;colnames(x)<-sel$gene;spp<-meta$species
+    stopifnot(nrow(d)==300,nrow(sel)==20,nrow(sp)==15,!anyDuplicated(sel$row_id),!anyNA(x),!anyDuplicated(sel$gene))
+    edges<-read.delim(gzfile(file.path(w,'data/primary_regulon_edges.tsv.gz')),check.names=FALSE)
+    for(tf in c('ERG','FOXP4')) {
+      e<-edges[edges$TF==tf & edges$target!=tf,];e<-e[order(-e$importance,e$target),];chosen<-sel[sel$TF==tf,]
+      stopifnot(identical(chosen$gene,e$target[1:10]),max(abs(chosen$importance-e$importance[1:10]))<1e-12)
+    }
+  }
   mat<-sapply(sel$gene,function(g)vapply(sp$species,function(s)mean(x[spp==s,g]),numeric(1)))
   z<-scale(mat,center=TRUE,scale=TRUE)
   ix<-cbind(match(d$species,sp$species),match(d$gene,sel$gene))
   mean_error<-max(abs(mat[ix]-d$species_mean_log2_CPM_plus1))
   z_error<-max(abs(z[ix]-d$row_z))
   stopifnot(mean_error<1e-12,z_error<1e-12,all(diff(sp$mass_g)>0))
-  write_json(list(implementation='Independent R reading original wide frozen expression, matching sample metadata, independently checking saved top-ten ranking, species means and sample-SD row z.',mean_max_abs_error=mean_error,z_max_abs_error=z_error,verified_cells=nrow(d),all_selected_weights_and_ranks_match=TRUE),file.path(w,'audit/independent_R_verification.json'),pretty=TRUE,auto_unbox=TRUE,digits=16)
+  write_json(list(implementation=if('--verify-originals' %in% argv)'Original wide expression and full workspace verification' else 'Checked-in 520 sample values and frozen full primary target-edge table; species means, sample-SD row z and top-ten ranking verified',verification_scope=if('--verify-originals' %in% argv)'original-workspace' else 'compact-snapshot',mean_max_abs_error=mean_error,z_max_abs_error=z_error,verified_cells=nrow(d),all_selected_weights_and_ranks_match=TRUE),file.path(out,'audit/independent_R_verification.json'),pretty=TRUE,auto_unbox=TRUE,digits=16)
   d$species<-factor(d$species,levels=sp$species);sp$species<-factor(sp$species,levels=sp$species)
   d$gene_row<-factor(d$row_id,levels=rev(sel$row_id));d$TF<-factor(d$TF,levels=c('ERG','FOXP4'))
   ylabs<-setNames(sel$gene,sel$row_id)
@@ -83,9 +123,9 @@ targets <- function(run_dir=NULL, argv=character()) {
    theme(axis.text.y=element_text(color='black',size=10),legend.position='right',legend.title=element_text(size=10),legend.text=element_text(size=9),plot.margin=margin(0,10,0,8))
   p<-(mass/hm)+plot_layout(heights=c(.75,10))+
    plot_annotation(title='F',theme=theme(plot.title=element_text(size=21,face='bold',hjust=0,margin=margin(b=10)),plot.margin=margin(10,12,8,8)))
-  svglite::svglite(file.path(w,'Panel_F_regulon_targets.svg'),width=8.8,height=8.5,bg='white');print(p);dev.off()
-  ggsave(file.path(w,'audit/preview.png'),p,width=8.8,height=8.5,dpi=170,bg='white')
-  write_json(list(R=R.version.string,packages=setNames(lapply(c('ggplot2','patchwork','svglite','jsonlite'),function(n)as.character(packageVersion(n))),c('ggplot2','patchwork','svglite','jsonlite')),source='Frozen primary Ma2016 SCENIC input and nonself target weights, seed 20261023',rows=20,columns=15,full_color_range=c(-lim,lim),actual_range=range(d$row_z),clipped_cells=sum(abs(d$row_z)>lim),rows_clustered=FALSE,species_reordered_by_mass=TRUE,signs_flipped=FALSE,new_models=FALSE,new_association_tests=FALSE,figure_approval='pending',presentation_modified=FALSE),file.path(w,'audit/render.json'),auto_unbox=TRUE,pretty=TRUE,digits=16)
+  svg_device(file.path(out,'Panel_F_regulon_targets.svg'),width=8.8,height=8.5,bg='white');print(p);dev.off()
+  ggsave(file.path(out,'audit/preview.png'),p,width=8.8,height=8.5,dpi=170,bg='white')
+  write_json(list(R=R.version.string,packages=setNames(lapply(c('ggplot2','patchwork','svglite','jsonlite'),function(n)if(requireNamespace(n,quietly=TRUE))as.character(packageVersion(n))else "not installed; base SVG fallback"),c('ggplot2','patchwork','svglite','jsonlite')),source='Frozen primary Ma2016 SCENIC input and nonself target weights, seed 20261023',rows=20,columns=15,full_color_range=c(-lim,lim),actual_range=range(d$row_z),clipped_cells=sum(abs(d$row_z)>lim),rows_clustered=FALSE,species_reordered_by_mass=TRUE,signs_flipped=FALSE,new_models=FALSE,new_association_tests=FALSE,figure_approval='pending',presentation_modified=FALSE),file.path(out,'audit/render.json'),auto_unbox=TRUE,pretty=TRUE,digits=16)
 }
 
 if (sys.nframe() == 0) { a<-commandArgs(TRUE); if(length(a)<2)stop("operation and run directory required"); do.call(get(a[1]),list(run_dir=a[2],argv=a[-c(1,2)])) }

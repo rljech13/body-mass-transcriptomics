@@ -1,4 +1,4 @@
-"""Workflow catalogue; safe to import without data or scientific dependencies."""
+"""Explicit existing workflow and stage catalogue."""
 
 UNITS = {
     "avian.40_ruslan_style_scatters": ["groups", "_ruslan_style_scatters"],
@@ -40,6 +40,7 @@ UNITS = {
     "figure_bank.draw_scientific_panels": ["figures", "_draw_scientific_panels"],
     "figure_bank.refine_motif_panels": ["figures", "_refine_motif_panels"],
     "target_heatmap.prepare_heatmap": ["figures", "_prepare_heatmap"],
+    "figures.whole_map_panels": ["figures", "_whole_map_panels"],
 }
 
 STAGES = {
@@ -50,6 +51,9 @@ STAGES = {
         "cage": "avian.74_nineteen_via_cage",
         "epiblast-promoters": "avian.98_epi_own_promoters",
         "module-tests": "avian.72_modules_v2",
+        "gene-scan": "avian.75_honest_gene_mass_scan",
+        "gene-checks": "avian.53_three_checks",
+        "epiblast-traits": "avian.80_story_epi_and_traits",
     },
     "groups": {
         "components": "avian.78_holding_cores",
@@ -69,7 +73,7 @@ STAGES = {
         "tree-sensitivity": "mammal_wgcna.16_tree_sensitivity",
         "annotation": "mammal_wgcna.19_Hallmark_and_gene_jackknife",
         "leave-one-species": ["networks.R", "loo", "wgcna"],
-        "summary": ["networks.R", "summary", "wgcna"],
+        "summary": ["networks.R", "summary", "network_summary"],
         "avian": ["networks.R", "avian", "avian"],
     },
     "scenic": {
@@ -88,5 +92,6 @@ STAGES = {
         "prepare-targets": "target_heatmap.prepare_heatmap",
         "regulons": ["figures.R", "regulons", "regulon_scatter"],
         "targets": ["figures.R", "targets", "target_heatmap"],
+        "all-maps": "figures.whole_map_panels",
     },
 }

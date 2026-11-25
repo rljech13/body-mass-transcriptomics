@@ -14,20 +14,35 @@ def main(argv=None):
     )
     parser.add_argument("workflow", nargs="?", choices=sorted(STAGES))
     parser.add_argument("stage", nargs="?")
-    parser.add_argument("--config", default="config/local.json")
+    parser.add_argument("--config", default=None)
     parser.add_argument(
         "--list", action="store_true", help="List workflows and stages without reading data."
     )
     parser.add_argument(
         "--plan", action="store_true", help="Show the configured operation without running it."
     )
+    parser.add_argument(
+        "--verify-data",
+        action="store_true",
+        help="Check all packaged data hashes without scientific dependencies.",
+    )
     args, remaining = parser.parse_known_args(argv)
+    if args.verify_data:
+        from .runtime import verify_data
+
+        print(json.dumps(verify_data(), indent=2))
+        return 0
     if args.list or args.workflow is None:
         print(json.dumps({k: list(v) for k, v in STAGES.items()}, indent=2))
         return 0
     if args.stage not in STAGES[args.workflow]:
         parser.error("Choose a stage: " + ", ".join(STAGES[args.workflow]))
-    context = Context.from_file(args.config, remaining)
+    config = args.config or (
+        str(PACKAGE_ROOT / "config/local.json")
+        if (PACKAGE_ROOT / "config/local.json").exists()
+        else None
+    )
+    context = Context.from_file(config, remaining) if config else Context({}, list(remaining))
     if args.plan:
         print(json.dumps(context.describe(args.workflow, args.stage, remaining), indent=2))
         return 0

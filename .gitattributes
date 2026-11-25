@@ -1,0 +1,3 @@
+# Frozen TSV bytes retain original line endings and meaningful empty fields.
+*.tsv -text whitespace=-trailing-space
+/environments/historical/*.txt -text whitespace=-trailing-space

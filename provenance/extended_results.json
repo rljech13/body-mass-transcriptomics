@@ -1,0 +1,422 @@
+{
+  "schema": "selected-existing-result-objects-v1",
+  "baseline_commit": "0b9ff465d3870620f1b615ba6d87af82b455db33",
+  "date": "2026-11-25",
+  "objects": [
+    {
+      "path": "data/snapshots/all_maps/results/map_tests.tsv.gz",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/map_tests.tsv.gz",
+      "original_sha256": "b01fd0c77ebc71ee4cef8d4efe3347f10fc54f14637f12f695fd47cb31a9bb62",
+      "sha256": "b01fd0c77ebc71ee4cef8d4efe3347f10fc54f14637f12f695fd47cb31a9bb62",
+      "bytes": 11138291,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_BH_hits.tsv",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/Pearson_BH_hits.tsv",
+      "original_sha256": "b2b2f5f95725df99d5b271bbf903d7b9e4aa8d957657fdd258cffb0cd18ad2ad",
+      "sha256": "b2b2f5f95725df99d5b271bbf903d7b9e4aa8d957657fdd258cffb0cd18ad2ad",
+      "bytes": 10179,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_hit_species_scores.tsv",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/Pearson_hit_species_scores.tsv",
+      "original_sha256": "c224998b1297bbfff4e9877abefb07eae128dacf7d7d07c83e184b699c119e4e",
+      "sha256": "c224998b1297bbfff4e9877abefb07eae128dacf7d7d07c83e184b699c119e4e",
+      "bytes": 126156,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_hit_diagnostics.tsv",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/Pearson_hit_diagnostics.tsv",
+      "original_sha256": "a886b2452763638ea3e746d9f6bdd4c8f112b24c712ae67721d6333c4c6f4838",
+      "sha256": "a886b2452763638ea3e746d9f6bdd4c8f112b24c712ae67721d6333c4c6f4838",
+      "bytes": 16421,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/descriptive_summary.json",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/descriptive_summary.json",
+      "original_sha256": "fd1c4be78a136953cfb8a15406f4df071eb466fe1ee3a9f77d5d3de435ee8925",
+      "sha256": "fd1c4be78a136953cfb8a15406f4df071eb466fe1ee3a9f77d5d3de435ee8925",
+      "bytes": 8690,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/summary.json",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/summary.json",
+      "original_sha256": "391c29591b154fd5d5a6274825ad56e50e58079ed248e17f4073da49b3319e01",
+      "sha256": "391c29591b154fd5d5a6274825ad56e50e58079ed248e17f4073da49b3319e01",
+      "bytes": 3757,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/gse105160_design.npz",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/gse105160_design.npz",
+      "original_sha256": "be547e07b2d1e21b9d13fb416930bdd9d4f98aa0a4d53d4b279d1f6f553b9fbb",
+      "sha256": "be547e07b2d1e21b9d13fb416930bdd9d4f98aa0a4d53d4b279d1f6f553b9fbb",
+      "bytes": 943,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/shortlist_leave_one_species.tsv.gz",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/shortlist_leave_one_species.tsv.gz",
+      "original_sha256": "fc31c24549fdc4c2d65066c96e7ec48a65b6aee69e69c204392733bc1d62e4a6",
+      "sha256": "fc31c24549fdc4c2d65066c96e7ec48a65b6aee69e69c204392733bc1d62e4a6",
+      "bytes": 4723,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/all_maps/results/shortlist_gene_dominance.tsv.gz",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/results/shortlist_gene_dominance.tsv.gz",
+      "original_sha256": "e08c68c5f13575aa9e7e8bc54918dd03e4ed202ebdc2561ada9676ee5b436fb1",
+      "sha256": "e08c68c5f13575aa9e7e8bc54918dd03e4ed202ebdc2561ada9676ee5b436fb1",
+      "bytes": 3621,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_eigengenes.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/saved_eigengenes.tsv",
+      "original_sha256": "d6a552a75b8a6cd47e5087f9c60ef084a416450ce18947bed373a9d33625ce5e",
+      "sha256": "d6a552a75b8a6cd47e5087f9c60ef084a416450ce18947bed373a9d33625ce5e",
+      "bytes": 73295,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_members.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/saved_members.tsv",
+      "original_sha256": "9d3d030cdc476f8e9bcdf7339ba9cd779631da6469236cf6931e1ea1d654fa36",
+      "sha256": "9d3d030cdc476f8e9bcdf7339ba9cd779631da6469236cf6931e1ea1d654fa36",
+      "bytes": 1817567,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/species.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/species.tsv",
+      "original_sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "bytes": 2655,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_historical_mass_tests.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/saved_historical_mass_tests.tsv",
+      "original_sha256": "a5fecb7a7bcf00d7837648349f9bf86fc2bac53508fd5bd6cdd45e3c246191b5",
+      "sha256": "a5fecb7a7bcf00d7837648349f9bf86fc2bac53508fd5bd6cdd45e3c246191b5",
+      "bytes": 29009,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_Hallmark_enrichment.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/saved_Hallmark_enrichment.tsv",
+      "original_sha256": "61c5ce82bf8ba8e782ac20187694ebb55cb5d62aaf91bf828407825041387f68",
+      "sha256": "61c5ce82bf8ba8e782ac20187694ebb55cb5d62aaf91bf828407825041387f68",
+      "bytes": 588620,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_runs.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/saved_runs.tsv",
+      "original_sha256": "8a7bf23183d8f906f498377a03bd85c3c8d9b6c065cc857fcedd33f91f631f17",
+      "sha256": "8a7bf23183d8f906f498377a03bd85c3c8d9b6c065cc857fcedd33f91f631f17",
+      "bytes": 180,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/module_mass_Pearson.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/module_mass_Pearson.tsv",
+      "original_sha256": "74e785447d72b2dd86d04b84583b8257220f5a98667f0a71d8dcf979a0a2cedc",
+      "sha256": "74e785447d72b2dd86d04b84583b8257220f5a98667f0a71d8dcf979a0a2cedc",
+      "bytes": 26478,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/data/displayed_modules.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "data/displayed_modules.tsv",
+      "original_sha256": "0a964d239429a178be3354a9213dd2ec6f6d46bbf1e08d5d33e49ab84d02dea6",
+      "sha256": "0a964d239429a178be3354a9213dd2ec6f6d46bbf1e08d5d33e49ab84d02dea6",
+      "bytes": 999,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/networks/summary.json",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "source_name": "audit/summary.json",
+      "original_sha256": "ce02307e7f00c7de93e410f0770763b8489c2f8da6458b5d3db3925b2e7c6d45",
+      "sha256": "ce02307e7f00c7de93e410f0770763b8489c2f8da6458b5d3db3925b2e7c6d45",
+      "bytes": 2972,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/regulon_mass_associations.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/regulon_mass_associations.tsv",
+      "original_sha256": "febb16e5a40cdec30e35a3d6a5538ff36b39a2b969427fe41d9e956e343ddcda",
+      "sha256": "febb16e5a40cdec30e35a3d6a5538ff36b39a2b969427fe41d9e956e343ddcda",
+      "bytes": 17348,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/mass_association_all_seeds.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/mass_association_all_seeds.tsv",
+      "original_sha256": "583db4cbe9aaf9887593aac583c954ce197feca02a44b41f22462965d77237cf",
+      "sha256": "583db4cbe9aaf9887593aac583c954ce197feca02a44b41f22462965d77237cf",
+      "bytes": 39708,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/regulon_stability.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/regulon_stability.tsv",
+      "original_sha256": "414bb0d17940ff7bb5b9c9e0d4735efc84b2d6d401c77d5649eaa349fb7c477a",
+      "sha256": "414bb0d17940ff7bb5b9c9e0d4735efc84b2d6d401c77d5649eaa349fb7c477a",
+      "bytes": 8890,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/seed_stability.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/seed_stability.tsv",
+      "original_sha256": "31e6d7f6a0dfb8dda8a2d6bf689ab673489ee501855260b17550371e51cf5742",
+      "sha256": "31e6d7f6a0dfb8dda8a2d6bf689ab673489ee501855260b17550371e51cf5742",
+      "bytes": 47359,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/stability_summary.json",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/stability_summary.json",
+      "original_sha256": "158c43269a6f9ca6262deaa2c33820c327a8a98a2e1d3a5823444619ace40d3e",
+      "sha256": "158c43269a6f9ca6262deaa2c33820c327a8a98a2e1d3a5823444619ace40d3e",
+      "bytes": 2682,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261023.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/overlap_20261023.tsv",
+      "original_sha256": "9f754d79b1674ecc4405070b45751ffc44e365af9525b82c52bd848db1eb3a59",
+      "sha256": "9f754d79b1674ecc4405070b45751ffc44e365af9525b82c52bd848db1eb3a59",
+      "bytes": 50792,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261024.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/overlap_20261024.tsv",
+      "original_sha256": "179f098fb39fd1a8bf8ece0a49581db0c74300d5ee0932eed8867fd8759214c5",
+      "sha256": "179f098fb39fd1a8bf8ece0a49581db0c74300d5ee0932eed8867fd8759214c5",
+      "bytes": 52908,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261025.tsv",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/analysis/overlap_20261025.tsv",
+      "original_sha256": "937a737ea75afaa2958d1726c3bb684684c077c969107772fc0f76fbd2c2cbb2",
+      "sha256": "937a737ea75afaa2958d1726c3bb684684c077c969107772fc0f76fbd2c2cbb2",
+      "bytes": 47989,
+      "transformation": "none"
+    },
+    {
+      "path": "figures/target_heatmap/data/primary_regulon_edges.tsv.gz",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/results/20261023/regulon_edges.tsv.gz",
+      "original_sha256": "6735b82980f7124250520601999099a740fd23933c95ebdb98cb0334534f8182",
+      "sha256": "6735b82980f7124250520601999099a740fd23933c95ebdb98cb0334534f8182",
+      "bytes": 143741,
+      "transformation": "none"
+    },
+    {
+      "path": "data/snapshots/robustness/summary.json",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "results/summary.json",
+      "original_sha256": "fc5584732ca080a8349ca38931213ab320553f6a157c492fe9ca9d3efc635f37",
+      "sha256": "fc5584732ca080a8349ca38931213ab320553f6a157c492fe9ca9d3efc635f37",
+      "bytes": 4802,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/wgcna/full_inventory.tsv",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "config/full_inventory.tsv",
+      "original_sha256": "e607462ca5e1b30fb43b78b3edefe98f4a4650da6885ca7ff10d2e1e0bc002cb",
+      "sha256": "e607462ca5e1b30fb43b78b3edefe98f4a4650da6885ca7ff10d2e1e0bc002cb",
+      "bytes": 319,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/wgcna/panel_inventory.tsv",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "config/panel_inventory.tsv",
+      "original_sha256": "37672424a0dfae1fc1bdc75f3ae9f5e0df92db96ff95a8f7650b97c28558d112",
+      "sha256": "37672424a0dfae1fc1bdc75f3ae9f5e0df92db96ff95a8f7650b97c28558d112",
+      "bytes": 723,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/wgcna/analysis_plan.initial.json",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "config/analysis_plan.initial.json",
+      "original_sha256": "5a357b792cdf512b53ca4cb5a7f4af37dcc01075283a1107947b0041d8e17674",
+      "sha256": "5a357b792cdf512b53ca4cb5a7f4af37dcc01075283a1107947b0041d8e17674",
+      "bytes": 2718,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/wgcna/fixed_sets.json",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "config/fixed_sets.json",
+      "original_sha256": "7bfa593a0cf77f1ef59794fce34e74b274aba50dc8ef2768820427d8ffb28c4b",
+      "sha256": "7bfa593a0cf77f1ef59794fce34e74b274aba50dc8ef2768820427d8ffb28c4b",
+      "bytes": 4543,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/scenic/plan.json",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/config/plan.json",
+      "original_sha256": "2ef6c3d1a81f6de81bc4ac7f571e53933b636dde165df1b99fda9e38e8e6af0f",
+      "sha256": "2ef6c3d1a81f6de81bc4ac7f571e53933b636dde165df1b99fda9e38e8e6af0f",
+      "bytes": 2015,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/scenic/existing_reference.json",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "source_name": "selected/config/existing_reference.json",
+      "original_sha256": "b73544d1c5b849b38394cb60be081c90e7aa46649b50276751e6b1cadbc60c15",
+      "sha256": "b73544d1c5b849b38394cb60be081c90e7aa46649b50276751e6b1cadbc60c15",
+      "bytes": 975,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/maps/plan.json",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "source_name": "config/plan.json",
+      "original_sha256": "fa846b8839fd35bdc1ce2b6b2d4e998107c5d2856b27936fac4804ae1e7d3051",
+      "sha256": "fa846b8839fd35bdc1ce2b6b2d4e998107c5d2856b27936fac4804ae1e7d3051",
+      "bytes": 1513,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/maps/plan_step2.json",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "source_name": "config/plan_step2.json",
+      "original_sha256": "af67cc8882554d35f5c477cd60326300c404778d25590ab0597d3f4361b72da3",
+      "sha256": "af67cc8882554d35f5c477cd60326300c404778d25590ab0597d3f4361b72da3",
+      "bytes": 2468,
+      "transformation": "none"
+    },
+    {
+      "path": "config/historical/maps/plan_step3.json",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "source_name": "config/plan_step3.json",
+      "original_sha256": "81d4eb80c25ee5e8e5065adb4f9b659294c9d8ca27be595967032ece4a71dd5c",
+      "sha256": "81d4eb80c25ee5e8e5065adb4f9b659294c9d8ca27be595967032ece4a71dd5c",
+      "bytes": 1838,
+      "transformation": "none"
+    },
+    {
+      "path": "environments/historical/python_growth.json",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "audit/environment.json",
+      "original_sha256": "049724cc20005ba4b79080a08f6ae25e747625b19862054dbb815dedeca420ee",
+      "sha256": "4d47874969f29c0a96666ca9d1d1d48e12d157c56ffbab35b3a55c8ecde1ac02",
+      "bytes": 10431,
+      "transformation": "Private machine path prefixes sanitized; original and packaged hashes distinguished."
+    },
+    {
+      "path": "environments/historical/R_WGCNA_sessionInfo.txt",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "source_name": "audit/R_sessionInfo.txt",
+      "original_sha256": "9f3317e9f97d20610668ae49e38ff3ab4882cb498676695ff063c821c3e591ce",
+      "sha256": "9f3317e9f97d20610668ae49e38ff3ab4882cb498676695ff063c821c3e591ce",
+      "bytes": 2072,
+      "transformation": "Private machine path prefixes sanitized; original and packaged hashes distinguished."
+    },
+    {
+      "path": "environments/historical/python_all_maps.json",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "selected/audit/environment.json",
+      "original_sha256": "c047bc0bbd889f559ac31424722808cdab3f7a196a261880fff02d0af30b83e8",
+      "sha256": "c047bc0bbd889f559ac31424722808cdab3f7a196a261880fff02d0af30b83e8",
+      "bytes": 195,
+      "transformation": "Private machine path prefixes sanitized; original and packaged hashes distinguished."
+    },
+    {
+      "path": "environments/historical/python_figure_bank.json",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "source_name": "audit/environment.json",
+      "original_sha256": "b6e9ab16406d148e546b877d7466330b6721084265e56773a0f5db96e7592ec8",
+      "sha256": "b6e9ab16406d148e546b877d7466330b6721084265e56773a0f5db96e7592ec8",
+      "bytes": 114,
+      "transformation": "Private machine path prefixes sanitized; original and packaged hashes distinguished."
+    },
+    {
+      "path": "bodymass/figures.py",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "draw_correlations.py",
+      "original_sha256": "ac60b1ba7e16b9e4373f918643af8d535d256dba937cbad59fa6c73f53bc7f87",
+      "sha256": "6f92bdc48428508c608a4dd2e586e9d56e95f7afa2b0b579aa097d3f3f4838c0",
+      "bytes": 58799,
+      "transformation": "Existing script body moved into callable scope; --selected defaults to checked-in results; no scientific expressions changed.",
+      "function": "_whole_map_panels"
+    },
+    {
+      "path": "docs/figures/01_whole_maps_three_programmes.png",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "figures/01_whole_maps_three_programmes.png",
+      "original_sha256": "30749a0c6b603b2d9f3b2dfada13faf864631604dd12f93e713a1150bf2f2d8c",
+      "sha256": "30749a0c6b603b2d9f3b2dfada13faf864631604dd12f93e713a1150bf2f2d8c",
+      "bytes": 340363,
+      "transformation": "none"
+    },
+    {
+      "path": "docs/figures/02_all_18_maps_context.png",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "figures/02_all_18_maps_context.png",
+      "original_sha256": "707f8ee792f62282d5efc69e634d2fd2860b853e1d085f0cc6e5024a830aa8dd",
+      "sha256": "707f8ee792f62282d5efc69e634d2fd2860b853e1d085f0cc6e5024a830aa8dd",
+      "bytes": 336029,
+      "transformation": "none"
+    },
+    {
+      "path": "docs/figures/03_catalogue_and_composition.png",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "source_name": "figures/03_catalogue_and_composition.png",
+      "original_sha256": "95ed0299037ec0e09a8bea8a0455e7c26cd526aa211450e79bd8bac94481b223",
+      "sha256": "95ed0299037ec0e09a8bea8a0455e7c26cd526aa211450e79bd8bac94481b223",
+      "bytes": 261716,
+      "transformation": "none"
+    }
+  ],
+  "scope": "Existing birds/mammals results and portable replay; no new discovery or full model training.",
+  "portability_changes": [
+    "Whole-map drawing body moved into figures module; argument defaults point to packaged saved results.",
+    "Motif inputs and all R figure/statistics outputs separated into read-only source and explicit destination.",
+    "R figure default verification uses packaged species/sample tables and primary target rankings; original full-workspace verification remains an explicit option.",
+    "Optional base R SVG backend when svglite is unavailable; numerical calculations retained.",
+    "Target preparation obtains workstation root from explicit configuration after relocation.",
+    "Empty historical environment summaries replaced by available original evidence and explicit missing-record statuses; bounded replay dependency pins recorded separately."
+  ]
+}

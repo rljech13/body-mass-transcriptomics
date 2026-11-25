@@ -1,0 +1,4 @@
+panel	mode	power	n_samples	n_features	n_modules	scale_free_reached
+ma2016_full	raw	18	15	5023	41	TRUE
+gse105160_full	raw	18	9	5054	28	FALSE
+wagner_full	raw	18	11	5005	54	FALSE

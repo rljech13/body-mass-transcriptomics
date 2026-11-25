@@ -1,0 +1,245 @@
+{
+  "files": [
+    {
+      "path": "data/frozen/figure_inputs.json",
+      "sha256": "2e52f4897216a5bb5f0bea3e33637207d0b86e8f395319b023933c33de58069b",
+      "bytes": 104120
+    },
+    {
+      "path": "data/frozen/gene_groups.tsv",
+      "sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "bytes": 1785
+    },
+    {
+      "path": "data/frozen/mammal_species.tsv",
+      "sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "bytes": 2655
+    },
+    {
+      "path": "data/frozen/module_relative_expression.tsv",
+      "sha256": "e7f83b5b6eb52d5cd78704a9af58deb05e6b6b8d112574f50a6d28edd7f7e40d",
+      "bytes": 128322
+    },
+    {
+      "path": "data/frozen/poster_inputs.json",
+      "sha256": "1920227900f5db7d29a91fbbf4e742ed75a6345929af58c8e5d20e7e00dbf81d",
+      "bytes": 31172
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_BH_hits.tsv",
+      "sha256": "b2b2f5f95725df99d5b271bbf903d7b9e4aa8d957657fdd258cffb0cd18ad2ad",
+      "bytes": 10179
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_hit_diagnostics.tsv",
+      "sha256": "a886b2452763638ea3e746d9f6bdd4c8f112b24c712ae67721d6333c4c6f4838",
+      "bytes": 16421
+    },
+    {
+      "path": "data/snapshots/all_maps/results/Pearson_hit_species_scores.tsv",
+      "sha256": "c224998b1297bbfff4e9877abefb07eae128dacf7d7d07c83e184b699c119e4e",
+      "bytes": 126156
+    },
+    {
+      "path": "data/snapshots/all_maps/results/descriptive_summary.json",
+      "sha256": "fd1c4be78a136953cfb8a15406f4df071eb466fe1ee3a9f77d5d3de435ee8925",
+      "bytes": 8690
+    },
+    {
+      "path": "data/snapshots/all_maps/results/gse105160_design.npz",
+      "sha256": "be547e07b2d1e21b9d13fb416930bdd9d4f98aa0a4d53d4b279d1f6f553b9fbb",
+      "bytes": 943
+    },
+    {
+      "path": "data/snapshots/all_maps/results/map_tests.tsv.gz",
+      "sha256": "b01fd0c77ebc71ee4cef8d4efe3347f10fc54f14637f12f695fd47cb31a9bb62",
+      "bytes": 11138291
+    },
+    {
+      "path": "data/snapshots/all_maps/results/shortlist_gene_dominance.tsv.gz",
+      "sha256": "e08c68c5f13575aa9e7e8bc54918dd03e4ed202ebdc2561ada9676ee5b436fb1",
+      "bytes": 3621
+    },
+    {
+      "path": "data/snapshots/all_maps/results/shortlist_leave_one_species.tsv.gz",
+      "sha256": "fc31c24549fdc4c2d65066c96e7ec48a65b6aee69e69c204392733bc1d62e4a6",
+      "bytes": 4723
+    },
+    {
+      "path": "data/snapshots/all_maps/results/summary.json",
+      "sha256": "391c29591b154fd5d5a6274825ad56e50e58079ed248e17f4073da49b3319e01",
+      "bytes": 3757
+    },
+    {
+      "path": "data/snapshots/networks/data/displayed_modules.tsv",
+      "sha256": "0a964d239429a178be3354a9213dd2ec6f6d46bbf1e08d5d33e49ab84d02dea6",
+      "bytes": 999
+    },
+    {
+      "path": "data/snapshots/networks/data/module_mass_Pearson.tsv",
+      "sha256": "74e785447d72b2dd86d04b84583b8257220f5a98667f0a71d8dcf979a0a2cedc",
+      "bytes": 26478
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_Hallmark_enrichment.tsv",
+      "sha256": "61c5ce82bf8ba8e782ac20187694ebb55cb5d62aaf91bf828407825041387f68",
+      "bytes": 588620
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_eigengenes.tsv",
+      "sha256": "d6a552a75b8a6cd47e5087f9c60ef084a416450ce18947bed373a9d33625ce5e",
+      "bytes": 73295
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_historical_mass_tests.tsv",
+      "sha256": "a5fecb7a7bcf00d7837648349f9bf86fc2bac53508fd5bd6cdd45e3c246191b5",
+      "bytes": 29009
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_members.tsv",
+      "sha256": "9d3d030cdc476f8e9bcdf7339ba9cd779631da6469236cf6931e1ea1d654fa36",
+      "bytes": 1817567
+    },
+    {
+      "path": "data/snapshots/networks/data/saved_runs.tsv",
+      "sha256": "8a7bf23183d8f906f498377a03bd85c3c8d9b6c065cc857fcedd33f91f631f17",
+      "bytes": 180
+    },
+    {
+      "path": "data/snapshots/networks/data/species.tsv",
+      "sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "bytes": 2655
+    },
+    {
+      "path": "data/snapshots/networks/summary.json",
+      "sha256": "ce02307e7f00c7de93e410f0770763b8489c2f8da6458b5d3db3925b2e7c6d45",
+      "bytes": 2972
+    },
+    {
+      "path": "data/snapshots/robustness/summary.json",
+      "sha256": "fc5584732ca080a8349ca38931213ab320553f6a157c492fe9ca9d3efc635f37",
+      "bytes": 4802
+    },
+    {
+      "path": "data/snapshots/scenic/mass_association_all_seeds.tsv",
+      "sha256": "583db4cbe9aaf9887593aac583c954ce197feca02a44b41f22462965d77237cf",
+      "bytes": 39708
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261023.tsv",
+      "sha256": "9f754d79b1674ecc4405070b45751ffc44e365af9525b82c52bd848db1eb3a59",
+      "bytes": 50792
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261024.tsv",
+      "sha256": "179f098fb39fd1a8bf8ece0a49581db0c74300d5ee0932eed8867fd8759214c5",
+      "bytes": 52908
+    },
+    {
+      "path": "data/snapshots/scenic/overlap_20261025.tsv",
+      "sha256": "937a737ea75afaa2958d1726c3bb684684c077c969107772fc0f76fbd2c2cbb2",
+      "bytes": 47989
+    },
+    {
+      "path": "data/snapshots/scenic/regulon_mass_associations.tsv",
+      "sha256": "febb16e5a40cdec30e35a3d6a5538ff36b39a2b969427fe41d9e956e343ddcda",
+      "bytes": 17348
+    },
+    {
+      "path": "data/snapshots/scenic/regulon_stability.tsv",
+      "sha256": "414bb0d17940ff7bb5b9c9e0d4735efc84b2d6d401c77d5649eaa349fb7c477a",
+      "bytes": 8890
+    },
+    {
+      "path": "data/snapshots/scenic/seed_stability.tsv",
+      "sha256": "31e6d7f6a0dfb8dda8a2d6bf689ab673489ee501855260b17550371e51cf5742",
+      "bytes": 47359
+    },
+    {
+      "path": "data/snapshots/scenic/stability_summary.json",
+      "sha256": "158c43269a6f9ca6262deaa2c33820c327a8a98a2e1d3a5823444619ace40d3e",
+      "bytes": 2682
+    },
+    {
+      "path": "figures/figure_bank/data/bird_points.tsv",
+      "sha256": "80047079024d088d36a6b3ab77c94223e2bc349f149e9d128d3e119a450ff369",
+      "bytes": 23036
+    },
+    {
+      "path": "figures/figure_bank/data/bird_tests.tsv",
+      "sha256": "d50612e223f9d3bfec79bcbda6c1de194a61ea6d92e4be3b118472b698d584a2",
+      "bytes": 4688
+    },
+    {
+      "path": "figures/figure_bank/data/folate_component_points.tsv",
+      "sha256": "6a60c85164204d2a3e7e428e8cb041ef5b05d4244ad89010f65702630c8bc2bb",
+      "bytes": 740
+    },
+    {
+      "path": "figures/figure_bank/data/frozen_gene_sets.tsv",
+      "sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "bytes": 1785
+    },
+    {
+      "path": "figures/figure_bank/data/motif_broad816.tsv",
+      "sha256": "bcfff130b275039caac4d2501cde345506f21290e0eba7b7112f7b8fb280774c",
+      "bytes": 6625
+    },
+    {
+      "path": "figures/figure_bank/data/motif_matched21.tsv",
+      "sha256": "f4f43a343c6f03d97ce9a5eff1cfd924f31aaab573e9a463f469191df5f7de26",
+      "bytes": 3465
+    },
+    {
+      "path": "figures/figure_bank/data/motif_probability_matrices.json",
+      "sha256": "ad45089fe632e4cd37dd71bd6c3cb8fe1c9b04c6c745b514f6b059bd38ab723e",
+      "bytes": 4121
+    },
+    {
+      "path": "figures/figure_bank/data/verified_NR_example_sites.tsv",
+      "sha256": "468fa9b9611c85710993c9f950db4114b1e3760bc16058dc461b9094d6a5f4bd",
+      "bytes": 3242
+    },
+    {
+      "path": "figures/figure_bank/data/verified_NR_example_windows.tsv",
+      "sha256": "592a30a689cff45bfd1eae4bf7c0d2d2eac9b1cf0502f31c88b320b3aa8662de",
+      "bytes": 3961
+    },
+    {
+      "path": "figures/regulon_scatter/data/display_fits.tsv",
+      "sha256": "ef35ec372d21203e9886b33a357ce7aadf352046d1a0a01a3454d2e76f24afb3",
+      "bytes": 252
+    },
+    {
+      "path": "figures/regulon_scatter/data/species_activity.tsv",
+      "sha256": "f021c9393547fc5985ef39c21610c6d81f77de7a19c45edcd4b24ad4d7dfc2ab",
+      "bytes": 3207
+    },
+    {
+      "path": "figures/target_heatmap/data/primary_regulon_edges.tsv.gz",
+      "sha256": "6735b82980f7124250520601999099a740fd23933c95ebdb98cb0334534f8182",
+      "bytes": 143741
+    },
+    {
+      "path": "figures/target_heatmap/data/sample_gene_expression.tsv",
+      "sha256": "ba82ccd4c4490343bf63d482d43662b163d22bcd84135db02cf3eec2b945cb2e",
+      "bytes": 28378
+    },
+    {
+      "path": "figures/target_heatmap/data/selected_targets.tsv",
+      "sha256": "335dfc879228c28ba4f9afd52f172ca98c4655dd49663ebea1ffd323042e8238",
+      "bytes": 1672
+    },
+    {
+      "path": "figures/target_heatmap/data/species_gene_expression.tsv",
+      "sha256": "ac109155ed4ce803fb6a5897f8dddc9f1f532e944f9463af953e1dece35a6bff",
+      "bytes": 36035
+    },
+    {
+      "path": "figures/target_heatmap/data/species_order.tsv",
+      "sha256": "9c7e827c23be9e2e33464f97e265fbb7d4236ffff07d8d3668f3fa580b96ef84",
+      "bytes": 551
+    }
+  ],
+  "meaning": "Byte integrity of packaged saved inputs, not independent biological replication."
+}

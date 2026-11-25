@@ -1,5 +1,6 @@
 {
   "source_method": "M-KLB-RUSLAN-MAMMALS-20261023",
-  "saved_environment": {},
-  "note": "Saved historical metadata; not a new universal environment specification."
+  "status": "partial_historical_environment_record",
+  "recorded_description": "Python scanpy_env with numpy, scipy, statsmodels, numba, biopython 1.85; FIMO from env meme",
+  "limitation": "Exact versions of the other components were not recorded; no historical lock is claimed."
 }

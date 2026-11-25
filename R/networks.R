@@ -219,7 +219,7 @@ avian <- function(run_dir=NULL, argv=character()) {
 
 summary <- function(run_dir=NULL, argv=character()) {
   suppressPackageStartupMessages(library(jsonlite))
-  w<-normalizePath(run_dir);rd<-function(n)read.delim(file.path(w,'data',n),check.names=FALSE,stringsAsFactors=FALSE)
+  w<-normalizePath(run_dir);iout<-match('--out',argv);if(!is.na(iout)&&iout==length(argv))stop('--out needs a directory');out<-if(is.na(iout))file.path('results','network_summary') else argv[iout+1];dir.create(file.path(out,'data'),recursive=TRUE,showWarnings=FALSE);dir.create(file.path(out,'audit'),recursive=TRUE,showWarnings=FALSE);rd<-function(n)read.delim(file.path(w,'data',n),check.names=FALSE,stringsAsFactors=FALSE)
   e<-rd('saved_eigengenes.tsv');members<-rd('saved_members.tsv');species<-rd('species.tsv');old<-rd('saved_historical_mass_tests.tsv');hm<-rd('saved_Hallmark_enrichment.tsv')
   rows<-list();scores<-list();i<-0
   for(panel in unique(e$panel)){
@@ -240,13 +240,13 @@ summary <- function(run_dir=NULL, argv=character()) {
   }
   t<-do.call(rbind,rows);t$q_within_study<-ave(t$p,t$panel,FUN=function(z)p.adjust(z,method='BH'));t$q_all3<-p.adjust(t$p,method='BH')
   stopifnot(nrow(t)==123)
-  write.table(t,file.path(w,'data/module_mass_Pearson.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
-  write.table(do.call(rbind,scores),file.path(w,'data/module_relative_expression.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
+  write.table(t,file.path(out,'data/module_mass_Pearson.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
+  write.table(do.call(rbind,scores),file.path(out,'data/module_relative_expression.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
   sel<-t[t$panel=='ma2016_full'&t$q_within_study<.05,];sel<-sel[order(sel$r),]
-  write.table(sel,file.path(w,'data/displayed_modules.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
+  write.table(sel,file.path(out,'data/displayed_modules.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
   summary<-list(studies=lapply(split(t,t$panel),function(z)list(modules=nrow(z),BH05=sum(z$q_within_study<.05),BH_all3_05=sum(z$q_all3<.05),min_q=min(z$q_within_study))),selected_modules=sel,all_historical_OLS_p_reproduced=TRUE,network_rebuilt=FALSE,
    previous_historical_PGLS_mammal_tests_BH05=0,interpretation='New descriptive Pearson/BH presentation of the previously frozen modules; no new module discovery. Relative module expression, not absolute activation or flux.',human_review='not_completed',training_enabled=FALSE)
-  write_json(summary,file.path(w,'audit/summary.json'),auto_unbox=TRUE,pretty=TRUE,digits=12)
+  write_json(summary,file.path(out,'audit/summary.json'),auto_unbox=TRUE,pretty=TRUE,digits=12)
   cat(toJSON(summary,auto_unbox=TRUE,pretty=TRUE,digits=6))
 }
 

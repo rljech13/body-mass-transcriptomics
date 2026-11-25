@@ -1,0 +1,7 @@
+{
+  "python": "3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0]",
+  "numpy": "1.26.4",
+  "pandas": "2.3.0",
+  "scipy": "1.16.0",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35"
+}

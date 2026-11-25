@@ -1,0 +1,97 @@
+{
+  "primary_regulons": 187,
+  "recovered_in_all3": 95,
+  "median_target_Jaccard_seed2": 0.028169014084507043,
+  "median_target_Jaccard_seed3": 0.0392156862745098,
+  "primary_significant_module_pairs": [
+    {
+      "seed": 20261023,
+      "module": "cyan",
+      "regulon": "VDR(+)",
+      "TF": "VDR",
+      "N_background": 4700,
+      "K_targets_background": 4,
+      "n_module_covered": 109,
+      "k_shared": 3,
+      "n_module_total": 116,
+      "p": 4.77379814052491e-05,
+      "fold_enrichment": 32.3394495412844,
+      "genes": "ANXA6;DENND1B;TBC1D2B",
+      "q": 0.0288567575825202,
+      "q_ge5_diagnostic": null,
+      "seeds_recovered": 2,
+      "Jaccard_seed2": 0.0,
+      "Jaccard_seed3": 0.0625,
+      "targets_all3": 0,
+      "module_genes_all3": 0,
+      "module_genes_all3_names": null,
+      "overlap_q_seed2": 1.0,
+      "overlap_q_seed3": 0.0055304325207173,
+      "q_positive_runs": 2
+    },
+    {
+      "seed": 20261023,
+      "module": "violet",
+      "regulon": "RXRB(+)",
+      "TF": "RXRB",
+      "N_background": 4699,
+      "K_targets_background": 8,
+      "n_module_covered": 54,
+      "k_shared": 3,
+      "n_module_total": 56,
+      "p": 7.715710583561552e-05,
+      "fold_enrichment": 32.63194444444445,
+      "genes": "COLEC12;GPR180;MRPL57",
+      "q": 0.0288567575825202,
+      "q_ge5_diagnostic": 0.0499978045814788,
+      "seeds_recovered": 3,
+      "Jaccard_seed2": 0.0,
+      "Jaccard_seed3": 0.0,
+      "targets_all3": 0,
+      "module_genes_all3": 0,
+      "module_genes_all3_names": null,
+      "overlap_q_seed2": 1.0,
+      "overlap_q_seed3": 0.5120709356935592,
+      "q_positive_runs": 1
+    }
+  ],
+  "module_pairs_q_positive_all3": 0,
+  "mass_ERG_FOXP4_all_seeds": [
+    {
+      "seed": 20261023,
+      "regulon": "ERG(+)",
+      "mass_r": 0.8362190807332905,
+      "mass_p": 0.00010251014250594642,
+      "mass_q": 0.019169396648611982
+    },
+    {
+      "seed": 20261023,
+      "regulon": "FOXP4(+)",
+      "mass_r": -0.8142346662179379,
+      "mass_p": 0.00021972921737794138,
+      "mass_q": 0.02054468182483752
+    },
+    {
+      "seed": 20261024,
+      "regulon": "ERG(+)",
+      "mass_r": 0.6520406924944678,
+      "mass_p": 0.00843400073854039,
+      "mass_q": 0.40025742629774663
+    },
+    {
+      "seed": 20261025,
+      "regulon": "ERG(+)",
+      "mass_r": 0.5025719331920911,
+      "mass_p": 0.05622121734530035,
+      "mass_q": 0.31193707688360195
+    },
+    {
+      "seed": 20261025,
+      "regulon": "FOXP4(+)",
+      "mass_r": -0.5902295479532786,
+      "mass_p": 0.020540549224384662,
+      "mass_q": 0.24496335193193733
+    }
+  ],
+  "code_sha256": "1735c5a630510494ba7645e284b09810fd784859dd879d6819802f41f7cd164c"
+}

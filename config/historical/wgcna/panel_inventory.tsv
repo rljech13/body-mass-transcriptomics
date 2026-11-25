@@ -1,0 +1,7 @@
+panel	n_features	n_libraries	n_species	network_unit	trait_unit	physical_donor	log_transform	features_filtered_before_trait_test
+ma2016	4805	15	15	species_mean	species	unresolved_or_species_mean	log2(1+normalized_linear)	True
+gse105160	4739	9	9	species_mean	species	unresolved_or_species_mean	log2(1+normalized_linear)	True
+wagner	4770	11	11	species_mean	species	unresolved_or_species_mean	log2(1+normalized_linear)	True
+bird_HG	2446	22	7	source_library	species	unresolved_or_species_mean	log2(1+normalized_linear)	True
+bird_F12	2445	18	6	source_library	species	unresolved_or_species_mean	log2(1+normalized_linear)	True
+bird_E_label	2440	23	7	source_library	species	unresolved_or_species_mean	log2(1+normalized_linear)	True

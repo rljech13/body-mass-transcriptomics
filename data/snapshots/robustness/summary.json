@@ -1,0 +1,146 @@
+{
+  "PWM_all_enrichment": {
+    "tests": 54604,
+    "q05": 1,
+    "min_q": 0.016851774675186
+  },
+  "PWM_hits": [
+    {
+      "panel": "gse105160",
+      "kind": "WGCNA_module",
+      "group": "turquoise",
+      "mode": "raw",
+      "threshold": 0.0001,
+      "motif_id": "MA0864.3",
+      "TF": "E2F2",
+      "n_universe": 4738,
+      "n_requested": 428,
+      "n_covered": 428,
+      "complete": true,
+      "n_species": 1,
+      "min_species_with_site": 1,
+      "observed": 109,
+      "expected": 70.41516924127123,
+      "p": 3.086179524427895e-07,
+      "matching_max_abs_SMD": 0.0631078320932616,
+      "hit_genes": "ADAT1;ATAD5;BAZ1B;CCT5;CDCA8;CDKN3;CENPL;CIAO2A;CMSS1;CPSF7;CSE1L;CTDSPL2;DAXX;DDX18;DDX46;DPY30;DTL;DYNC2I2;ECT2;EIF2A;ELP6;ERCC8;EXOSC10;EXOSC2;EXOSC8;EXTL2;FBXL5;FBXO5;FBXO9;FRA10AC1;FTSJ1;GABPB1;GART;GNPDA2;GPANK1;H2AZ2;HAUS2;ILF3;IMMT;IRAK1BP1;ITGB1BP1;KATNBL1;KIAA0586;KIF11;LARS1;LEO1;LUC7L3;LYRM7;MCM2;MCM5;MCM7;MGME1;MRPL45;MRPS18B;MRPS22;MSH3;MTHFD1;NCAPH;NDC80;NDUFAF6;NIPA2;NSRP1;ORC1;PDHX;PDS5A;PFDN4;PLRG1;POC1A;POLA1;POLE;PRPF38A;PRPSAP2;PSMB4;PSMC3IP;RAD51B;RFC5;RMDN1;RPA2;RPF2;RPL38;RRP1B;RWDD2B;SF3B3;SHMT1;SLC25A35;SNAPC3;SNF8;SRSF5;SUV39H2;SUZ12;TAB1;TARS1;TELO2;TERF2;TFDP1;TMEM200B;TPX2;TRA2B;TTI1;TUBGCP3;UBE3D;UBXN4;USP1;UTP11;VTA1;WDR62;WDR76;XPO1;XRCC3",
+      "q_mode_all_tests": 0.0061489040844701,
+      "scope": "PWM_human_enrichment.tsv.gz",
+      "q_joint_current_run": 0.016851774675186
+    }
+  ],
+  "motif_regulon_all_edges": {
+    "tests": 62423,
+    "q05": 4,
+    "min_q": 0.0041226554637463
+  },
+  "edge_hits": [
+    {
+      "panel": "gse105160",
+      "TF": "E2F3",
+      "target": "RELCH",
+      "partial_r": 0.995231617369631,
+      "p": 3.007954610527509e-06,
+      "loo_sign_fraction": 1.0,
+      "target_in_fixed_story": false,
+      "n_species": 9,
+      "motif_support": "human_reference_promoter",
+      "binding_demonstrated": false,
+      "q_mode_all_edges": 0.0331626995810657,
+      "scope": "motif_regulon_human_edges.tsv.gz",
+      "q_joint_current_run": 0.0469413876632396
+    },
+    {
+      "panel": "wagner",
+      "TF": "SREBF2",
+      "target": "EMC4",
+      "partial_r": -0.9872027606639908,
+      "p": 7.709536150625267e-07,
+      "loo_sign_fraction": 1.0,
+      "target_in_fixed_story": false,
+      "n_species": 11,
+      "motif_support": "human_reference_promoter",
+      "binding_demonstrated": false,
+      "q_mode_all_edges": 0.0169995272121287,
+      "scope": "motif_regulon_human_edges.tsv.gz",
+      "q_joint_current_run": 0.0160417458376827
+    },
+    {
+      "panel": "gse105160_full",
+      "TF": "TFEB",
+      "target": "ANKRD37",
+      "partial_r": 0.9989656972047116,
+      "p": 6.604385344738946e-08,
+      "loo_sign_fraction": 1.0,
+      "target_in_fixed_story": false,
+      "n_species": 9,
+      "motif_support": "human_reference_promoter",
+      "binding_demonstrated": false,
+      "q_mode_all_edges": 0.0024784276883201,
+      "scope": "motif_regulon_human_full_edges.tsv.gz",
+      "q_joint_current_run": 0.0041226554637463
+    },
+    {
+      "panel": "wagner_full",
+      "TF": "SREBF2",
+      "target": "EMC4",
+      "partial_r": -0.9877312716433022,
+      "p": 6.654934948252261e-07,
+      "loo_sign_fraction": 1.0,
+      "target_in_fixed_story": false,
+      "n_species": 11,
+      "motif_support": "human_reference_promoter",
+      "binding_demonstrated": false,
+      "q_mode_all_edges": 0.0124869871901531,
+      "scope": "motif_regulon_human_full_edges.tsv.gz",
+      "q_joint_current_run": 0.0160417458376827
+    }
+  ],
+  "max_q05_targets_per_TF_panel": 1,
+  "module_all_mass": {
+    "tests": 743,
+    "q05": 0,
+    "min_q": 0.1009593374225255
+  },
+  "module_all_TF_enrichment": {
+    "tests": 17939,
+    "q05": 67,
+    "min_q": 5.152388906762655e-31
+  },
+  "prior_TF_all_mass": {
+    "tests": 422,
+    "q05": 0,
+    "min_q": 0.5622747758616733
+  },
+  "LOO_median_of_module_medians": {
+    "bird_F12": 0.214662296950698,
+    "bird_HG": 0.2663608562691135,
+    "ma2016": 0.247787610619469,
+    "ma2016_full": 0.168918918918919
+  },
+  "LOO_Ma_common_E2F_module": {
+    "median": 0.55893536121673,
+    "minimum": 0.400641025641026
+  },
+  "module_transfers": {
+    "tests": 309,
+    "q05_primary": 0,
+    "min_p": 0.005171657536149
+  },
+  "tree_sensitivity": {
+    "n_trees": 100,
+    "largest_fraction_of_trees_with_module_q05": 0.18,
+    "modules_q05_on_all100": 0
+  },
+  "date_utc": "2026-10-21T09:46:11.581180+00:00",
+  "status": "completed_bounded_PWM_regulons_WGCNA",
+  "native_bird_windows": 44101,
+  "human_reference_windows": 4821,
+  "human_plus_own5_windows": 4830,
+  "candidate_motif_models": 34,
+  "physical_donor_ids_resolved": false,
+  "causal_master_regulator_established": false,
+  "wet_lab_performed": false,
+  "human_review": "not_completed",
+  "training_enabled": false
+}

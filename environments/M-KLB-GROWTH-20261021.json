@@ -1,5 +1,9 @@
 {
   "source_method": "M-KLB-GROWTH-20261021",
-  "saved_environment": {},
-  "note": "Saved historical metadata; not a new universal environment specification."
+  "status": "historical_environment_evidence_available",
+  "evidence": [
+    "historical/python_growth.json",
+    "historical/R_WGCNA_sessionInfo.txt"
+  ],
+  "limitation": "Historical package inventory, not a complete installable lock or proof of all external binary versions."
 }
