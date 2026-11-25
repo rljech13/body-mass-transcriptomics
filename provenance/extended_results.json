@@ -377,9 +377,9 @@
       "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
       "source_name": "draw_correlations.py",
       "original_sha256": "ac60b1ba7e16b9e4373f918643af8d535d256dba937cbad59fa6c73f53bc7f87",
-      "sha256": "6f92bdc48428508c608a4dd2e586e9d56e95f7afa2b0b579aa097d3f3f4838c0",
-      "bytes": 58799,
-      "transformation": "Existing script body moved into callable scope; --selected defaults to checked-in results; no scientific expressions changed.",
+      "sha256": "389483d4ab17b5528493402f49816adf5b196c5d849a2a7c844d52b0f30d9155",
+      "bytes": 57055,
+      "transformation": "Existing script body moved into callable scope; --selected defaults to checked-in results; no scientific expressions changed. Display strings translated to English; executable AST otherwise identical.",
       "function": "_whole_map_panels"
     },
     {

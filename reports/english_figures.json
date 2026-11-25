@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-25",
+  "baseline_commit": "dfe79614aa87b0c54e6d616bdc49a326a335455a",
+  "status": "passed",
+  "translated_unique_display_strings": 61,
+  "only_display_strings_changed": true,
+  "code_sha256": "389483d4ab17b5528493402f49816adf5b196c5d849a2a7c844d52b0f30d9155",
+  "render_command": "python -m bodymass figures all-maps --out OUTPUT",
+  "SVG_visible_text_contains_Cyrillic": false,
+  "artifacts": [
+    {
+      "path": "docs/figures/01_whole_maps_three_programmes.png",
+      "sha256": "ff10b5d1c3c81b1a51c47a65ed5be19ae0de9b10a16c33680b224c243faf743e",
+      "bytes": 381276
+    },
+    {
+      "path": "docs/figures/01_whole_maps_three_programmes.svg",
+      "sha256": "b8b37e01c42d97826d4fc1a950120f1e0ac78abd4486faea0e53f0a7bbcc77c6",
+      "bytes": 45624
+    },
+    {
+      "path": "docs/figures/02_all_18_maps_context.png",
+      "sha256": "3e479d962430076db835ce5ac3f873c39ce9a6c7622c8b1a770f8695d2108aaa",
+      "bytes": 425743
+    },
+    {
+      "path": "docs/figures/02_all_18_maps_context.svg",
+      "sha256": "9e9bb3abfe988f1b997138e4ec3f42ca7a73193821b7e7ce36873c40fb043984",
+      "bytes": 40150
+    },
+    {
+      "path": "docs/figures/03_catalogue_and_composition.png",
+      "sha256": "6346edf7ed7196270fdfff41c1cb126a3c4217c762b40f3040c7d69e75ba40a7",
+      "bytes": 353273
+    },
+    {
+      "path": "docs/figures/03_catalogue_and_composition.svg",
+      "sha256": "5a46a4439694c24b9329113662fe39a54e1af8f23fa3148f18431e47a1496757",
+      "bytes": 31880
+    }
+  ],
+  "regressions": "test_bundled_input_integrity (test_refactor.RefactorTests.test_bundled_input_integrity) ... ok\ntest_existing_bird_fit_functions_preserve_all_eighteen_frozen_results (test_refactor.RefactorTests.test_existing_bird_fit_functions_preserve_all_eighteen_frozen_results) ... ok\ntest_grn_worker_preserves_original_arguments (test_refactor.RefactorTests.test_grn_worker_preserves_original_arguments) ... ok\ntest_help_and_plan_do_not_read_scientific_inputs (test_refactor.RefactorTests.test_help_and_plan_do_not_read_scientific_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.717s\n\nOK\n",
+  "data_integrity": {
+    "status": "passed",
+    "checked_files": 48,
+    "biological_replication": false
+  },
+  "scientific_algorithms_changed": false,
+  "full_models_rerun": false,
+  "prior_bounded_replay": "reports/replay.json"
+}

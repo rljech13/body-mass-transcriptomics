@@ -976,7 +976,7 @@ def _whole_map_panels(context):
             f.text(
                 0.04,
                 0.021,
-                "Млекопитающие · суммы нормированной RNA · описательный поиск · 23 октября 2026",
+                "Mammals | summed normalized RNA | descriptive analysis | 23 October 2026",
                 fontsize=9,
                 color=GRAY,
             )
@@ -998,36 +998,36 @@ def _whole_map_panels(context):
         programmes = [
             (
                 "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE",
-                "Ресничная переходная зона",
+                "Ciliary transition zone",
                 BLUE,
             ),
             (
                 "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION",
-                "Регуляция окисления жирных кислот (+)",
+                "Positive regulation of fatty-acid oxidation",
                 BLUE,
             ),
             (
                 "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS",
-                "Регуляция метаболизма гликогена (−)",
+                "Negative regulation of glycogen metabolism",
                 RED,
             ),
         ]
         shortspecies = [
-            "Мышь",
-            "Саймири",
-            "Макак лапундер",
-            "Макак резус",
-            "Павиан анубис",
-            "Бонобо",
-            "Шимпанзе",
-            "Человек",
-            "Горилла",
+            "Mouse",
+            "Squirrel monkey",
+            "Pig-tailed macaque",
+            "Rhesus macaque",
+            "Olive baboon",
+            "Bonobo",
+            "Chimpanzee",
+            "Human",
+            "Gorilla",
         ]
         gsp = np.load(D / "results/gse105160_design.npz")["species"].tolist()
         f = fig(
-            "Целые измеренные карты уже дают сильные размерные связи",
-            "GSE105160 · 9 видов · сначала сумма линейной RNA всех измеренных генов карты, затем log₁₀ · обычная корреляция Пирсона",
-            "Три знакомые темы сохраняются при суммировании всех измеренных компонентов карт; все три проходят FDR по 10 880 картам.",
+            "Whole measured-map sums show strong mass associations",
+            "GSE105160 | 9 species | sum linear normalized RNA across measured map genes, then log₁₀ | ordinary Pearson correlation",
+            "All three functional themes pass FDR across 10,880 maps using their full measured gene composition.",
         )
         gs = f.add_gridspec(1, 3, left=0.07, right=0.96, bottom=0.32, top=0.76, wspace=0.27)
         for j, (sid, title, color) in enumerate(programmes):
@@ -1073,17 +1073,17 @@ def _whole_map_panels(context):
             ax.text(
                 0,
                 1.015,
-                f"{row.n_measured}/{row.n_canonical} генов карты · β = {row.beta_OLS:+.3f}",
+                f"{row.n_measured}/{row.n_canonical} measured map genes | β = {row.beta_OLS:+.3f}",
                 transform=ax.transAxes,
                 fontsize=10,
                 color=GRAY,
             )
-            ax.set_xlabel("log₁₀ массы тела, г")
-            ax.set_ylabel("log₁₀ суммы нормированной RNA")
+            ax.set_xlabel("log₁₀ adult body mass (g)")
+            ax.set_ylabel("log₁₀ summed normalized RNA")
             ax.text(
                 0,
                 -0.22,
-                f"Удаление одного вида: min |r| = {diag.loo_min_abs_r:.3f}",
+                f"Leave-one-species-out: min |r| = {diag.loo_min_abs_r:.3f}",
                 transform=ax.transAxes,
                 fontsize=10,
                 color=GRAY,
@@ -1099,37 +1099,37 @@ def _whole_map_panels(context):
         f.text(
             0.07,
             0.131,
-            "Знаки (+)/(−) входят в аннотацию GO. По сумме RNA мы измеряем ассоциацию набора генов, без измерения потока реакции.",
+            "(+)/(−) are part of the GO annotation. Summed RNA measures a gene-set association, not metabolic flux.",
             fontsize=9.5,
             color=GRAY,
         )
         save(f, "01_whole_maps_three_programmes")
         names = {
-            "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE": "Белки ресничной переходной зоны",
-            "GO_CC:GOCC_MKS_COMPLEX": "Комплекс MKS",
-            "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION": "Окисление жирных кислот: регуляция (+)",
-            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS": "Метаболизм гликогена: регуляция (−)",
-            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_BIOSYNTHETIC_PROCESS": "Синтез гликогена: регуляция (−)",
-            "Reactome:REACTOME_RRNA_MODIFICATION_IN_THE_MITOCHONDRION": "Модификация митохондриальной рРНК",
-            "Reactome:REACTOME_NFE2L2_REGULATING_ER_STRESS_ASSOCIATED_GENES": "Гены ER-стресса под регуляцией NFE2L2",
-            "GO_BP:GOBP_ISOPENTENYL_DIPHOSPHATE_BIOSYNTHETIC_PROCESS_MEVALONATE_PATHWAY": "Мевалонатный путь: синтез изопентенил-PP",
-            "GO_MF:GOMF_HETEROTRIMERIC_G_PROTEIN_BINDING": "Связывание гетеротримерного G-белка",
-            "GO_BP:GOBP_REGULATION_OF_GLUTAMATE_RECEPTOR_CLUSTERING": "Кластеризация глутаматных рецепторов",
-            "GO_BP:GOBP_FIBROBLAST_ACTIVATION": "Активация фибробластов",
-            "GO_BP:GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CONTRACTION": "Сокращение сосудистых гладких мышц",
-            "GO_BP:GOBP_ARTICULAR_CARTILAGE_DEVELOPMENT": "Развитие суставного хряща",
-            "GO_BP:GOBP_REGULATION_OF_SOMATIC_STEM_CELL_POPULATION_MAINTENANCE": "Поддержание соматических стволовых клеток",
-            "GO_BP:GOBP_POSITIVE_REGULATION_OF_INTERLEUKIN_5_PRODUCTION": "Продукция интерлейкина-5: регуляция (+)",
-            "GO_BP:GOBP_POSITIVE_REGULATION_OF_CELL_ACTIVATION": "Активация клеток: регуляция (+)",
-            "GO_BP:GOBP_DEPYRIMIDINATION": "Депиримидинизация ДНК",
-            "GO_BP:GOBP_PLASMA_MEMBRANE_PHOSPHOLIPID_SCRAMBLING": "Перераспределение фосфолипидов мембраны",
+            "GO_BP:GOBP_PROTEIN_LOCALIZATION_TO_CILIARY_TRANSITION_ZONE": "Ciliary transition-zone proteins",
+            "GO_CC:GOCC_MKS_COMPLEX": "MKS complex",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_FATTY_ACID_OXIDATION": "Fatty-acid oxidation: positive regulation",
+            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_METABOLIC_PROCESS": "Glycogen metabolism: negative regulation",
+            "GO_BP:GOBP_NEGATIVE_REGULATION_OF_GLYCOGEN_BIOSYNTHETIC_PROCESS": "Glycogen synthesis: negative regulation",
+            "Reactome:REACTOME_RRNA_MODIFICATION_IN_THE_MITOCHONDRION": "Mitochondrial rRNA modification",
+            "Reactome:REACTOME_NFE2L2_REGULATING_ER_STRESS_ASSOCIATED_GENES": "NFE2L2-regulated ER-stress genes",
+            "GO_BP:GOBP_ISOPENTENYL_DIPHOSPHATE_BIOSYNTHETIC_PROCESS_MEVALONATE_PATHWAY": "Mevalonate pathway: isopentenyl-PP synthesis",
+            "GO_MF:GOMF_HETEROTRIMERIC_G_PROTEIN_BINDING": "Heterotrimeric G-protein binding",
+            "GO_BP:GOBP_REGULATION_OF_GLUTAMATE_RECEPTOR_CLUSTERING": "Glutamate-receptor clustering",
+            "GO_BP:GOBP_FIBROBLAST_ACTIVATION": "Fibroblast activation",
+            "GO_BP:GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CONTRACTION": "Vascular smooth-muscle contraction",
+            "GO_BP:GOBP_ARTICULAR_CARTILAGE_DEVELOPMENT": "Articular cartilage development",
+            "GO_BP:GOBP_REGULATION_OF_SOMATIC_STEM_CELL_POPULATION_MAINTENANCE": "Somatic stem-cell maintenance",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_INTERLEUKIN_5_PRODUCTION": "Interleukin-5 production: positive regulation",
+            "GO_BP:GOBP_POSITIVE_REGULATION_OF_CELL_ACTIVATION": "Cell activation: positive regulation",
+            "GO_BP:GOBP_DEPYRIMIDINATION": "DNA depyrimidination",
+            "GO_BP:GOBP_PLASMA_MEMBRANE_PHOSPHOLIPID_SCRAMBLING": "Membrane phospholipid redistribution",
         }
         ids = list(names)
         assert set(ids) == set(H[H["mode"].eq("panel_available")].set_id)
         f = fig(
-            "18 ассоциаций GSE105160: что видно в остальных панелях",
-            "Все 18 проходят BH q<0,05 в GSE105160 · цвет и число — Pearson r · каждая панель использует свою фиксированную измеренную часть карты",
-            "Это 18 связанных с размером карт в GSE105160. Остальные панели показывают, где наблюдается сходная или другая картина.",
+            "The 18 GSE105160 associations in cross-panel context",
+            "All 18 pass BH q < 0.05 in GSE105160 | colour and number: Pearson r | each panel uses its fixed measured map composition",
+            "The other panels place the 18 GSE105160 associations in context; these are not 18 independently replicated findings.",
         )
         ax = f.add_axes([0.345, 0.178, 0.32, 0.637])
         pa = ["ma2016", "gse105160", "wagner"]
@@ -1144,7 +1144,9 @@ def _whole_map_panels(context):
         ax.imshow(mat, cmap=cmap, norm=TwoSlopeNorm(vmin=-1, vcenter=0, vmax=1), aspect="auto")
         ax.grid(False)
         ax.set_xticks(
-            range(3), ["Ma2016\n15 видов", "GSE105160\n9 видов", "Wagner\n11 видов"], fontsize=11
+            range(3),
+            ["Ma2016\n15 species", "GSE105160\n9 species", "Wagner\n11 species"],
+            fontsize=11,
         )
         ax.xaxis.tick_top()
         ax.set_yticks(range(len(ids)), [names[s] for s in ids], fontsize=9.7)
@@ -1178,21 +1180,21 @@ def _whole_map_panels(context):
         ax2.set_xticks([-1, 0, 1])
         ax2.set_yticks([])
         ax2.set_title(
-            "GSE: удаляем по одному виду\nдиапазон r; точка — все 9 видов", fontsize=10.5, pad=24
+            "GSE: leave one species out\nr range; point: all 9 species", fontsize=10.5, pad=24
         )
         ax2.set_xlabel("Pearson r", fontsize=10)
         f.text(
             0.04,
             0.132,
-            "— измерено менее 5 генов карты; составы карт между панелями различаются.",
+            "— fewer than 5 measured genes; measured map compositions differ between panels.",
             fontsize=9.5,
             color=GRAY,
         )
         save(f, "02_all_18_maps_context")
         f = fig(
-            "Все карты: охват поиска и зависимость от состава суммы",
-            "12 701 карта: KEGG 372 · GO BP 7 538 · GO MF 1 872 · GO CC 1 080 · Reactome 1 839 · минимум 5 измеренных генов",
-            "Основной результат — 18 карт GSE105160. На меньшем общем составе есть ещё три ассоциации Ma2016; состав суммы имеет значение.",
+            "Functional-map search: coverage and gene-composition sensitivity",
+            "12,701 maps: KEGG 372 | GO BP 7,538 | GO MF 1,872 | GO CC 1,080 | Reactome 1,839 | at least 5 measured genes",
+            "18 GSE105160 maps pass FDR; three Ma2016 associations emerge with the smaller common composition. Gene composition matters.",
         )
         gs = f.add_gridspec(
             1,
@@ -1213,9 +1215,9 @@ def _whole_map_panels(context):
         ax.set_yticks(range(3), ["Ma2016", "GSE105160", "Wagner"])
         ax.invert_yaxis()
         ax.set_xlim(0, 13300)
-        ax.set_xlabel("Карт с измеренным составом ≥5 генов")
+        ax.set_xlabel("Maps with at least 5 measured genes")
         ax.set_title(
-            "A  Реально проверенные карты", loc="left", fontsize=12, fontweight="bold", pad=17
+            "A  Maps tested in each panel", loc="left", fontsize=12, fontweight="bold", pad=17
         )
         for i, z in enumerate(zs):
             ax.text(
@@ -1230,12 +1232,14 @@ def _whole_map_panels(context):
             )
             for p in pa
         ]
-        ax.bar(xx - 0.18, main, 0.35, color=BLUE, label="Все измеренные гены карты")
-        ax.bar(xx + 0.18, common, 0.35, color="#94A8CE", label="Гены, общие трём панелям")
+        ax.bar(xx - 0.18, main, 0.35, color=BLUE, label="All measured map genes")
+        ax.bar(xx + 0.18, common, 0.35, color="#94A8CE", label="Genes shared by all three panels")
         ax.set_xticks(xx, ["Ma2016", "GSE105160", "Wagner"])
         ax.set_ylim(0, 23)
-        ax.set_ylabel("Карт с BH q<0,05 · Pearson")
-        ax.set_title("B  Ассоциации после FDR", loc="left", fontsize=12, fontweight="bold", pad=17)
+        ax.set_ylabel("Maps with BH q < 0.05 | Pearson")
+        ax.set_title(
+            "B  Associations after FDR", loc="left", fontsize=12, fontweight="bold", pad=17
+        )
         ax.legend(loc="upper right", fontsize=8.5, frameon=False)
         for i, (v, w) in enumerate(zip(main, common)):
             ax.text(i - 0.18, v + 0.3, str(v), ha="center", fontsize=12, fontweight="bold")
@@ -1250,10 +1254,10 @@ def _whole_map_panels(context):
         y = z.log10_sum.to_numpy()
         ax.scatter(x, y, color=RED, s=28)
         ax.plot(x, np.polyval(np.polyfit(x, y, 1), x), color=RED, lw=2)
-        ax.set_xlabel("log₁₀ массы тела, г")
-        ax.set_ylabel("log₁₀ суммы 14 общих генов")
+        ax.set_xlabel("log₁₀ adult body mass (g)")
+        ax.set_ylabel("log₁₀ sum of 14 shared genes")
         ax.set_title(
-            "C  Ma2016: регуляция сплайсинга (+)",
+            "C  Ma2016: positive regulation of RNA splicing",
             loc="left",
             fontsize=12,
             fontweight="bold",
@@ -1262,7 +1266,7 @@ def _whole_map_panels(context):
         ax.text(
             0,
             1.025,
-            f"r={row.r_Pearson:.3f} · BH q={row.q_Pearson_panel:.3f} · 15 видов",
+            f"r={row.r_Pearson:.3f} · BH q={row.q_Pearson_panel:.3f} | 15 species",
             transform=ax.transAxes,
             fontsize=10,
             color=RED,
@@ -1270,7 +1274,7 @@ def _whole_map_panels(context):
         f.text(
             0.07,
             0.157,
-            "Общий состав: 4 825 генов, 7 414 карт в каждой панели. Это отдельная чувствительность с меньшими фрагментами карт.",
+            "Common composition: 4,825 genes and 7,414 maps per panel. This separate sensitivity analysis uses smaller measured map subsets.",
             fontsize=10,
             color=GRAY,
         )
@@ -1287,7 +1291,7 @@ def _whole_map_panels(context):
             sheet.paste(im, (0, i * 900))
         sheet.save(O / "preview.jpg", quality=92)
         (O / "gallery.html").write_text(
-            '<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Суммы карт и размер млекопитающих</title><style>body{margin:0;background:#eef1f6;font:16px system-ui}main{max-width:1600px;margin:auto}img{width:100%;margin:18px 0}a{color:#3467db}</style><main>'
+            '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Functional-map sums and mammalian body mass</title><style>body{margin:0;background:#eef1f6;font:16px system-ui}main{max-width:1600px;margin:auto}img{width:100%;margin:18px 0}a{color:#3467db}</style><main>'
             + "".join(
                 (
                     f'<a href="{s}.png"><img src="{s}.png" alt="{s}"></a><a href="{s}.svg">SVG</a>'

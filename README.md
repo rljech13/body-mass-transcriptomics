@@ -62,4 +62,4 @@ Existing calculation bodies are in these modules. They do not dispatch to hidden
 
 Avian fibroblasts: GSE213253. Mammalian fibroblasts: Ma et al. (2016), eLife 5:e19130, https://doi.org/10.7554/eLife.19130, plus the GSE105160 and Wagner panels identified in the saved input records. Avian epiblast measurements were supplied by the study authors; the selected metadata do not specify a public accession. Raw reads, genomes and large ranking databases remain external.
 
-Selected groups, multiple-testing families, gene coverage, phylogeny and seed sensitivity are reported separately. Motif matches and predicted targets nominate regulatory candidates; they do not establish TF occupancy or causal control of body size. A reuse license and public access have not yet been selected by the authors.
+Selected groups, multiple-testing families, gene coverage, phylogeny and seed sensitivity are reported separately. Motif matches and predicted targets nominate regulatory candidates; they do not establish TF occupancy or causal control of body size. The repository is public. A reuse license has not yet been selected by the authors.

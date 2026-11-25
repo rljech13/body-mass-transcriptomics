@@ -261,5 +261,7 @@
     "Historical raw-input and exact-environment gaps remain; this verifies only the specified bundled-data replay.",
     "Visual file equality is not required across graphics environments; numerical values are checked separately."
   ],
-  "github_actions_execution": "Not configured: the current GitHub OAuth token cannot create workflows. The documented local replay commands were executed successfully."
+  "github_actions_execution": "Not configured: the current GitHub OAuth token cannot create workflows. The documented local replay commands were executed successfully.",
+  "verified_code_commit": "dfe79614aa87b0c54e6d616bdc49a326a335455a",
+  "subsequent_changes": "English-only figure labels are verified separately in reports/english_figures.json."
 }
