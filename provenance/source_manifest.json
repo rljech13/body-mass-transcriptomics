@@ -1,0 +1,2422 @@
+{
+  "schema": "selected-publication-sources-v1",
+  "date": "2026-11-25",
+  "sources": [
+    {
+      "path": "data/frozen/poster_inputs.json",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "scientific_sources/poster_inputs.json",
+      "original_sha256": "b11d8161eb129cb8f82c993f0b2a6a80126acdfe798f85e684d7ffd938323a53",
+      "repository_sha256": "1920227900f5db7d29a91fbbf4e742ed75a6345929af58c8e5d20e7e00dbf81d",
+      "bytes": 31172,
+      "transformations": [
+        {
+          "description": "Selected compact scientific rows/metadata; no new inference."
+        }
+      ]
+    },
+    {
+      "path": "data/frozen/figure_inputs.json",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "inputs/figure_inputs.json",
+      "original_sha256": "2e52f4897216a5bb5f0bea3e33637207d0b86e8f395319b023933c33de58069b",
+      "repository_sha256": "2e52f4897216a5bb5f0bea3e33637207d0b86e8f395319b023933c33de58069b",
+      "bytes": 104120,
+      "transformations": []
+    },
+    {
+      "path": "data/frozen/gene_groups.tsv",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "scientific_sources/frozen_gene_sets.tsv",
+      "original_sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "repository_sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "bytes": 1785,
+      "transformations": []
+    },
+    {
+      "path": "data/frozen/module_relative_expression.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "method_sha256": "e277123c64c4fc36f5f58460ea44208402118943f5f6fa2da3b11dcac8a18635",
+      "source_name": "data/module_relative_expression.tsv",
+      "original_sha256": "e7f83b5b6eb52d5cd78704a9af58deb05e6b6b8d112574f50a6d28edd7f7e40d",
+      "repository_sha256": "e7f83b5b6eb52d5cd78704a9af58deb05e6b6b8d112574f50a6d28edd7f7e40d",
+      "bytes": 128322,
+      "transformations": []
+    },
+    {
+      "path": "data/frozen/mammal_species.tsv",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "method_sha256": "e277123c64c4fc36f5f58460ea44208402118943f5f6fa2da3b11dcac8a18635",
+      "source_name": "data/species.tsv",
+      "original_sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "repository_sha256": "219de03c090ab944edae38aac45effeffd5011011263cbbe4636511953939de2",
+      "bytes": 2655,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/01_prepare.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/01_prepare.py",
+      "original_sha256": "4adf0066397bb00ed79456dc408ef14fcf0555eb8e82b4d14465717e77a3680e",
+      "repository_sha256": "a252100c547faf01fe34eeff949fe04fe699662b382a108e751fb725fa9cd9e4",
+      "bytes": 5035,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/02_wgcna.R",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/02_wgcna.R",
+      "original_sha256": "77608471f7fb66c9328dd018171f0d5df772f98a5d064ba26ba6724e3b258dee",
+      "repository_sha256": "21e5ec6dbd80ade24010ed824d62d3833ff3881355c872d4847bf96143169c24",
+      "bytes": 3142,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/03_native_pwm.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/03_native_pwm.py",
+      "original_sha256": "41af55ed8d9f5d764c8a35279778cb259f6d538ea6a99b68391f23aa3a6f6ef9",
+      "repository_sha256": "138c71df80b97ff9514e172d1fc202f29de13413bc585f141d98d314521db48b",
+      "bytes": 5418,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/04_statistics.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/04_statistics.py",
+      "original_sha256": "f122819ee706bbebc07d0d2b42e02a5e4ac97a2904bfb950526785825376f7cf",
+      "repository_sha256": "d11e8ad8690f77383a0ccdb219a0905a97fac3ab3b1be78daa0e85caa2fa4032",
+      "bytes": 10894,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/05_human_pwm.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/05_human_pwm.py",
+      "original_sha256": "6ab5671133adfc283989d2a4f7c67d3b1077664442ad901be1413f4c23f4adf1",
+      "repository_sha256": "d073d6abe5801abb5acbfa569ebbed26fe88998f7ab12d14aba34c342c6e6067",
+      "bytes": 3907,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/06_wgcna_LOO.R",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/06_wgcna_LOO.R",
+      "original_sha256": "e08beede84696ad3b81bf5c9e4d8400b8d98e9f8e45fd8edd45529b4de8cbb22",
+      "repository_sha256": "6d4b8db9c24b86ca078edf7bfa8e3ccf729a22bf880ad3ba56a1c1ab4d7e1794",
+      "bytes": 1844,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/07_pwm_statistics.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/07_pwm_statistics.py",
+      "original_sha256": "547de719640877771f1db179f4d6b0cefdfb04ca11a48d96666e838d77f18274",
+      "repository_sha256": "547de719640877771f1db179f4d6b0cefdfb04ca11a48d96666e838d77f18274",
+      "bytes": 7739,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/08_additional.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/08_additional.py",
+      "original_sha256": "701acbc8c9eeb5be45669d76d1b88c1f694b75e4a42efa81359836bc6c7d8737",
+      "repository_sha256": "701acbc8c9eeb5be45669d76d1b88c1f694b75e4a42efa81359836bc6c7d8737",
+      "bytes": 3345,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/09_independent_GLS.R",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/09_independent_GLS.R",
+      "original_sha256": "8d39eefb9de73351206a1167b1e165525a044f8a361dd86025ae385579ce4849",
+      "repository_sha256": "74596d9a394e838205656cd383521eaf9d451fcd99b7c827ca9f6589337b87a7",
+      "bytes": 559,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/10_prepare_full.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/10_prepare_full.py",
+      "original_sha256": "9cdbdbf9c69e0408ea4ede8b36ad595e8bb74e66849feeb12e0fcdeed565f788",
+      "repository_sha256": "9cdbdbf9c69e0408ea4ede8b36ad595e8bb74e66849feeb12e0fcdeed565f788",
+      "bytes": 1990,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/11_wgcna_full.R",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/11_wgcna_full.R",
+      "original_sha256": "f6549b59087f5bf2857885c459551df24130bb80e6afedcc26e018ddb4fa14e8",
+      "repository_sha256": "e09692148474dd782ded7c766115118dd95e0b8306f49fb7177a13520e1b4542",
+      "bytes": 3303,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/12_statistics_full.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/12_statistics_full.py",
+      "original_sha256": "a0c13da9e2ac0771d206cd735dc4ad2e9bc2fea09bc7b3f07d5235cf17362eab",
+      "repository_sha256": "5bd73784be3590a3d15a1d683494fa797c5e8d833208f7bd162124c41a7ed8ff",
+      "bytes": 10876,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/13_own5_full_original.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/13_own5_full_original.py",
+      "original_sha256": "db9587d30ed443ef8ab532d48d21a0e292d27ccdb60a9979eb750f064cd7455e",
+      "repository_sha256": "db9587d30ed443ef8ab532d48d21a0e292d27ccdb60a9979eb750f064cd7455e",
+      "bytes": 3072,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/14_full_pipeline.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/14_full_pipeline.py",
+      "original_sha256": "df003a5a50de4c51354838963a83b449902f6e4a7c4e072e181b641b8daabca8",
+      "repository_sha256": "3da563a82b723c7ed3eedb698bd16eb89484da1c8f108dab46511394c555ad04",
+      "bytes": 1102,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/15_wgcna_full_LOO.R",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/15_wgcna_full_LOO.R",
+      "original_sha256": "ed5f225c57fe68e2a12cd0031545a47c583668affd81ad1ea5f4382314db4381",
+      "repository_sha256": "31e39a1d0d93530f41cd26accf62d99e70c68ccd5dd5557da487617c99e7862f",
+      "bytes": 2072,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/16_tree_sensitivity.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/16_tree_sensitivity.py",
+      "original_sha256": "f58dd987e5bf4a921b89bff018ab7d46ca93e622017a0dee7789319f28a5e5ad",
+      "repository_sha256": "f58dd987e5bf4a921b89bff018ab7d46ca93e622017a0dee7789319f28a5e5ad",
+      "bytes": 3114,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/17_human_own5_union.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/17_human_own5_union.py",
+      "original_sha256": "ed9f37dab124cb892b62019cc07f93c4798055e3a0143e7303f702ffdb5b1529",
+      "repository_sha256": "ed9f37dab124cb892b62019cc07f93c4798055e3a0143e7303f702ffdb5b1529",
+      "bytes": 2306,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/18_human_pipeline.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/18_human_pipeline.py",
+      "original_sha256": "f60dd3917da5ecc7c49e1920b684cec188aa95262f1fc3760d0d52474712fc35",
+      "repository_sha256": "4218209b1c0140f53e52e227d257fc8fd0c8568eccfa61ad2c71ddb66ea10f7d",
+      "bytes": 936,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/19_Hallmark_and_gene_jackknife.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/19_Hallmark_and_gene_jackknife.py",
+      "original_sha256": "203b818dda9a98d3d53446a5ed30efa7e1e7c7a31c111add1b5b3a9215e721f3",
+      "repository_sha256": "203b818dda9a98d3d53446a5ed30efa7e1e7c7a31c111add1b5b3a9215e721f3",
+      "bytes": 3037,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/20_QA.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/20_QA.py",
+      "original_sha256": "4ec69f7bc8474daacd5b13829d565fdf60492136a9c9513ffd15955403fcaf60",
+      "repository_sha256": "cf49f4a1b7f418f7d990cf67e1c1844061f1a38fb9f0de93dbe687bc948b5493",
+      "bytes": 4602,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/21_figures.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/21_figures.py",
+      "original_sha256": "a7968a29b38d6837d30072cce4fa534aef6ba8c07703d78208d2456a852ff22d",
+      "repository_sha256": "a7968a29b38d6837d30072cce4fa534aef6ba8c07703d78208d2456a852ff22d",
+      "bytes": 3354,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/common.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/common.py",
+      "original_sha256": "a728883f03f9165210ec26afed28c14047408ba95d81bf1b195839be54eb8e77",
+      "repository_sha256": "dca963f90c8855f1b5981f181c7985337f75e1823de4271420f5d70ee7f95af8",
+      "bytes": 2970,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/native_bridge_lib.py",
+      "method_id": "M-KLB-GROWTH-20261021",
+      "method_sha256": "3f4d4706651007eca16814e8fcc70b180a7c6ef6fd17c07c41d9875d299a7d8e",
+      "source_name": "code/native_bridge_lib.py",
+      "original_sha256": "ecf03f756b3c25b7323b02963ad7423d18314e2c07932584efd13e45736dca49",
+      "repository_sha256": "ecf03f756b3c25b7323b02963ad7423d18314e2c07932584efd13e45736dca49",
+      "bytes": 5916,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/01_prepare.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/01_prepare.py",
+      "original_sha256": "ccc1f38b9bf9b9c5d3b5b8cc031e2174e58560a55f3761b0e93fd0fa8ece5783",
+      "repository_sha256": "9b4cd8473af4e67f8617cd90b9d72e813783f0c678166ec43c830ae3faf17a55",
+      "bytes": 10181,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/02_grn.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/02_grn.py",
+      "original_sha256": "9745a0e91933122a87e08619d5586e77114614b895ee2b81b7bdb102ebec87c1",
+      "repository_sha256": "9745a0e91933122a87e08619d5586e77114614b895ee2b81b7bdb102ebec87c1",
+      "bytes": 2479,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/03_build_db.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/03_build_db.py",
+      "original_sha256": "19dbd5ba72d64fd9175c94fdabc9f0e937d476753443af10096bba27abdc9caf",
+      "repository_sha256": "4454dde3781785099a79f5e325e1d4bba711bceaaf48cc4a7101d32650ad7790",
+      "bytes": 1003,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/04_prune.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/04_prune.py",
+      "original_sha256": "83526f40640b9eb50ba08120d4123572dfe064372fbcce39d88f3e0ab8d908f9",
+      "repository_sha256": "83526f40640b9eb50ba08120d4123572dfe064372fbcce39d88f3e0ab8d908f9",
+      "bytes": 3802,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/04_prune_existing.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/04_prune_existing.py",
+      "original_sha256": "466519ff4c598b7138e0f3911dbab70724d24c15a3f59ab9b8e66aba8dff2699",
+      "repository_sha256": "466519ff4c598b7138e0f3911dbab70724d24c15a3f59ab9b8e66aba8dff2699",
+      "bytes": 3460,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/04_run_existing.sh",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/04_run_existing.sh",
+      "original_sha256": "34cfafac7077fb364b8017d31c65f5dc652667f8c9b0e595c94fc66d5b7060d3",
+      "repository_sha256": "d32f9a7c5b56c76ec5dd81f38773b587a2a34fca6d1688cd0469781632f5c701",
+      "bytes": 447,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/05_analyze.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/05_analyze.py",
+      "original_sha256": "85d174fcfc208292f2f7266b18ad3d60184d498c537c0564e33e0a36fa19f229",
+      "repository_sha256": "85d174fcfc208292f2f7266b18ad3d60184d498c537c0564e33e0a36fa19f229",
+      "bytes": 8333,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/06_verify.R",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/06_verify.R",
+      "original_sha256": "ab3a5b81eb1a6eae58f98109ab0b9a35df0b3d2427e1f67a32293cc2ded804c2",
+      "repository_sha256": "ab3a5b81eb1a6eae58f98109ab0b9a35df0b3d2427e1f67a32293cc2ded804c2",
+      "bytes": 1391,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/07_draw.R",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/07_draw.R",
+      "original_sha256": "cf14e590c7aae135cc6eb413cfab5fc738e76d66cd819eba172a3d21b286440d",
+      "repository_sha256": "cf14e590c7aae135cc6eb413cfab5fc738e76d66cd819eba172a3d21b286440d",
+      "bytes": 3641,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/08_stability.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/08_stability.py",
+      "original_sha256": "1735c5a630510494ba7645e284b09810fd784859dd879d6819802f41f7cd164c",
+      "repository_sha256": "1735c5a630510494ba7645e284b09810fd784859dd879d6819802f41f7cd164c",
+      "bytes": 2561,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_scenic/code/09_export.py",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/09_export.py",
+      "original_sha256": "737d30dcaa4df021460a53a7cf3c1cb27163b3e0238745901cb355040ba8f7d1",
+      "repository_sha256": "f2303c6b5eac90bc01d51889df3d0adbc6a6ca9271439afd48a1967c08e2af94",
+      "bytes": 3582,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/run_analysis.sh",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/run_analysis.sh",
+      "original_sha256": "844835a5fa4216f85735311888ed020bc3157474ab23a5a1c8eb4672ad68e27a",
+      "repository_sha256": "e34b0d081e792babbb760361bf49dd1aaceded46c1835387b02976d5ccb00e8c",
+      "bytes": 685,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/run_databases.sh",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/run_databases.sh",
+      "original_sha256": "1b96a87a0f9fae12f47499671662bc76ad2a6e7f45e05f6c5a4d99abee356fee",
+      "repository_sha256": "c84559b0dce596fa853b0a2c0e58a15d8afd4106a98d3b7ee4f532a0831935ad",
+      "bytes": 311,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_scenic/code/run_networks.sh",
+      "method_id": "M-KLB-MA2016-PYSCENIC-20261023",
+      "method_sha256": "9db1ab242affc24b1e2bb2b07ba148c995a51dfaaf00be46b8cfd6955179185b",
+      "source_name": "code/run_networks.sh",
+      "original_sha256": "ed6191f146314f9a71b78deeffdff9e65ed574aaa7872edeaca81f3783957a6a",
+      "repository_sha256": "51750e45b0d60d62c6d75604dee8f90d5dda5556eddc0a22dbfcb6bc4b2c5aa9",
+      "bytes": 701,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_maps/code/00_gene_sets.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/00_gene_sets.py",
+      "original_sha256": "fddcb14aa30944e878b2e1e83746637b2d90b99bd0e44067d02aa9b1ac7021d8",
+      "repository_sha256": "fddcb14aa30944e878b2e1e83746637b2d90b99bd0e44067d02aa9b1ac7021d8",
+      "bytes": 2001,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/01_sets_mass.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/01_sets_mass.py",
+      "original_sha256": "35778c43fc730331a9ae1e82e37dbd0c7571b7fe56eda2391e5ae8a3273363d4",
+      "repository_sha256": "35778c43fc730331a9ae1e82e37dbd0c7571b7fe56eda2391e5ae8a3273363d4",
+      "bytes": 6858,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/02_fetch_genomes.sh",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/02_fetch_genomes.sh",
+      "original_sha256": "816d647a062a021454650402648e2fa55ea9e59c5220d6091c7267220877aa17",
+      "repository_sha256": "816d647a062a021454650402648e2fa55ea9e59c5220d6091c7267220877aa17",
+      "bytes": 843,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/03_promoters_fimo.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/03_promoters_fimo.py",
+      "original_sha256": "631496a5e171b8c79c0591bad2cc59fe2a8caf446c8a177ac7a0cb359382d93c",
+      "repository_sha256": "f82ad1ff61ca8e2cfbad19865edac70d437ba6443302465ecf7e603064f806b3",
+      "bytes": 5912,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_maps/code/03b_run_all.sh",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/03b_run_all.sh",
+      "original_sha256": "cccf5724460ff550cde2d78d40e7a1a115e798513221eee6887a2f92c622ba9a",
+      "repository_sha256": "ef27855566657d72a9760ca22fecabc39a336fa4d5c946a1f42488492950a1f2",
+      "bytes": 983,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_maps/code/04_enrichment_mass.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/04_enrichment_mass.py",
+      "original_sha256": "f4e7934d3dcb165f75d9aa44e5cfcf5ad449faf1d476970b507baf09c44253ab",
+      "repository_sha256": "f4e7934d3dcb165f75d9aa44e5cfcf5ad449faf1d476970b507baf09c44253ab",
+      "bytes": 6157,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/05_gsea_phylo.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/05_gsea_phylo.py",
+      "original_sha256": "8cd9d40f79cebd6cd199e5c709c568a42e9db385a1b4c9a816e6e58d1713997d",
+      "repository_sha256": "46745b08baafcbd67cabc1aa7501d8c0c8e980abf848f712aa000b765ce51460",
+      "bytes": 7780,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/mammal_maps/code/common_rm.py",
+      "method_id": "M-KLB-RUSLAN-MAMMALS-20261023",
+      "method_sha256": "e7c2f04dd61ed14fc946ead4f65f5b6c2f44839814edb9366bb1ec91ea1f58c9",
+      "source_name": "code/common_rm.py",
+      "original_sha256": "2edcc00bffc0214ff416449a1734d0b4e3bab5f632fbb815bb88d7b67fa05da6",
+      "repository_sha256": "2edcc00bffc0214ff416449a1734d0b4e3bab5f632fbb815bb88d7b67fa05da6",
+      "bytes": 2152,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/describe_correlations.py",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "method_sha256": "8cb7e46cb3ffc32634ddc190531c330a2d6beb524f77c7b95dbf0a49a8834b4e",
+      "source_name": "selected/code/describe_correlations.py",
+      "original_sha256": "88979a66792589de9db1c60c7908122c75b35d234217a69fa4e5b6f4fbbbc134",
+      "repository_sha256": "88979a66792589de9db1c60c7908122c75b35d234217a69fa4e5b6f4fbbbc134",
+      "bytes": 6586,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/export_go.R",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "method_sha256": "8cb7e46cb3ffc32634ddc190531c330a2d6beb524f77c7b95dbf0a49a8834b4e",
+      "source_name": "selected/code/export_go.R",
+      "original_sha256": "f5441f260619b473180e6efd04cd87f580aa25f158cd1bca5949d7d091a20c95",
+      "repository_sha256": "f5441f260619b473180e6efd04cd87f580aa25f158cd1bca5949d7d091a20c95",
+      "bytes": 467,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_maps/code/run_all_maps.py",
+      "method_id": "M-KLB-ALL-MAP-SUMS-20261023",
+      "method_sha256": "8cb7e46cb3ffc32634ddc190531c330a2d6beb524f77c7b95dbf0a49a8834b4e",
+      "source_name": "selected/code/run_all_maps.py",
+      "original_sha256": "b4cdc6b00746beec0b66b4bcf6fbcd55dd1f663f5189ae43b4fe7633496b5c72",
+      "repository_sha256": "b4cdc6b00746beec0b66b4bcf6fbcd55dd1f663f5189ae43b4fe7633496b5c72",
+      "bytes": 11793,
+      "transformations": []
+    },
+    {
+      "path": "analyses/mammal_wgcna/code/module_scores.R",
+      "method_id": "M-KLB-WGCNA-DESCRIPTIVE-PANEL-B-20261023",
+      "method_sha256": "e277123c64c4fc36f5f58460ea44208402118943f5f6fa2da3b11dcac8a18635",
+      "source_name": "code/module_scores.R",
+      "original_sha256": "6cc704ba95ebb2a27a4f7623d2e54761a8e16ed31d6d1706db1fb718d7576130",
+      "repository_sha256": "6cc704ba95ebb2a27a4f7623d2e54761a8e16ed31d6d1706db1fb718d7576130",
+      "bytes": 3019,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/01_ingest_and_allometry.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/01_ingest_and_allometry.py",
+      "original_sha256": "76beb551642e6e934051803629d0b799265d53cdb30e4fed8ff6389813f8b3f4",
+      "repository_sha256": "ff636ca21ac386e400741e1611af4c10aafa0152ca50df868cbff4cedee4f419",
+      "bytes": 18400,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/02_chicken_esc_fib_gemcat.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/02_chicken_esc_fib_gemcat.py",
+      "original_sha256": "4354ed1871745f149eebf78ef1a7de2644781c7084d323bd2a3662aef806680e",
+      "repository_sha256": "dd5f597b9c7af02cf3ca00fbb7b7107b6ac0ac5ceaa89129d484a65f2180ca15",
+      "bytes": 10680,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/02b_gemcat_ies_primary_recon_baseline.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/02b_gemcat_ies_primary_recon_baseline.py",
+      "original_sha256": "2fa8ed635aa115f7235a93ac105cb9fa7f025974468d54a14f96b31813d17bcf",
+      "repository_sha256": "95d57a818d3a562cdd1d2a064ae015380ee8fb0c87832312fe389e31173824bf",
+      "bytes": 5628,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/03_cage_promoter_regulation.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/03_cage_promoter_regulation.py",
+      "original_sha256": "49df0fab7e55000a9b2a6a6fcfd200ed25f5fa9fac4ee74489fba553a08bafc5",
+      "repository_sha256": "097c35277714267873cd98d46e0cbc0e0e50f4ffec54bee6e5883f9f4ec2894d",
+      "bytes": 6441,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/04_gwas_cre_inventory.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/04_gwas_cre_inventory.py",
+      "original_sha256": "0607fef37c9d1dfe8d44420adaeeb57d2a21f2049237c1a45397a27ef73eb691",
+      "repository_sha256": "424f28d375343ead30fb7549c20c4f32a6e8a1fdacc90c1e8f7725a1abdd5f0f",
+      "bytes": 7958,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/05_write_summary.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/05_write_summary.py",
+      "original_sha256": "6e213028864f2f4d09c56e67177f64304ec9b719ad34726c0a9c57098e6dd380",
+      "repository_sha256": "a80715240e5cecebc928b63bb0a3af5a42b9a289ea7f93a2a1f8a802224d9cf2",
+      "bytes": 4522,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/06_recover3_salmon_allometry.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/06_recover3_salmon_allometry.py",
+      "original_sha256": "97cb2bf118fcde37119e8b8afe2a141517eedc38ed7744033d69717164ff5c80",
+      "repository_sha256": "c152f3ea2812af375d1b59351113a29d3bbe085bf0d126ff3000619ccb41b5c3",
+      "bytes": 6591,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/07_gemcat_multispp_ies_vs_recon.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/07_gemcat_multispp_ies_vs_recon.py",
+      "original_sha256": "00f4c2806b88b9e641e88c5bb004b447d2e365eb0df3399af4117b8fb84fc67b",
+      "repository_sha256": "5f1bee60671838374ec7cdb852d4ad85fa9e8f5050c45101cfecf50f54f4ebfc",
+      "bytes": 9768,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/08_paperA_genes_gemcat_oxphos_cage.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/08_paperA_genes_gemcat_oxphos_cage.py",
+      "original_sha256": "84486b5bdd12ca8e95cf7bae0f9375f9410aa86fd0459b74c1cd84c8067d9de3",
+      "repository_sha256": "70ca7921b0fe0c1b66af590bcae9d6fbb7dccd264384ff0bebd876130e0adc2d",
+      "bytes": 27770,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/08b_cage_oxphos_n7.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/08b_cage_oxphos_n7.py",
+      "original_sha256": "f0a3faf3beab156eb57ec2fbddd73f30937f3efda1869897d70d28d16f66b254",
+      "repository_sha256": "9e40864e261b7e9c15cee64934ae4e26690ba91d6cb2b106e024964882a0198e",
+      "bytes": 8946,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/09_alt_scaling_not_kleiber.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/09_alt_scaling_not_kleiber.py",
+      "original_sha256": "e1b21b49d913b2fa1e831bbb844d81da580aafd39904aa6827feb2566e47e1c3",
+      "repository_sha256": "ffbfa8a3218b77e139cb126c155f1ac25d5df3e386fd12c7ba74482241d1e989",
+      "bytes": 12936,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/10_pgls_simplicity_S.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/10_pgls_simplicity_S.py",
+      "original_sha256": "7704bbe3413706bb76e34c56e3d436e7ae89bb4c85caf5dfdf62d2a33bb9c2eb",
+      "repository_sha256": "5a629b43f6060ebe41e100df1c9a6e4af3b72f311ae7415ff89e034d0069c47a",
+      "bytes": 16979,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/11_salmon_all7_chicken.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/11_salmon_all7_chicken.sh",
+      "original_sha256": "71b8d8083864de7269ef4a4e41f763cf0c1482016eb083a4e077cf0fa61f0629",
+      "repository_sha256": "f45956ec7b046f24bdfe2867923552aacbb6f898a34d52b777675f47ef71eb09",
+      "bytes": 4886,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 4
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/11b_aggregate_salmon_all7.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/11b_aggregate_salmon_all7.py",
+      "original_sha256": "f6e1bfbcdafc272ac58b3c3ca14ea888406bc95e188142a6408184213782091c",
+      "repository_sha256": "1d41a8a77897deb857a86ceb205e10f6f5a7443082c2df8013285a5439974bb9",
+      "bytes": 8655,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/12_promoter_honest_reanalysis.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/12_promoter_honest_reanalysis.py",
+      "original_sha256": "caac6d078ce1fd347a7924356ee02133be78505f24b20ac6a865a9fbc2340ad2",
+      "repository_sha256": "67abf7b7a55d8d7c3f784c7a2dacf8cb6da8c5ab830091486322950b9dbc125b",
+      "bytes": 18757,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/13_dropbox_oxphos_promoter_architecture.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/13_dropbox_oxphos_promoter_architecture.py",
+      "original_sha256": "dd7c50f673c1e496438f6d3d1cade4118912e2055dcbe1445b2fab410bf5d9e5",
+      "repository_sha256": "dadf0f77fad2667c082bfdf5ae00e3c30f010a695b1f82283baa88f7c2583e95",
+      "bytes": 20513,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/14_oxphos_gene_drivers_vs_mass.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/14_oxphos_gene_drivers_vs_mass.py",
+      "original_sha256": "f8b738b6a736cd9b5717ee1f80274c9b9e8b40acef5127d585cc136a08f1297c",
+      "repository_sha256": "c7806b1f691a1f0b333a81e004616f1d4d8d123c37a461ce7598a2162555c20c",
+      "bytes": 19356,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/15_ortholog_expand_and_confounders.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/15_ortholog_expand_and_confounders.py",
+      "original_sha256": "6e0ed2bda55437d967f30c37406357af1d3bb09703d08f69373c1a19768a2853",
+      "repository_sha256": "43e3f8eca1b518ca62e63bf2d7c2c558562d6ff871eb15654efabd58bc98ef15",
+      "bytes": 25648,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/16_oxphos_promoter_shape_motifs_bidir.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/16_oxphos_promoter_shape_motifs_bidir.py",
+      "original_sha256": "658ebd8fbcbe19c2a68b763680b385dc3001bbc12076b2c7de1bc8f53608a7e9",
+      "repository_sha256": "143358e8ab3ff9b91be3ad0488097fd4c5e1271e926733fa6dc317577240abc9",
+      "bytes": 23508,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 2
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/17_prep_cage_remap_genomes.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/17_prep_cage_remap_genomes.sh",
+      "original_sha256": "48370214e5ff861caecf605437177ec5d1bd41bad8cdc0427ba63e228a765b58",
+      "repository_sha256": "15b6accdaf492167e3732ed4a6c3fc6671fccbfdcfe392a4c8bf3b5ebfae2c3e",
+      "bytes": 2850,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 4
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/18_cage_remap_mt_pipeline.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/18_cage_remap_mt_pipeline.sh",
+      "original_sha256": "3a32bf664260a63e51d909edbce2bdd4e31e628e320675a034261d568ca2407f",
+      "repository_sha256": "3b53fd454c6343555de6b3b3df6864917f7be90bf40c2a3ba288d92e518a9379",
+      "bytes": 11519,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/19_oxphos_species_thread_phase2.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/19_oxphos_species_thread_phase2.py",
+      "original_sha256": "d0f3905c937745a2adfacc72a5a686f40a7d594f76c9f535a3448cdf169f0a7a",
+      "repository_sha256": "d0f3905c937745a2adfacc72a5a686f40a7d594f76c9f535a3448cdf169f0a7a",
+      "bytes": 14820,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/19a_oxphos_module_consistency_chicken.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/19a_oxphos_module_consistency_chicken.py",
+      "original_sha256": "252fec15bc2bb23dcbbb328f083a45a313e95d3eac9afd2ae74f6903ece3e46d",
+      "repository_sha256": "252fec15bc2bb23dcbbb328f083a45a313e95d3eac9afd2ae74f6903ece3e46d",
+      "bytes": 18179,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/20_oxphos_cis_promoter_orthologs_n7.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/20_oxphos_cis_promoter_orthologs_n7.py",
+      "original_sha256": "2e9f7ff1952549d25fb6984e3d4eec931e5f7f22af4ccb79a3f850985120bb1c",
+      "repository_sha256": "fd08bb0a06e057050c5f9b97a4367c93497a334bdbee9ff88fe333e99859006b",
+      "bytes": 19170,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/21_rnaseq_geo_native_recompute.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/21_rnaseq_geo_native_recompute.py",
+      "original_sha256": "8fa240a33900545927b7e20437b12b58ffd604dbde5373bd6b8dbaaae1ed58d3",
+      "repository_sha256": "ca9ff99e596c6b6090107b3cbd7a572bf78531425090db8678436059d17a36f5",
+      "bytes": 13612,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/22_gene_correspondence_and_cage_recompute.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/22_gene_correspondence_and_cage_recompute.py",
+      "original_sha256": "f3049b75ff2929eab6cb9c1be72b7b442114137a02f5f6d67e9ef92f58cb863d",
+      "repository_sha256": "6750b2d4511cc62bf9281d79c6bcfdf67a14d6cf65d03e089ff2cf7fe50ab175",
+      "bytes": 25231,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/23_reverify_oxphos_mass_confounds.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/23_reverify_oxphos_mass_confounds.py",
+      "original_sha256": "414af1882b38be9dd0655f88233e07c65b97546abfb997b337eb0fb899d2ec6a",
+      "repository_sha256": "8c4696b33bcf796ff63c1f147013c646856de46c84e695b2b4d51f35db6f1a75",
+      "bytes": 11995,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/24_random_geneset_null_and_coverage.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/24_random_geneset_null_and_coverage.py",
+      "original_sha256": "de35ad9dd29666a4ef125cd67912600f06b0a94f42de76ec5e2811b208be961d",
+      "repository_sha256": "3b3e985206294ef6401bd17c023b3556e811b4934d8b9ddfa425a2e30687eba2",
+      "bytes": 10444,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/25_matched_null_oxphos_vs_mass.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/25_matched_null_oxphos_vs_mass.py",
+      "original_sha256": "c89cf46b61da483a7aca8acb9d35b71225284de5149a8a045369e8343b26ac8c",
+      "repository_sha256": "ada04ffad072437354d4eebeb07339759b6d24a9014c027c77bb012e58714049",
+      "bytes": 8635,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/26_what_explains_the_cage_decline.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/26_what_explains_the_cage_decline.py",
+      "original_sha256": "9375d6e643b3d921eef789710fffe6c9f4fb5dab7a3623c1c862627a48611440",
+      "repository_sha256": "bb6adc4fe4f0ab0e9aa01aa65b7b0ca847053ce4006c38b72e45a2aed27069e2",
+      "bytes": 16228,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/27_abundance_gradient_and_rank_test.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/27_abundance_gradient_and_rank_test.py",
+      "original_sha256": "81777c8c366f73e9ecbc1eedcbe568692dbd68c81e171e6225d6fc93f210f0b3",
+      "repository_sha256": "df357e97df782248f98e31f828ede3d072c7e7d12942852951cb5d6de221a30e",
+      "bytes": 9072,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/28_dropout_mechanism_and_fixed_null.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/28_dropout_mechanism_and_fixed_null.py",
+      "original_sha256": "ea79aca337a4e4b7ab09fd41c8af2c9459def5d071249a08aec59b5900aa47c0",
+      "repository_sha256": "e592b09277068a85b3d082ce0fb9e6390880ab38976a2d73c10e99009c04e986",
+      "bytes": 9885,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/29_colleagues_ortholog_matrix_check.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/29_colleagues_ortholog_matrix_check.py",
+      "original_sha256": "439a48eb051c68bdfa308d464639bb13b9a04a42ed220ff7202f7a9c67c64cad",
+      "repository_sha256": "2569a20d486c4a9e47c7eb51480f71b029299e1bca039cb6c8fddb0e1cbfffce",
+      "bytes": 11296,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/30_reproduce_colleagues_heatmap.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/30_reproduce_colleagues_heatmap.py",
+      "original_sha256": "93a43b2a3e8b75957420519829fc5a701ae8d69af08e66bc2f808aa8422c6986",
+      "repository_sha256": "f778de424407751f2e80c0afd2f2607ae10bfca3369ac02214250c0456821236",
+      "bytes": 10215,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/31_reproduce_colleagues_setsum_figure.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/31_reproduce_colleagues_setsum_figure.py",
+      "original_sha256": "42f23031e99ee1734467b40b416a5f6b7ccb6797a3062645dee1c97a42312e97",
+      "repository_sha256": "91397e2b8cf502dd30bbf76410e7da35a89e2698372541ee5faecd72e91823a2",
+      "bytes": 9194,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/32_gene_length_discriminator.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/32_gene_length_discriminator.py",
+      "original_sha256": "891d94668f97a7970d4f4f447a37b0eee4aed1cf997f06a7b06123a5080733c7",
+      "repository_sha256": "52112cc594faae14632cdbc2f2d679582adf20cca9db914f5c9355c89621c1aa",
+      "bytes": 9557,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/33_same_metric_fixed_list.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/33_same_metric_fixed_list.py",
+      "original_sha256": "30cbed4bd6529693f5cd4ca1ad12aa824f35c5520d6a10ca166c5381f7f9e1cd",
+      "repository_sha256": "0a1cbe26774c936ab11c3fee8bebacd638e0b9c5325d89811665f01144e32cba",
+      "bytes": 10339,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/34_pvalue_audit.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/34_pvalue_audit.py",
+      "original_sha256": "b4154fecad721b0c410546f0c986264164537fb1626616d0acb95ad9e9e88e9f",
+      "repository_sha256": "9ade376bf3bb5ae04a02e16a7f8f2a1130942e1cf05db7d0bf977389607cf5c2",
+      "bytes": 6900,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/35_rna_layer_independence.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/35_rna_layer_independence.py",
+      "original_sha256": "f361c6525b6ec575734b1e69e680f4dfae8e2a1335cc3e98104c0555fc62e178",
+      "repository_sha256": "b2ad0ff3e9978782556c4b75481e3a8e40a9db1dac2330997ceb9984dcb1c015",
+      "bytes": 9837,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/36_gse167580_fib_oxphos_module.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/36_gse167580_fib_oxphos_module.py",
+      "original_sha256": "e6501a86b866737f9493ee3fe7476c401634596d0c8fd58c616e9f5754a70c98",
+      "repository_sha256": "e6501a86b866737f9493ee3fe7476c401634596d0c8fd58c616e9f5754a70c98",
+      "bytes": 18061,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/37_wagner_sf_oxphos.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/37_wagner_sf_oxphos.py",
+      "original_sha256": "c1bb59bc848691cc39621971ca6e7bf4bbee368e50cdf9f0548da4a25432b772",
+      "repository_sha256": "cfeedd116156938968efbf95beba9cf844152ee512a8c6f07c260672fb0ba07b",
+      "bytes": 11151,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/38_fantom_msc_oxphos.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/38_fantom_msc_oxphos.py",
+      "original_sha256": "decdfe4524e1a256bfb9ddb548070e0c975b351a2901684b6d4e19125a58f83b",
+      "repository_sha256": "30cac596cba0655f88738bc7640b4ef1396940480f4a5390dd6175229a5902a5",
+      "bytes": 17736,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/39_ruslan_metric_fib_panels.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/39_ruslan_metric_fib_panels.py",
+      "original_sha256": "0598f38e142e328d12f98150e9447c5e576ccaae4965cb6beb49fe1054138152",
+      "repository_sha256": "0598f38e142e328d12f98150e9447c5e576ccaae4965cb6beb49fe1054138152",
+      "bytes": 10841,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/40_ruslan_style_scatters.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/40_ruslan_style_scatters.py",
+      "original_sha256": "80b6a3f234d9f334bc0bc699753e413b10f3280e1dfd16546ba6f5d1d5ac61c9",
+      "repository_sha256": "0d2a10035c83e67561e58d10ed9d2991b04eb055ae505999e5e4824998855670",
+      "bytes": 9889,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/41_ruslan_kegg_thermogenesis.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/41_ruslan_kegg_thermogenesis.py",
+      "original_sha256": "ae4a3bd7bdac750585fcadcbc7cb4ce80cf22cfa0b9287dfe9e48158cab0e7d5",
+      "repository_sha256": "ae4a3bd7bdac750585fcadcbc7cb4ce80cf22cfa0b9287dfe9e48158cab0e7d5",
+      "bytes": 15076,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/42_file_panels_ruslan.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/42_file_panels_ruslan.py",
+      "original_sha256": "e9d9c5be76619da916f2a08a918cd1bf5559c1037ed750e225bde362d629ac53",
+      "repository_sha256": "e9d9c5be76619da916f2a08a918cd1bf5559c1037ed750e225bde362d629ac53",
+      "bytes": 15725,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/43_wagner_kegg_panels.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/43_wagner_kegg_panels.py",
+      "original_sha256": "a79dad32e78c8914e0377f1a5ff043af5ce8501f21b8025138ea52c291f8c5cd",
+      "repository_sha256": "a79dad32e78c8914e0377f1a5ff043af5ce8501f21b8025138ea52c291f8c5cd",
+      "bytes": 3871,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/44_fantom_deck_check.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/44_fantom_deck_check.py",
+      "original_sha256": "6b57933fc0fdcb9e2641702c271072d3b73fd5c891712b1de56cbb3e1bd34630",
+      "repository_sha256": "6b57933fc0fdcb9e2641702c271072d3b73fd5c891712b1de56cbb3e1bd34630",
+      "bytes": 5450,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/45_unified_setscan_birds.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/45_unified_setscan_birds.py",
+      "original_sha256": "e065103c5cee196f9ceea6cffcf0de84b53f464aad05f9b28ab4d79da2039ceb",
+      "repository_sha256": "7030ad4e5300c5f4ef4d2b79d1713ce4c78ea062f1486638801540f3fef23a65",
+      "bytes": 6885,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/46_fixed_core_gradient.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/46_fixed_core_gradient.py",
+      "original_sha256": "41297973a00ea36583890c1ced825cfb8eb005f01318766722445bc95907c464",
+      "repository_sha256": "41297973a00ea36583890c1ced825cfb8eb005f01318766722445bc95907c464",
+      "bytes": 7276,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/47_missing_genes_targets.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/47_missing_genes_targets.py",
+      "original_sha256": "94ed20b024f894d92d6d8dd710a212fc51078e15a4aeb0468a13e2c8624e6083",
+      "repository_sha256": "512085f8a19c5a6df5e02677a1b1cec14d84555fa314374282cfc495b88c06c1",
+      "bytes": 5566,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/48_fetch_source_assemblies.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/48_fetch_source_assemblies.sh",
+      "original_sha256": "7ed9a004a197c4ea64462a89e7f83dbca042cddceb4f0e2f16ce4b547859287e",
+      "repository_sha256": "544a72620348bf1bd5aafa76668c10a9a53cc32d4ff4d2bf88ec2a784ec9ea5c",
+      "bytes": 3145,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/50_recover_missing_genes.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/50_recover_missing_genes.py",
+      "original_sha256": "70bb57b3b2d148ba5e621cf9fdfc83cd58ee929d29432fe8cfb2b677ba6fc94e",
+      "repository_sha256": "7438a4f73953937787ecfc926d54d4f29ebdd2d5a97e748514e68ae88ecb66a5",
+      "bytes": 9397,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/51_rerun_with_recovered.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/51_rerun_with_recovered.py",
+      "original_sha256": "de3c48d0c485eea9ff038bb3484a7af1aa614fd9037488cfe6f13d617766c6ce",
+      "repository_sha256": "f6aeec3747d7dfdb88dd514822ffa8415fbec86ed7b3538eb40682e72aec0af3",
+      "bytes": 8607,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/52_recover_rna_layer.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/52_recover_rna_layer.py",
+      "original_sha256": "50260c8aa913c8d4865bb33e4d02894007a68e5def9b69e967df3fdb47f71d41",
+      "repository_sha256": "263b850dac8187a6b6dddd19086bfc261fc1f06c5bf47d0a399f14be9d77beaf",
+      "bytes": 8824,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/53_three_checks.py",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "inputs/history_sources/53_three_checks.py",
+      "original_sha256": "7173c1c32dc2bbd1ad3e46cf48cd4b825dc2b26ef7715275eb4e5378b5140862",
+      "repository_sha256": "19870385e87474455dcd476722047c2a339d11c0a499f642df7826caaf7577b0",
+      "bytes": 8959,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/54_bird_core_sets.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/54_bird_core_sets.py",
+      "original_sha256": "4c5fd00d8b81420b406b31c02e5c05f9da33c671a49f9f3ecc8e93935896bb95",
+      "repository_sha256": "4c5fd00d8b81420b406b31c02e5c05f9da33c671a49f9f3ecc8e93935896bb95",
+      "bytes": 3414,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/55_working_sets_fits.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/55_working_sets_fits.py",
+      "original_sha256": "ba9c6b9ae644d00998906b6b7ddb3762d6f05be81b9864ee5db3edba7d062d22",
+      "repository_sha256": "ba9c6b9ae644d00998906b6b7ddb3762d6f05be81b9864ee5db3edba7d062d22",
+      "bytes": 3803,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/56_recovery_round2.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/56_recovery_round2.py",
+      "original_sha256": "1b36b493b0804e782c2cc9a47c15569d6f74e4eb10a0550e7fc577d07f7e5e9c",
+      "repository_sha256": "ede63b34f6cc1d1c150de3c6002696a5aec8089850544b483212cdf8c38ce302",
+      "bytes": 10053,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/57_working_sets_round2.py",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "inputs/history_sources/57_working_sets_round2.py",
+      "original_sha256": "d9fcba00ced8f8d540ec8323cbcfc40c5f3103cb9f21619d02cfc3a8c1ac448b",
+      "repository_sha256": "153b54d0505d4fa06f365990846bac909713526c551c9d652a27111bbb5609db",
+      "bytes": 6980,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/58_full_reannotation.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/58_full_reannotation.sh",
+      "original_sha256": "6aac21bc32f5d18a142b25550b8d2d689f667e203ebe0a8affb24e1093ba0ceb",
+      "repository_sha256": "a35fb106d87d23ca563e9fca897d528e07e7330d03c6fa700c8fe86cb0057b88",
+      "bytes": 3039,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/59_emu_liftover.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/59_emu_liftover.py",
+      "original_sha256": "824ca04e51bf2ce8e732d89d849c5b42f28475dbffb819f1f59f3ab21169ffbc",
+      "repository_sha256": "2dd583763faf72cc890c178d6dccfe706a5de653f5ef1914895cae14d8306d04",
+      "bytes": 7096,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/60_unbiased_mass_scan.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/60_unbiased_mass_scan.py",
+      "original_sha256": "9333319fa21e21b8cb9e83e780f6441448739c5a067513ee8c98ce822a3954b1",
+      "repository_sha256": "9333319fa21e21b8cb9e83e780f6441448739c5a067513ee8c98ce822a3954b1",
+      "bytes": 6716,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/61_metabolic_panel.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/61_metabolic_panel.py",
+      "original_sha256": "4332b03809febfad567148827e48afc9d0d1efd0d01fb31a75ef282ef97c7f5a",
+      "repository_sha256": "4332b03809febfad567148827e48afc9d0d1efd0d01fb31a75ef282ef97c7f5a",
+      "bytes": 5072,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/62_build_library_matrices.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/62_build_library_matrices.py",
+      "original_sha256": "ddf4fc9d26e3ed6437a0e1ad29377ab12df8d0541b8b29a33492848c329a7ca0",
+      "repository_sha256": "4649f3ae59a69083b5e815133f882164da78be0d66144b63bcf4f6d32e43af7e",
+      "bytes": 6451,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/63_variance_partition.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/63_variance_partition.py",
+      "original_sha256": "a5a9c9153a2a166f2bbc8618c0558e2efcf9720bcdde795dcc1c4c0e0f2d8c7b",
+      "repository_sha256": "a5a9c9153a2a166f2bbc8618c0558e2efcf9720bcdde795dcc1c4c0e0f2d8c7b",
+      "bytes": 4934,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/64_wgcna_run.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/64_wgcna_run.R",
+      "original_sha256": "7cbefb8a66a902551555182d3f063c22d43970603a7c22ac6c88badca2e0ffc3",
+      "repository_sha256": "aac8e216764c08dc5656e4f80640017871a70c333ca27cb7afe4689d4f712bc1",
+      "bytes": 8686,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/64b_consensus_fix.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/64b_consensus_fix.R",
+      "original_sha256": "1968da08daf0688d2a0a5eefabbeaab796ed49481d686701e39675cf32aace40",
+      "repository_sha256": "fc42de3b9467de5c0e34ac26a269790cf722c026a1cfcdfa6193bc32d1e6f2d9",
+      "bytes": 3770,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/65_modules_vs_mass.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/65_modules_vs_mass.py",
+      "original_sha256": "9f51aa1d025d2a5d447458d76a85dbc3d18096ac2d14f19ea3ce24a7e05a8e90",
+      "repository_sha256": "9f51aa1d025d2a5d447458d76a85dbc3d18096ac2d14f19ea3ce24a7e05a8e90",
+      "bytes": 7033,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/66_module_function.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/66_module_function.py",
+      "original_sha256": "296fed3fd5f066190e8f713e347d6413e8a565670d7c55d41f3d7bba71c16a7a",
+      "repository_sha256": "296fed3fd5f066190e8f713e347d6413e8a565670d7c55d41f3d7bba71c16a7a",
+      "bytes": 6063,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/67_modules_within_species.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/67_modules_within_species.py",
+      "original_sha256": "c0952538e097fc5eb9d41905832ef35302cafec5839a883fab883c32e9bc2b3e",
+      "repository_sha256": "90530a899bc4aa5b1544ea7cc86e0a2c1f643c6a62a92f38a8fc9ab078255a80",
+      "bytes": 6838,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/68_rebuild_matrices_asymmetric.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/68_rebuild_matrices_asymmetric.py",
+      "original_sha256": "1f391f7ee183fc40806588a90c69f2853a5e4502f74ee65ad35811e675ca85ae",
+      "repository_sha256": "a6c50c939ed17337be56f125c652253ebb8396f7bf45a8b18fbacc0cb2510633",
+      "bytes": 19829,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/69_fetch_native_assemblies.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/69_fetch_native_assemblies.sh",
+      "original_sha256": "b87d914c10b792d45d9ead4fe3754d0f52ad3f1a223a3b6303a5a5090d9bf7b7",
+      "repository_sha256": "c2b027d988c1b44092b994237374d4559255a8d0d5f3b3d64338a1cf5b92cd7b",
+      "bytes": 2584,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/70_common_reannotation.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/70_common_reannotation.sh",
+      "original_sha256": "7665dff4e3c0bb77f68e1c5508323d7dba353d9f11b9693b62f5b3843f8e8228",
+      "repository_sha256": "c3d1d671fe6576067ac4d2effec07816c61d76680fdf70e724d2bd2716d4c8d9",
+      "bytes": 5244,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/71_wgcna_v2.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/71_wgcna_v2.R",
+      "original_sha256": "62758da7fc9157bce0c3ccd1030bd41ebc46feee6c76010af9eabde756603b93",
+      "repository_sha256": "0898880466b5b6d4118e151149a5369248b250a8cd54bfad5d300332693097a7",
+      "bytes": 7673,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/71b_consensus_v2.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/71b_consensus_v2.R",
+      "original_sha256": "c3641c01bbd718a62e68c5245ef14d59fe755c99219299733f8d332a0882d84f",
+      "repository_sha256": "ba7b2c77a584a0a4e3b7bf681396790905250922e2d022c33f276ed567513b67",
+      "bytes": 2676,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/72_modules_v2.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/72_modules_v2.py",
+      "original_sha256": "c1ec20eefd241ac89b2b138f18a4b5c621755aa4550ad9a7c69ac23a6b14180c",
+      "repository_sha256": "0e019f9d0e7adbecbec12e81fdd4d4ccee14174c9bc57fe28bad003394e64478",
+      "bytes": 10844,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/73_phylo_oxphos.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/73_phylo_oxphos.py",
+      "original_sha256": "33427cf88fc5d36f2e6fb39e527f6990562a528a1c96cd7a7286da2703e49d50",
+      "repository_sha256": "33427cf88fc5d36f2e6fb39e527f6990562a528a1c96cd7a7286da2703e49d50",
+      "bytes": 8018,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/74_nineteen_via_cage.py",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "inputs/history_sources/74_nineteen_via_cage.py",
+      "original_sha256": "da4594a3aff1cd0f85d7b9cfa77c9e13326607489708e12e66cdfc73f93c8ccc",
+      "repository_sha256": "d71b76f135d5cc5cb522042d3877ca51926dcd7b4fa4123eb5bc50b2c880f111",
+      "bytes": 21675,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/75_honest_gene_mass_scan.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/75_honest_gene_mass_scan.py",
+      "original_sha256": "dd1d9853f40f99d0f304f83b28bb2523812e8be5fd8e0e31e6dbcac0b703bbe8",
+      "repository_sha256": "a3a3e08d22b706ee6508ac79f41d70664acf4e63cabeca4aef208c0377ec96d9",
+      "bytes": 10766,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/76_set_scan_honest.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/76_set_scan_honest.py",
+      "original_sha256": "98798a4e9d641926128ee7ac80c5ff5c9a2d597e2c090a57b030fbb9d8faac81",
+      "repository_sha256": "98798a4e9d641926128ee7ac80c5ff5c9a2d597e2c090a57b030fbb9d8faac81",
+      "bytes": 7784,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/77_kegg_zeros.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/77_kegg_zeros.py",
+      "original_sha256": "9ce5a807944550c9978a5ff3627e14e1b63d0fcd8cda7dc17c3daec17fa734eb",
+      "repository_sha256": "9ce5a807944550c9978a5ff3627e14e1b63d0fcd8cda7dc17c3daec17fa734eb",
+      "bytes": 6134,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/78_holding_cores.py",
+      "method_id": "M-KLB-MBSJ-CAPTIONS-HISTORY-V21-20261112",
+      "method_sha256": "98e7c0b3e07a340d5c0108439e51a03c22638d9cded332b67d5cd90aeb33b021",
+      "source_name": "inputs/history_sources/78_holding_cores.py",
+      "original_sha256": "3f188003b2c48fdfa1184140bfa622d47b796bae0baaf10de18044bb1c101980",
+      "repository_sha256": "3f188003b2c48fdfa1184140bfa622d47b796bae0baaf10de18044bb1c101980",
+      "bytes": 19508,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/79_story_ruslan_scatters.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/79_story_ruslan_scatters.py",
+      "original_sha256": "361a23128e190c23ece7833c00f1ed478f2b307aa051f3cd2614349376f5a4da",
+      "repository_sha256": "361a23128e190c23ece7833c00f1ed478f2b307aa051f3cd2614349376f5a4da",
+      "bytes": 3748,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/80_story_epi_and_traits.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/80_story_epi_and_traits.py",
+      "original_sha256": "ee34fc66c3f9b0d1f3246ff4d1f7e42f1ad60e4c0020e438d94a985be71a35f3",
+      "repository_sha256": "ee34fc66c3f9b0d1f3246ff4d1f7e42f1ad60e4c0020e438d94a985be71a35f3",
+      "bytes": 16128,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/81_story_cre_motifs.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/81_story_cre_motifs.py",
+      "original_sha256": "80cace721d4bc32c6761685333fa39fcabdf9acd8c5a2956e787b3dec8dc47ef",
+      "repository_sha256": "80cace721d4bc32c6761685333fa39fcabdf9acd8c5a2956e787b3dec8dc47ef",
+      "bytes": 18472,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/82_create_fib_atlas.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/82_create_fib_atlas.sh",
+      "original_sha256": "b1736c26949ae9529944176b6a6ed32cc0eb4d52c3bfd1d5113e27dd5ab2006f",
+      "repository_sha256": "e5259b59f986f52c26fd05dee9772f802c6bf3ff631abafb223c3bf3230cd8a2",
+      "bytes": 2523,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/82_monalisa_binned.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/82_monalisa_binned.R",
+      "original_sha256": "1df9218d83ff7978a5b2a1c4e6574b35f3a5dcab862ff442ee6b8d104974498c",
+      "repository_sha256": "1df9218d83ff7978a5b2a1c4e6574b35f3a5dcab862ff442ee6b8d104974498c",
+      "bytes": 4180,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/82_motif_method_compare.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/82_motif_method_compare.py",
+      "original_sha256": "3113422021e139f4f874c4209718f43df124eec7b289df2e3610b91ccd451518",
+      "repository_sha256": "51b9fb46641450a33c717a75f96ee1232593e3feb767b0ab9941b25d8c204e64",
+      "bytes": 29495,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/83_ruslan_bidir_enhancers.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/83_ruslan_bidir_enhancers.py",
+      "original_sha256": "29342315b1ff9ec0cc8065e8ea3f630744193705175fb62465258775a61721be",
+      "repository_sha256": "bcdcf5303405c89ab9de4b4661f474cc4fabda2b0ad612bdc498250d3e03875a",
+      "bytes": 17171,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 7
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/84_create_peaks_to_story_genes.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/84_create_peaks_to_story_genes.py",
+      "original_sha256": "8871847f9df6b3dca7d33fef3af3b263889454dcb0a847352f83918d40cc0690",
+      "repository_sha256": "57f81af4b681a4327765cf0a0fea71270d7bf6b04626f1fe76f435e5c5cbce74",
+      "bytes": 8447,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/85_ela_distal_fimo.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/85_ela_distal_fimo.py",
+      "original_sha256": "cf0c2380ac2d3445e92e1c14ba32c7b2e4bd3b5682445db8dc0bf87aea3821f5",
+      "repository_sha256": "ddfb500f3246de50d04340b2691171dc5318956e1708fdf0084303cb0849822f",
+      "bytes": 13505,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/86_ela_distance_to_pla.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/86_ela_distance_to_pla.py",
+      "original_sha256": "2436f71217b9a0711caaa6fddbc44ca737c26814b9ff4c6cb32931702ae16152",
+      "repository_sha256": "59c528ee0a74f9c74a406a59ab566bc31b80c36f797773fac98f3f1bd2b19956",
+      "bytes": 8024,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/87_cross_tissue_size_set.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/87_cross_tissue_size_set.py",
+      "original_sha256": "86f79d292862eac5a8a8d93714279383562aa656b193b54e5d464b5d784e48d3",
+      "repository_sha256": "fdbe388eeb2d022ba01eefcacd4cbb975257e7a5ecb807d8b097b6174c5da224",
+      "bytes": 5267,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/88_mammal_honest_matrices.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/88_mammal_honest_matrices.py",
+      "original_sha256": "900d0ad842dbb13e11888a4b1dda7854f32a455ad138c1928aeab4b7ed5a7f1a",
+      "repository_sha256": "900d0ad842dbb13e11888a4b1dda7854f32a455ad138c1928aeab4b7ed5a7f1a",
+      "bytes": 7244,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/88_size_group_search.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/88_size_group_search.py",
+      "original_sha256": "09b6039822b1cfc129810d5303f57e95330db8c1948125eac45519d3028f37a3",
+      "repository_sha256": "29a80ee40c507397f8e52a9aad067bf1ee5949965492d4c5ee67f49eee6670e9",
+      "bytes": 22354,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/89_mammal_set_scan.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/89_mammal_set_scan.py",
+      "original_sha256": "86c894f89a024f35be8f2913ddf1e5163017aed5744e80a9e35d06371bce36cf",
+      "repository_sha256": "86c894f89a024f35be8f2913ddf1e5163017aed5744e80a9e35d06371bce36cf",
+      "bytes": 9852,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/90_mammal_camera_gsea.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/90_mammal_camera_gsea.py",
+      "original_sha256": "8ee183e5ef197d8010a6b94ad10c6fe05a5c8439142241ddc8eb89495803580f",
+      "repository_sha256": "8ee183e5ef197d8010a6b94ad10c6fe05a5c8439142241ddc8eb89495803580f",
+      "bytes": 10063,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/91_mammal_pgls.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/91_mammal_pgls.py",
+      "original_sha256": "ea183b361683248151cb7817984b8d44f5d040a7994b5ed6ae120dda57035d5d",
+      "repository_sha256": "ea183b361683248151cb7817984b8d44f5d040a7994b5ed6ae120dda57035d5d",
+      "bytes": 7046,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/92_mammal_size_report.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/92_mammal_size_report.py",
+      "original_sha256": "c7698ab41dd0cc129d0f870361ad690c2b80b3c5e90038ea9d181c2b1210448d",
+      "repository_sha256": "c5e4ee0f29d1621d7a36821ff67a480701fa5d1491dfc9390762e896a7acb2b7",
+      "bytes": 14061,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/93_panel_background.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/93_panel_background.py",
+      "original_sha256": "7173555e81ae45df2549bf59a4af2c9821304430f9bd7690b6f00478dd3abcf2",
+      "repository_sha256": "7173555e81ae45df2549bf59a4af2c9821304430f9bd7690b6f00478dd3abcf2",
+      "bytes": 4901,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/94_monalisa_nine.R",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/94_monalisa_nine.R",
+      "original_sha256": "ae497bf0f31711f66c087065e8a8f0ba157788609cb41900a436c88e720a0e3c",
+      "repository_sha256": "ae497bf0f31711f66c087065e8a8f0ba157788609cb41900a436c88e720a0e3c",
+      "bytes": 4134,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/94_nine_set_motifs.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/94_nine_set_motifs.py",
+      "original_sha256": "49dda28d16d7a2500eabd95d184e5414699eb3a1feff979f2808091dffd6e39c",
+      "repository_sha256": "f92756c19732cd37dd9895207a123841bd7c8b8e3cd5ef90001b5ea95ff8b724",
+      "bytes": 11265,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/95_nine_set_slopes.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/95_nine_set_slopes.py",
+      "original_sha256": "dd07d13afcbbf73966b0e65d915dba8b59bcc0338eb90564bed329f322fe24ee",
+      "repository_sha256": "ccb73da3c503dfc42c92ea06f304d70602fa068d5702e0405a8810e3e3e6df3a",
+      "bytes": 5888,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/96_mammal_pass_slopes.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/96_mammal_pass_slopes.py",
+      "original_sha256": "5f7b12b51a1de147e0a559e6c8dc164a763891beb0744af5c4cdd88cac256f2c",
+      "repository_sha256": "5f7b12b51a1de147e0a559e6c8dc164a763891beb0744af5c4cdd88cac256f2c",
+      "bytes": 5206,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/97_mammal_core_slopes.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/97_mammal_core_slopes.py",
+      "original_sha256": "d4e72ac5e8016b7a01e7a1b040a62ee39fb8f75b7a639fe62b8a969132fd501e",
+      "repository_sha256": "d4e72ac5e8016b7a01e7a1b040a62ee39fb8f75b7a639fe62b8a969132fd501e",
+      "bytes": 8637,
+      "transformations": []
+    },
+    {
+      "path": "analyses/avian/scripts/98_epi_own_promoters.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/98_epi_own_promoters.py",
+      "original_sha256": "367c15b182669824fb88d73049b72524e431b8521523d8ab6592ad0fcd21f103",
+      "repository_sha256": "a45f4e7c5cd4f862bebdc9848c405f04cb96c10a97aa65666f9334f4c40d01c5",
+      "bytes": 5610,
+      "transformations": [
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/bg_full_pipeline.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/bg_full_pipeline.sh",
+      "original_sha256": "ad85fa1776c1b33f5afac9c057150c85a1ab8051a28e24b4df65ba733d58dd6e",
+      "repository_sha256": "294522b89f9af85acc35f184e94f49f99363910ef3cb3ba1f2df958f0cf84e5e",
+      "bytes": 4185,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/oxphos_thread_lib.py",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/oxphos_thread_lib.py",
+      "original_sha256": "83a57be59d44dcb9fd9a81d3fae98f0a4ac9ff3c3bf7da4546f5d2cfd04e80de",
+      "repository_sha256": "964f938f697391ed4c0ec4e2aea5b2fdb3460279f7c93cba8701d86704336f87",
+      "bytes": 11526,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        },
+        {
+          "replacement": "/path/to/storage",
+          "occurrences": 2
+        },
+        {
+          "replacement": "/path/to/storage/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "analyses/avian/scripts/run_all.sh",
+      "source_kind": "host1 selected current helper code; historical executed identity not established",
+      "source_name": "scripts/run_all.sh",
+      "original_sha256": "2f7f4ee2fa4ee584c1229891774b1dda0d3759eac0b6b9ae6a3706405b53b720",
+      "repository_sha256": "7d2053eb742c4204646abbc538fbeaa9a4dacb1b92485fe8c54a8b5c3a9d6fe5",
+      "bytes": 633,
+      "transformations": [
+        {
+          "replacement": "/path/to/user-home",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "path": "figures/figure_bank/data/bird_points.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/bird_points.tsv",
+      "original_sha256": "80047079024d088d36a6b3ab77c94223e2bc349f149e9d128d3e119a450ff369",
+      "repository_sha256": "80047079024d088d36a6b3ab77c94223e2bc349f149e9d128d3e119a450ff369",
+      "bytes": 23036,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/bird_tests.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/bird_tests.tsv",
+      "original_sha256": "d50612e223f9d3bfec79bcbda6c1de194a61ea6d92e4be3b118472b698d584a2",
+      "repository_sha256": "d50612e223f9d3bfec79bcbda6c1de194a61ea6d92e4be3b118472b698d584a2",
+      "bytes": 4688,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/folate_component_points.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/folate_component_points.tsv",
+      "original_sha256": "6a60c85164204d2a3e7e428e8cb041ef5b05d4244ad89010f65702630c8bc2bb",
+      "repository_sha256": "6a60c85164204d2a3e7e428e8cb041ef5b05d4244ad89010f65702630c8bc2bb",
+      "bytes": 740,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/frozen_gene_sets.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/frozen_gene_sets.tsv",
+      "original_sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "repository_sha256": "bfa3de0af7a3689d0d93f8ba09ada46dec0c557b4ff392c686f7b38dde271242",
+      "bytes": 1785,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/motif_broad816.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/motif_broad816.tsv",
+      "original_sha256": "bcfff130b275039caac4d2501cde345506f21290e0eba7b7112f7b8fb280774c",
+      "repository_sha256": "bcfff130b275039caac4d2501cde345506f21290e0eba7b7112f7b8fb280774c",
+      "bytes": 6625,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/motif_matched21.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/motif_matched21.tsv",
+      "original_sha256": "f4f43a343c6f03d97ce9a5eff1cfd924f31aaab573e9a463f469191df5f7de26",
+      "repository_sha256": "f4f43a343c6f03d97ce9a5eff1cfd924f31aaab573e9a463f469191df5f7de26",
+      "bytes": 3465,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/motif_probability_matrices.json",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/motif_probability_matrices.json",
+      "original_sha256": "ad45089fe632e4cd37dd71bd6c3cb8fe1c9b04c6c745b514f6b059bd38ab723e",
+      "repository_sha256": "ad45089fe632e4cd37dd71bd6c3cb8fe1c9b04c6c745b514f6b059bd38ab723e",
+      "bytes": 4121,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/verified_NR_example_sites.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/verified_NR_example_sites.tsv",
+      "original_sha256": "468fa9b9611c85710993c9f950db4114b1e3760bc16058dc461b9094d6a5f4bd",
+      "repository_sha256": "468fa9b9611c85710993c9f950db4114b1e3760bc16058dc461b9094d6a5f4bd",
+      "bytes": 3242,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/data/verified_NR_example_windows.tsv",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "data/verified_NR_example_windows.tsv",
+      "original_sha256": "592a30a689cff45bfd1eae4bf7c0d2d2eac9b1cf0502f31c88b320b3aa8662de",
+      "repository_sha256": "592a30a689cff45bfd1eae4bf7c0d2d2eac9b1cf0502f31c88b320b3aa8662de",
+      "bytes": 3961,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/code/draw_scientific_panels.py",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "code/draw_scientific_panels.py",
+      "original_sha256": "7db11627a6656f24518ca49db9c568a37348a2a63eec2df9b95d6b82d408ac49",
+      "repository_sha256": "7db11627a6656f24518ca49db9c568a37348a2a63eec2df9b95d6b82d408ac49",
+      "bytes": 17403,
+      "transformations": []
+    },
+    {
+      "path": "figures/figure_bank/code/refine_motif_panels.py",
+      "method_id": "M-KLB-MBSJ-FIGURE-BANK-V1-20261111",
+      "method_sha256": "a84019b2ee51c67bfad8024fa67344d24b2baca5c8cfc6ecc48b36b29db9674f",
+      "source_name": "code/refine_motif_panels.py",
+      "original_sha256": "46293047b920411d186d4f54d84f5a9ccaa7f5120485f5af0abd24d58b6d04e9",
+      "repository_sha256": "46293047b920411d186d4f54d84f5a9ccaa7f5120485f5af0abd24d58b6d04e9",
+      "bytes": 2539,
+      "transformations": []
+    },
+    {
+      "path": "figures/regulon_scatter/code/draw_regulons.R",
+      "method_id": "M-KLB-SCENIC-ERG-FOXP4-SCATTER-20261023",
+      "method_sha256": "8699016943eef371e5d73f497a349d03f1b4f38b54f463ce2931fa2b83950200",
+      "source_name": "code/draw_regulons.R",
+      "original_sha256": "a11245aec645faedc7593df99fd530bf3afadf4a6d5d23e54bf3ba08b0fbb94d",
+      "repository_sha256": "a11245aec645faedc7593df99fd530bf3afadf4a6d5d23e54bf3ba08b0fbb94d",
+      "bytes": 4035,
+      "transformations": []
+    },
+    {
+      "path": "figures/regulon_scatter/data/display_fits.tsv",
+      "method_id": "M-KLB-SCENIC-ERG-FOXP4-SCATTER-20261023",
+      "method_sha256": "8699016943eef371e5d73f497a349d03f1b4f38b54f463ce2931fa2b83950200",
+      "source_name": "data/display_fits.tsv",
+      "original_sha256": "ef35ec372d21203e9886b33a357ce7aadf352046d1a0a01a3454d2e76f24afb3",
+      "repository_sha256": "ef35ec372d21203e9886b33a357ce7aadf352046d1a0a01a3454d2e76f24afb3",
+      "bytes": 252,
+      "transformations": []
+    },
+    {
+      "path": "figures/regulon_scatter/data/species_activity.tsv",
+      "method_id": "M-KLB-SCENIC-ERG-FOXP4-SCATTER-20261023",
+      "method_sha256": "8699016943eef371e5d73f497a349d03f1b4f38b54f463ce2931fa2b83950200",
+      "source_name": "data/species_activity.tsv",
+      "original_sha256": "f021c9393547fc5985ef39c21610c6d81f77de7a19c45edcd4b24ad4d7dfc2ab",
+      "repository_sha256": "f021c9393547fc5985ef39c21610c6d81f77de7a19c45edcd4b24ad4d7dfc2ab",
+      "bytes": 3207,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/code/draw_heatmap.R",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "code/draw_heatmap.R",
+      "original_sha256": "13eb16a444108393f305515a4f5df313ce12fd9c16d02b67ddf9d690a1c5d71d",
+      "repository_sha256": "13eb16a444108393f305515a4f5df313ce12fd9c16d02b67ddf9d690a1c5d71d",
+      "bytes": 5125,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/code/prepare_heatmap.py",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "code/prepare_heatmap.py",
+      "original_sha256": "34072e4e68672146c5f811bcc1d2e09523bd93bcd05d130853fe973e8e37d52a",
+      "repository_sha256": "34072e4e68672146c5f811bcc1d2e09523bd93bcd05d130853fe973e8e37d52a",
+      "bytes": 4220,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/data/sample_gene_expression.tsv",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "data/sample_gene_expression.tsv",
+      "original_sha256": "ba82ccd4c4490343bf63d482d43662b163d22bcd84135db02cf3eec2b945cb2e",
+      "repository_sha256": "ba82ccd4c4490343bf63d482d43662b163d22bcd84135db02cf3eec2b945cb2e",
+      "bytes": 28378,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/data/selected_targets.tsv",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "data/selected_targets.tsv",
+      "original_sha256": "335dfc879228c28ba4f9afd52f172ca98c4655dd49663ebea1ffd323042e8238",
+      "repository_sha256": "335dfc879228c28ba4f9afd52f172ca98c4655dd49663ebea1ffd323042e8238",
+      "bytes": 1672,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/data/species_gene_expression.tsv",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "data/species_gene_expression.tsv",
+      "original_sha256": "ac109155ed4ce803fb6a5897f8dddc9f1f532e944f9463af953e1dece35a6bff",
+      "repository_sha256": "ac109155ed4ce803fb6a5897f8dddc9f1f532e944f9463af953e1dece35a6bff",
+      "bytes": 36035,
+      "transformations": []
+    },
+    {
+      "path": "figures/target_heatmap/data/species_order.tsv",
+      "method_id": "M-KLB-SCENIC-TARGET-HEATMAP-20261024",
+      "method_sha256": "d9f860fef23f55045a8d12ca8549c930c6784469c2cf06d773fc4dbbd7d8be87",
+      "source_name": "data/species_order.tsv",
+      "original_sha256": "9c7e827c23be9e2e33464f97e265fbb7d4236ffff07d8d3668f3fa580b96ef84",
+      "repository_sha256": "9c7e827c23be9e2e33464f97e265fbb7d4236ffff07d8d3668f3fa580b96ef84",
+      "bytes": 551,
+      "transformations": []
+    }
+  ]
+}

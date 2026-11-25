@@ -1,0 +1,20 @@
+species	gene	tf	motif_id	chrom	start_0based	end_exclusive	strand	sequence	sequence_matches_fimo	peak_id	status
+Zebra	ATP5F1E	ESRRA	MA0592.4	NC_045018.1	11582102	11582111	-	GCAAGGTCA	True	L2__NC_045018.1_+_11582114	sequence_coordinate_verified; promoter/TF function unproven
+Zebra	ATP5F1E	ESRRG	MA0643.2	NC_045018.1	11582102	11582111	-	GCAAGGTCA	True	L2__NC_045018.1_+_11582114	sequence_coordinate_verified; promoter/TF function unproven
+Quail	ATP5F1E	ESRRG	MA0643.2	NC_029535.1	9834254	9834263	-	CCGAGGTCA	True	L2__NC_029535.1_+_9834269	sequence_coordinate_verified; promoter/TF function unproven
+Chicken	ATP5F1E	ESRRA	MA0592.4	NC_006107.5	10886050	10886059	-	ACAAGGTCA	True	L2__NC_006107.5_+_10886060	sequence_coordinate_verified; promoter/TF function unproven
+Chicken	ATP5F1E	ESRRG	MA0643.2	NC_006107.5	10886050	10886059	-	ACAAGGTCA	True	L2__NC_006107.5_+_10886060	sequence_coordinate_verified; promoter/TF function unproven
+Duck	ATP5F1E	ESRRA	MA0592.4	NC_051792.1	8341237	8341246	-	GCAAGGTCA	True	L2__NC_051792.1_+_8341238	sequence_coordinate_verified; promoter/TF function unproven
+Duck	ATP5F1E	ESRRG	MA0643.2	NC_051792.1	8341237	8341246	-	GCAAGGTCA	True	L2__NC_051792.1_+_8341238	sequence_coordinate_verified; promoter/TF function unproven
+Peacock	ATP5F1E	ESRRA	MA0592.4	scaffold2398_len71541_cov0_single	70373	70382	-	ACAAGGTCA	True	L2__scaffold2398_len71541_cov0_single_+_70380	sequence_coordinate_verified; promoter/TF function unproven
+Peacock	ATP5F1E	ESRRG	MA0643.2	scaffold2398_len71541_cov0_single	70373	70382	-	ACAAGGTCA	True	L2__scaffold2398_len71541_cov0_single_+_70380	sequence_coordinate_verified; promoter/TF function unproven
+Turkey	ATP5F1E	ESRRA	MA0592.4	HG999697.1	11074748	11074757	-	ACAAGGTCA	True	L2__HG999697.1_+_11074755	sequence_coordinate_verified; promoter/TF function unproven
+Turkey	ATP5F1E	ESRRG	MA0643.2	HG999697.1	11074748	11074757	-	ACAAGGTCA	True	L2__HG999697.1_+_11074755	sequence_coordinate_verified; promoter/TF function unproven
+Emu	ATP5F1E	ESRRA	MA0592.4	CM027963.1	5476980	5476989	-	CCAAGGTCA	True	L2__CM027963.1_+_5476980	sequence_coordinate_verified; promoter/TF function unproven
+Emu	ATP5F1E	ESRRG	MA0643.2	CM027963.1	5476980	5476989	-	CCAAGGTCA	True	L2__CM027963.1_+_5476980	sequence_coordinate_verified; promoter/TF function unproven
+Quail	NDUFB8	ESRRG	MA0643.2	NC_029521.1	14913542	14913551	+	GGAAGGTCA	True	L2__NC_029521.1_+_14913639	sequence_coordinate_verified; promoter/TF function unproven
+Duck	NDUFB8	ESRRG	MA0643.2	NC_051777.1	17591474	17591483	-	CCGAGGTCA	True	L2__NC_051777.1_+_17591214	sequence_coordinate_verified; promoter/TF function unproven
+Turkey	NDUFB8	ESRRA	MA0592.4	HG999688.1	16799536	16799545	-	TCAAGGACA	True	L2__HG999688.1_+_16799361	sequence_coordinate_verified; promoter/TF function unproven
+Turkey	NDUFB8	ESRRG	MA0643.2	HG999688.1	16799536	16799545	-	TCAAGGACA	True	L2__HG999688.1_+_16799361	sequence_coordinate_verified; promoter/TF function unproven
+Emu	NDUFB8	ESRRA	MA0592.4	CM027950.1	22485628	22485637	+	GCAAGGTCA	True	L2__CM027950.1_-_22485611	sequence_coordinate_verified; promoter/TF function unproven
+Emu	NDUFB8	ESRRG	MA0643.2	CM027950.1	22485628	22485637	+	GCAAGGTCA	True	L2__CM027950.1_-_22485611	sequence_coordinate_verified; promoter/TF function unproven
